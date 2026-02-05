@@ -1,0 +1,128 @@
+.clone-section {
+  width: 100%;
+  padding-bottom: 300px;
+  font-family: 'Pretendard', sans-serif;
+}
+
+.clone-header {
+  text-align: center;
+  margin: 150px 0 120px;
+}
+
+.clone-title {
+    font-family: 'Anton', sans-serif;
+  font-size: 300px;
+  line-height: 1;
+  color: var(--title-color);
+  transition: color var(--transition-speed) ease;
+}
+
+.clone-desc-top {
+  margin-top: 16px;
+  font-family: 'Pretendard', sans-serif;
+  font-size: 20px;
+  line-height: 1.1;
+  color: var(--sub-text-color);
+  font-weight: 400;
+  letter-spacing: -1px;
+  transition: color var(--transition-speed) ease;
+}
+
+.clone-list-container {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+
+.clone-item {
+  position: sticky;
+  width: calc(100% - 160px);
+  background: var(--card-bg);
+  border-radius: 20px;
+  align-items: center;
+  justify-content: center;
+  transition: background-color var(--transition-speed) ease;
+  transform: translate3d(0, 0, 0);
+  will-change: transform;
+}
+
+.clone-content {
+  display: flex;
+  gap: 120px;
+  padding: 60px;
+  height: 100%;
+  box-sizing: border-box;
+}
+
+.clone-img-box {
+  flex: 0 0 50%;
+  background: #000;
+  border-radius: 30px;
+  overflow: hidden;
+  border: 8px solid #000;
+}
+
+.clone-img-box img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.clone-text-box {
+  flex: 1;
+  color: var(--sub-text-color);
+  display: flex;
+  flex-direction: column;
+  margin-top: 50px;
+  transition: color var(--transition-speed) ease;
+}
+
+.clone-text-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 30px;
+}
+
+.clone-item-title {
+  font-family: 'Anton', sans-serif;
+  font-size: 72px;
+  line-height: 1;
+  font-weight: 600;
+  white-space: nowrap;
+}
+
+.clone-view-btn {
+  width: 250px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 16px 40px;
+  border-radius: 50px;
+  background: #D0E3FF;
+  font-family: 'Anton', sans-serif;
+  font-size: 22px;
+  text-decoration: none;
+  color: var(--btn-text);
+  white-space: nowrap;
+  transition: background-color var(--transition-speed) ease, color var(--transition-speed) ease;
+  position: absolute;
+  bottom: 60px;
+  left: 57%;
+}
+
+.clone-item-desc {
+  width: 60%;
+  font-size: 18px;
+  line-height: 1.6;
+  margin-top: 16px;
+  letter-spacing: -1px;
+  word-break: keep-all;
+}
+
+.clone-view-btn:hover {
+    background-color: #1573FF;
+    color: #fff;
+}

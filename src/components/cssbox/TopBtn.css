@@ -1,0 +1,67 @@
+.fixed-btn-container {
+  position: fixed;
+  right: 60px;
+  bottom: 50px;
+  z-index: 1000;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 24px;
+}
+
+.play-btn {
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  transition: transform 0.3s ease-in-out;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.play-btn img {
+  width: 60px; /* Same size as top button icon */
+  height: 60px;
+  display: block;
+}
+
+.play-btn:hover {
+  transform: scale(1.1);
+}
+
+.play-btn:active {
+  transform: scale(0.9);
+}
+
+.top-btn {
+  /* Removed fixed positioning since container handles it */
+  position: static; 
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  transition: all 0.3s ease-in-out;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 24px;
+  color: #1573FF;
+  font-weight: 600;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.top-btn img {
+  width: 60px;
+  height: auto;
+  display: block;
+  padding-bottom: 10px;
+}
+
+.top-btn:hover {
+  transform: translateY(-8px);
+}
+
+.top-btn:active {
+  transform: scale(0.9) translateY(-4px);
+}

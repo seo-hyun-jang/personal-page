@@ -1,0 +1,25 @@
+.reveal-up {
+  position: relative;
+  opacity: 0;
+  transform: translateY(80px);
+  transition:
+    transform 0.9s cubic-bezier(0.22, 1, 0.36, 1),
+    opacity 0.6s ease;
+}
+
+.reveal-up.is-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+
+
+
+.sns-title-ani {
+    position: absolute;
+    top: 0%;
+    left: 14%;
+
+    z-index: 30; /* 원, 비디오, SVG 전부 위 */
+    pointer-events: none;
+}

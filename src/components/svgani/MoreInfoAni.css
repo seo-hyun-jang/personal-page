@@ -1,0 +1,37 @@
+.more-info-ani-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 40px; 
+}
+
+.more-info-svg {
+  width: 100%;
+  height: auto;
+  overflow: visible !important;
+}
+
+.bg-layer {
+  transform-origin: center;
+  transform-box: fill-box;
+  animation: moreInfoSpin 10s linear infinite;
+}
+
+@keyframes moreInfoSpin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.more-info-text {
+  fill: #411F15;
+  transition: fill var(--transition-speed) ease;
+}
+
+body.dark-mode .more-info-text {
+  fill: #fff;
+}
+

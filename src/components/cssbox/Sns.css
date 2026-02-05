@@ -1,0 +1,255 @@
+.sns-section {
+  width: 100%;
+  padding: 150px 0 200px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+}
+
+.sns-header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+  text-align: center;
+  margin-bottom: 200px;
+}
+
+.sns-main-title {
+  font-family: 'Anton', sans-serif;
+  font-size: 280px;
+  line-height: 1;
+  color: var(--title-color);
+  margin: 0;
+  position: relative;
+  z-index: 1;
+  transition: color var(--transition-speed) ease;
+}
+
+.sns-subtitle {
+  margin: 0;
+  font-family: 'Pretendard', sans-serif;
+  font-size: 20px;
+  line-height: 1.1;
+  color: var(--sub-text-color);
+  white-space: pre-line;
+  font-weight: 400;
+  letter-spacing: -1px;
+  transition: color var(--transition-speed) ease;
+}
+
+.sns-columns-container {
+  display: flex;
+  justify-content: center;
+  gap: 53px;
+  max-width: 1600px;
+  width: 100%;
+  padding: 0 40px;
+  margin: 0 auto;
+}
+
+.sns-column {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* 플랫폼 헤더 */
+.sns-platform-header {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin-bottom: 80px;
+}
+
+.sns-platform-logo {
+  width: 60px;
+}
+
+.sns-platform-name {
+  font-family: 'Anton';
+  font-size: 60px;
+  color: var(--sub-text-color);
+  font-weight: 600;
+  transition: color var(--transition-speed) ease;
+}
+
+/* === 핵심 수정 영역 === */
+/* clone 카드와 동일한 배경/톤 */
+.sns-stats-card {
+  background: var(--card-bg); /* ✅ clone과 동일 */
+  border-radius: 20px;
+  width: 846px;
+  max-width: 100%;
+  height: 180px;
+  margin-bottom: 80px;
+  display: flex;
+  align-items: stretch;
+  font-family: 'Pretendard', sans-serif;
+  transition: background-color var(--transition-speed) ease;
+}
+
+.sns-stats-grid.two {
+  display: flex;
+  width: 100%;
+  height: 100%;
+  align-items: stretch;
+}
+
+.sns-stat-item {
+  flex: 1;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  padding-top: 40px;
+}
+
+/* 구분선도 다크모드 대응 */
+.sns-stat-item:first-child {
+  border-right: 1px solid #808080;
+}
+
+.sns-stat-label {
+  font-size: 18px;
+  font-weight: 500;
+  color: var(--sub-text-color);
+  height: 22px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  letter-spacing: -1px;
+}
+
+.sns-stat-value {
+  margin-top: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 60px;
+  font-size: 28px;
+  font-weight: 700;
+  color: var(--sub-text-color);
+  line-height: 1.5;
+  letter-spacing: -1px;
+}
+
+.sns-stat-value.small-value {
+  font-size: 28px;
+}
+
+/* 갤러리 */
+.sns-gallery {
+  width: 100%;
+  height: 680px;
+  display: flex;
+  gap: 24px;
+  margin-bottom: 40px;
+}
+
+.sns-gallery.youtube {
+  display: flex;
+}
+
+.youtube-large {
+  flex: 0.8;
+  height: 100%;
+}
+
+.sns-gallery-right-stack {
+  flex: 1.2;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.youtube-small {
+  flex: 1;
+}
+
+.sns-gallery.instagram .sns-card {
+  flex: 1;
+  height: 100%;
+}
+
+.sns-card {
+  position: relative;
+  border-radius: 20px;
+  overflow: hidden;
+  background: transparent;
+}
+
+.sns-thumb {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.sns-card-overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(0,0,0,0.4);
+  opacity: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  color: #fff;
+  font-size: 32px;
+  font-weight: 700;
+  transition: 0.3s;
+}
+
+.sns-overlay-icon {
+  width: 44px;
+  height: auto;
+}
+
+.sns-card:hover .sns-card-overlay {
+  opacity: 1;
+  backdrop-filter: blur(8px);
+}
+
+/* 버튼도 clone 톤으로 */
+.sns-view-project-btn {
+  margin-top: auto;
+  padding: 18px 60px;
+  border-radius: 50px;
+  font-family: 'Anton';
+  font-size: 24px;
+  letter-spacing: 1px;
+  background: #D0E3FF;
+  border: none;
+  color: #411F15;
+  cursor: pointer;
+  transition: background-color var(--transition-speed) ease,
+              color var(--transition-speed) ease;
+}
+
+.sns-view-project-btn:hover {
+  background-color: var(--primary-blue);
+  color: #fff;
+}
+
+.sns-char-box {
+  position: absolute;
+  bottom: 10%;
+  left: 48%;
+  transform: translateX(-50%);
+  width: 140px;
+  z-index: 100;
+}
+
+.sns-crown-icon {
+  position: absolute;
+  top: -45px;
+  left: -25px;
+  width: 80px;
+  z-index: 10;
+  filter: drop-shadow(0 4px 4px rgba(0,0,0,0.2));
+  transform: rotate(-15deg);
+}
