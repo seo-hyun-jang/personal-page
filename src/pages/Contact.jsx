@@ -1,7 +1,7 @@
 import ContactWaveAni from "../components/svgani/ContactWaveAni.jsx";
 import MoreInfoAni from "../components/svgani/MoreInfoAni.jsx";
 import '../components/cssbox/Contact.css';
-import TextAni from "/components/svgani/TextAni.jsx";
+import TextAni from "../components/svgani/TextAni.jsx";
 import { useEffect } from "react";
 
 export default function Contact() {
