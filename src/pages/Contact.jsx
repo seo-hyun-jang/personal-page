@@ -1,7 +1,7 @@
 import ContactWaveAni from "../components/svgani/ContactWaveAni.jsx";
 import MoreInfoAni from "../components/svgani/MoreInfoAni.jsx";
 import '../components/cssbox/Contact.css';
-import TextAni from "../components/svgani/textani.jsx";
+import TextAni from "../components/svgani/TextAni.jsx";
 
 export default function Contact() {
   return (
