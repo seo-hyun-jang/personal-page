@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import MoreInfoAni from "./svgani/MoreInfoAni.jsx";
 import "./cssbox/TeamProject.css";
-import TextAni from "./svgani/textani.jsx";
+import TextAni from "../svgani/TextAni.jsx";
 
 export default function TeamProject() {
   const projects = [

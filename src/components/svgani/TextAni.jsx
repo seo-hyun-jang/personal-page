@@ -13,7 +13,7 @@ export default function TextAni({ children, className = "", delay = "0s" }) {
         if (entry.isIntersecting) {
           el.classList.add("is-visible");
         } else {
-          el.classList.remove("is-visible"); // ← 핵심
+          el.classList.remove("is-visible");
         }
       },
       {

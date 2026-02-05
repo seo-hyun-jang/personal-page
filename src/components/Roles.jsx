@@ -1,5 +1,5 @@
 import "./cssbox/Roles.css";
-import TextAni from "./svgani/textani.jsx";
+import TextAni from "../svgani/TextAni.jsx";
 
 export default function Roles() {
   return (

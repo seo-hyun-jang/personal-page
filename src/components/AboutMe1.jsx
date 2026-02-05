@@ -1,6 +1,6 @@
 import AboutMeBlobAni from "./svgani/AboutMeBlobAni.jsx";
 import "./cssbox/AboutMe1.css";
-import TextAni from "./svgani/textani.jsx";
+import TextAni from "../svgani/TextAni.jsx";
 
 export default function AboutMe1() {
   

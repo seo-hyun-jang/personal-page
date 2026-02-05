@@ -2,7 +2,7 @@ import { useEffect, useRef } from "react";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import "./cssbox/Makeup.css";
-import TextAni from "./svgani/textani.jsx";
+import TextAni from "../svgani/TextAni.jsx";
 
 gsap.registerPlugin(ScrollTrigger);
 

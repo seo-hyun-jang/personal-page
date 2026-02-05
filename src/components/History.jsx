@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react';
 import "./cssbox/History.css";
-import TextAni from "./svgani/textani.jsx";
+import TextAni from "../svgani/TextAni.jsx";
 
 const historyData = [
   { year: 2022, count: 8 },
