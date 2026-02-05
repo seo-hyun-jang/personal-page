@@ -43,7 +43,7 @@ export default function TopBtn() {
 
   return (
     <div className="fixed-btn-container">
-      <audio ref={audioRef} src="/public/audio/cute.mp3" />
+      <audio ref={audioRef} src="/audio/cute.mp3" />
 
       <button className="play-btn" onClick={togglePlay}>
         <img
