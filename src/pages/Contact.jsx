@@ -1,9 +1,33 @@
 import ContactWaveAni from "../components/svgani/ContactWaveAni.jsx";
 import MoreInfoAni from "../components/svgani/MoreInfoAni.jsx";
 import '../components/cssbox/Contact.css';
-import TextAni from "../components/svgani/TextAni.jsx";
+import TextAni from "/components/svgani/TextAni.jsx";
+import { useEffect } from "react";
 
 export default function Contact() {
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add("is-visible");
+        } else {
+          entry.target.classList.remove("is-visible");
+        }
+      },
+      {
+        threshold: 0.15,
+      }
+    );
+
+    const elements = document.querySelectorAll(".reveal-up");
+    elements.forEach((el) => observer.observe(el));
+
+    return () => {
+      observer.disconnect();
+      elements.forEach((el) => observer.unobserve(el));
+    };
+  }, []);
+
   return (
     <div className="contact-section">
       <ContactWaveAni className="bg-wave" />
