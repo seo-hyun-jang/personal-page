@@ -2,7 +2,7 @@ import { useEffect } from "react";
 import MoreInfoAni from "./svgani/MoreInfoAni.jsx";
 import VedioCut from "./svgani/VedioCut.jsx";
 import "./cssbox/SnsMarketing.css";
-import TextAni from "../svgani/TextAni.jsx";
+import TextAni from "./svgani/TextAni.jsx";
 
 export default function SnsMarketing() {
 

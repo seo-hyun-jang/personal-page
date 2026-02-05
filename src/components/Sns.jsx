@@ -1,6 +1,6 @@
 import React from 'react';
 import './cssbox/Sns.css';
-import TextAni from "../svgani/TextAni.jsx";
+import TextAni from "./svgani/TextAni.jsx";
 
 const Sns = () => {
   const youtubeStats = [

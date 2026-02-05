@@ -1,7 +1,7 @@
 import IntroBlobAni from "./svgani/IntroBlobAni.jsx";
 import MoreInfoAni from "./svgani/MoreInfoAni.jsx";
 import "./cssbox/Introduction.css";
-import TextAni from "../svgani/TextAni.jsx";
+import TextAni from "./svgani/TextAni.jsx";
 
 export default function Introduction() {
   const hobbies = [

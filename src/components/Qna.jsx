@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import './cssbox/Qna.css';
-import TextAni from "../svgani/TextAni.jsx";
+import TextAni from "./svgani/TextAni.jsx";
 
 const Qna = () => {
   const qnaData = [

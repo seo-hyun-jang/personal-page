@@ -1,5 +1,5 @@
 import "./cssbox/PersonalProject.css";
-import TextAni from "../svgani/TextAni.jsx";
+import TextAni from "./svgani/TextAni.jsx";
 
 export default function PersonalProject() {
   const project = {

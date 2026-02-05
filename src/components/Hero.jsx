@@ -1,6 +1,6 @@
 import React, { useEffect, useRef } from "react";
 import "./cssbox/Hero.css";
-import TextAni from "../svgani/TextAni.jsx";
+import TextAni from "./svgani/TextAni.jsx";
 
 const INITIAL_BALLS = [
   
