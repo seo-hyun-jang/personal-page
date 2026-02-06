@@ -136,10 +136,19 @@
 .contact-char-container {
   position: relative;
   width: 500px;
-  height: 500px; 
+  height: 500px;
   display: flex;
   justify-content: center;
   align-items: center;
+  animation: walk-sequence 16s linear infinite;
+}
+
+@keyframes walk-sequence {
+  0% { transform: translateX(250%); }
+  15% { transform: translateX(0); }
+  75% { transform: translateX(0); }
+  90% { transform: translateX(-250%); }
+  100% { transform: translateX(-250%); }
 }
 
 .contact-char {
@@ -156,8 +165,13 @@
   animation: contactFrameToggle1 0.6s step-end infinite;
 }
 
-.contact-char.frame-2 {
+/* .contact-char.frame-2 {
   animation: contactFrameToggle2 0.6s step-end infinite;
+} */
+
+.contact-char.frame-3 {
+  margin-bottom: 10px;
+  animation: contactFrameToggle3 0.6s step-end infinite;
 }
 
 @keyframes contactFrameToggle1 {
@@ -165,7 +179,12 @@
   50%, 100% { visibility: hidden; }
 }
 
-@keyframes contactFrameToggle2 {
+/* @keyframes contactFrameToggle2 {
+  0%, 49% { visibility: hidden; }
+  50%, 100% { visibility: visible; }
+} */
+
+@keyframes contactFrameToggle3 {
   0%, 49% { visibility: hidden; }
   50%, 100% { visibility: visible; }
 }

@@ -46,6 +46,12 @@
   perspective: 1500px;
   cursor: pointer;
   flex-shrink: 0;
+  opacity: 0; /* Hidden until animation starts */
+  transition: opacity 0.5s;
+}
+
+.start-animation .qna-card {
+  opacity: 1 !important;
 }
 
 .qna-card-inner {
@@ -58,6 +64,40 @@
 
 .qna-card.is-flipped .qna-card-inner {
   transform: rotateY(180deg);
+}
+
+.start-animation .qna-card:nth-child(1) {
+  animation: shuffle-deal-1 3s cubic-bezier(0.34, 1.56, 0.64, 1) forwards;
+}
+.start-animation .qna-card:nth-child(2) {
+  animation: shuffle-deal-2 3s cubic-bezier(0.34, 1.56, 0.64, 1) forwards;
+}
+.start-animation .qna-card:nth-child(3) {
+  animation: shuffle-deal-3 3s cubic-bezier(0.34, 1.56, 0.64, 1) forwards;
+}
+
+@keyframes shuffle-deal-1 {
+  0% { transform: translateX(516px) translateY(0) scale(0.9) rotate(0deg); z-index: 1; opacity: 1; }
+  25% { transform: translateX(516px) translateY(-40px) scale(0.92) rotate(-8deg); z-index: 5; opacity: 1; }
+  50% { transform: translateX(516px) translateY(0) scale(0.9) rotate(0deg); z-index: 5; opacity: 1; }
+  75% { transform: translateX(516px) translateY(-10px) scale(0.95) rotate(-2deg); z-index: 5; opacity: 1; }
+  100% { transform: translateX(0) translateY(0) scale(1) rotate(0deg); z-index: 1; opacity: 1; }
+}
+
+@keyframes shuffle-deal-2 {
+  0% { transform: translateX(0px) translateY(0) scale(0.9) rotate(0deg); z-index: 3; opacity: 1; }
+  25% { transform: translateX(0px) translateY(10px) scale(0.88) rotate(3deg); z-index: 1; opacity: 1; }
+  50% { transform: translateX(0px) translateY(0) scale(0.9) rotate(0deg); z-index: 3; opacity: 1; }
+  75% { transform: translateX(0px) translateY(0) scale(0.95) rotate(0deg); z-index: 2; opacity: 1; }
+  100% { transform: translateX(0) translateY(0) scale(1) rotate(0deg); z-index: 2; opacity: 1; }
+}
+
+@keyframes shuffle-deal-3 {
+  0% { transform: translateX(-516px) translateY(0) scale(0.9) rotate(0deg); z-index: 2; opacity: 1; }
+  25% { transform: translateX(-516px) translateY(-20px) scale(0.92) rotate(5deg); z-index: 3; opacity: 1; }
+  50% { transform: translateX(-516px) translateY(0) scale(0.9) rotate(0deg); z-index: 2; opacity: 1; }
+  75% { transform: translateX(-516px) translateY(-10px) scale(0.95) rotate(2deg); z-index: 3; opacity: 1; }
+  100% { transform: translateX(0) translateY(0) scale(1) rotate(0deg); z-index: 3; opacity: 1; }
 }
 
 .qna-card-front,

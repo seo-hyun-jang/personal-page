@@ -58,6 +58,7 @@ export default function Contact() {
         <div className="contact-char-container">
           <img src="/img/contact-char.svg" alt="character" className="contact-char frame-1" />
           <img src="/img/contact-char2.svg" alt="character" className="contact-char frame-2" />
+          <img src="/img/contact-char3.svg" alt="character" className="contact-char frame-3" />
         </div>
       </div>
     </div>
