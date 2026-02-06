@@ -14,11 +14,11 @@ export default function IntroAnimation({ onComplete }) {
 
   useEffect(() => {
     const timers = [
-      setTimeout(() => setStage("name"), 3000),
-      setTimeout(() => setStage("blackhole"), 5000),
-      setTimeout(() => setStage("explode"), 7500),
-      setTimeout(() => setStage("statement"), 8800),
-      setTimeout(() => onComplete(), 10500),
+      setTimeout(() => setStage("name"), 1200),
+      setTimeout(() => setStage("blackhole"), 2200),
+      setTimeout(() => setStage("explode"), 3400),
+      setTimeout(() => setStage("statement"), 4000),
+      setTimeout(() => onComplete(), 5000),
     ];
     return () => timers.forEach(clearTimeout);
   }, [onComplete]);
@@ -53,7 +53,7 @@ export default function IntroAnimation({ onComplete }) {
               }),
             }}
             transition={{
-              duration: isBlackhole ? 2.5 : 3,
+              duration: isBlackhole ? 1.0 : 1.2,
               ease: "easeInOut",
             }}
             style={{
@@ -79,7 +79,7 @@ export default function IntroAnimation({ onComplete }) {
               : { y: 0, opacity: 1 }
           }
           transition={{
-            duration: isBlackhole ? 2 : 1.8,
+            duration: isBlackhole ? 0.8 : 0.8,
             ease: "easeOut",
           }}
           style={{
@@ -90,7 +90,7 @@ export default function IntroAnimation({ onComplete }) {
             justifyContent: "center",
             fontFamily: "Anton, sans-serif",
             fontSize: "200px",
-            letterSpacing: "0.1em",
+            letterSpacing: "0.05em",
             paddingLeft: "0.25em",
             color: "#000",
             whiteSpace: "nowrap",
@@ -117,7 +117,7 @@ export default function IntroAnimation({ onComplete }) {
               : { y: 0, opacity: 1, rotate: 360 }
           }
           transition={{
-            duration: isBlackhole ? 2.5 : 3,
+            duration: isBlackhole ? 1.0 : 1.2,
             ease: "easeOut",
             repeat: isBlackhole ? 0 : Infinity,
           }}
@@ -137,7 +137,7 @@ export default function IntroAnimation({ onComplete }) {
           initial={{ scale: 0 }}
           animate={{ scale: stage === "explode" ? 50 : 1 }}
           transition={{
-            duration: stage === "explode" ? 1.2 : 2.5,
+            duration: stage === "explode" ? 0.5 : 1.0,
             ease: "easeInOut",
           }}
           style={{

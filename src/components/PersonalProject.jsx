@@ -19,8 +19,8 @@ UX와 UI 전반을 직접 설계하며, 기획 단계부터 화면 구조와 인
 사용자 여정을 기준으로 기능과 화면 흐름을 설계했습니다.
 각 단계에서 필요한 정보가 자연스럽게 이어지도록 UI 구조를 구성하며,
 사용자가 고민하지 않고 다음 행동으로 넘어갈 수 있는 경험을 만드는 데 집중했습니다.`,
-    linkPlan: '#',
-    linkProject: '#',
+    linkPlan: 'https://www.figma.com/design/NVNNJxevXpC6TpXoN6YAV0/23.%EC%9E%A5%EC%84%9C%ED%98%84?node-id=1556-17795&t=e4iKN61IgSATVm9C-1',
+    linkProject: 'https://www.figma.com/design/NVNNJxevXpC6TpXoN6YAV0/23.%EC%9E%A5%EC%84%9C%ED%98%84?node-id=0-1&t=e4iKN61IgSATVm9C-1',
   };
 
   return (

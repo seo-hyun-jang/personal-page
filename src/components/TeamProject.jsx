@@ -23,8 +23,8 @@ export default function TeamProject() {
 프론트엔드 개발을 중심으로 주요 화면을 직접 구현했습니다.
 다양한 디바이스 환경을 고려해 반응형 레이아웃을 적용했습니다.
 클릭과 전환 등 사용자 행동에 따른 인터랙션을 구현하며 완성도를 높였습니다.`,
-      linkPlan: '#',
-      linkProject: '#',
+      linkPlan: 'https://www.figma.com/design/NVNNJxevXpC6TpXoN6YAV0/23.%EC%9E%A5%EC%84%9C%ED%98%84?node-id=1554-5325&t=e4iKN61IgSATVm9C-1',
+      linkProject: 'https://yunjioh.github.io/1million/',
     },
     {
       id: 'nova',
@@ -44,8 +44,8 @@ export default function TeamProject() {
 기본 레이아웃과 와이어프레임을 설계하며 화면 구조와 흐름을 정리했습니다.
 개발 파트에서는 채팅 기능 전반을 직접 구현했고,
 가챠 시스템 역시 로직 설계부터 화면 구현까지 담당했습니다.`,
-      linkPlan: '#',
-      linkProject: '#',
+      linkPlan: 'https://www.figma.com/design/NVNNJxevXpC6TpXoN6YAV0/23.%EC%9E%A5%EC%84%9C%ED%98%84?node-id=1554-933&t=e4iKN61IgSATVm9C-1',
+      linkProject: 'https://tubi-nova.vercel.app/',
     }
   ];
 
@@ -114,7 +114,7 @@ export default function TeamProject() {
             </div>
 
             <div className="action-buttons">
-              <a href={activeProject.linkPlan} className="team-btn">VIEW PLAN</a>
+              <a href={activeProject.linkPlan} className="team-btn" target="_blank" rel="noopener noreferrer">VIEW PLAN</a>
               <a href={activeProject.linkProject} className="team-btn">VIEW PROJECT</a>
             </div>
           </div>
