@@ -1,7 +1,7 @@
 .uxui-spoiler {
   width: 100%;
   background-color: var(--bg-color);
-  padding: 150px 0;
+  padding: 7.8vw 0; /* 150px / 1920px */
   font-family: 'Montserrat', sans-serif;
   overflow-x: hidden;
   overflow-y: visible;
@@ -10,24 +10,24 @@
 
 .uxui-header {
   text-align: center;
-  margin-bottom: 100px;
+  margin-bottom: 5.2vw; /* 100px / 1920px */
 }
 
 .uxui-title {
   font-family: 'Anton', 'Impact', sans-serif;
-  font-size: 320px;
+  font-size: 16.6vw; /* 320px / 1920px */
   line-height: 1;
   color: var(--title-color);
   text-transform: uppercase;
   margin: 0;
-  letter-spacing: -2px;
+  letter-spacing: -0.1vw;
   transition: color var(--transition-speed) ease;
 }
 
 .uxui-subtitle {
-  margin-top: 16px;
+  margin-top: 1vw;
   font-family: 'Pretendard', sans-serif;
-  font-size: 20px;
+  font-size: 1.04vw; /* 20px / 1920px */
   line-height: 1.1;
   color: var(--sub-text-color);
   font-weight: 400;
@@ -50,13 +50,13 @@
 .spoiler-track {
   display: flex;
   align-items: center;
-  gap: 100px;
+  gap: 5.2vw; /* 100px / 1920px */
   padding: 0 10vw; 
   width: max-content;
 }
 .spoiler-card {
   flex-shrink: 0;
-  width: min(1400px, 80vw);
+  width: min(72.9vw, 80vw); /* 1400px / 1920px */
   aspect-ratio: 1400 / 782;
 
   border-radius: 20px;
@@ -76,24 +76,41 @@
 
 
 @media (max-width: 1024px) {
-  .uxui-title {
-    font-size: 120px;
-  }
+  /* .uxui-title { font-size: 120px; } -> Handled by vw */
+  .uxui-content { height: auto; overflow: visible; padding: 4.16vw 0; }
+  .spoiler-track { flex-direction: column; width: 100%; padding: 0; gap: 3.125vw; }
+  .spoiler-card { width: 90vw; }
+}
 
-  .uxui-content {
-    height: auto;
-    overflow: visible;
-    padding: 80px 0;
-  }
+/* Desktop */
+@media (min-width: 1280px) and (max-width: 1400px) {
+  /* .uxui-title { font-size: 280px; } */
+  .spoiler-card { width: min(62.5vw, 75vw); }
+}
 
-  .spoiler-track {
-    flex-direction: column;
-    width: 100%;
-    padding: 0;
-    gap: 60px;
-  }
+/* Tablet */
+@media (min-width: 768px) and (max-width: 1279px) {
+  /* .uxui-title { font-size: 180px; } */
+  .uxui-content { height: auto; overflow: visible; padding: 8vw 0; }
+  .spoiler-track { gap: 4vw; padding: 0 5vw; }
+  .spoiler-card { width: 85vw; border-radius: 1.5vw; }
+}
 
-  .spoiler-card {
-    width: 90vw;
-  }
+/* Mobile Large */
+@media (min-width: 390px) and (max-width: 767px) {
+  .uxui-title { font-size: 18vw; }
+  .uxui-subtitle { font-size: 3.5vw; width: 90%; margin: 2vw auto 0; }
+  .uxui-header { margin-bottom: 8vw; }
+  .spoiler-track { gap: 8vw; }
+  .spoiler-card { width: 92vw; border-radius: 2vw; }
+}
+
+/* Mobile */
+@media (max-width: 389px) {
+  .uxui-spoiler { padding: 15vw 0; }
+  .uxui-title { font-size: 18vw; }
+  .uxui-subtitle { font-size: 4vw; width: 90%; margin: 2vw auto 0; }
+  .uxui-header { margin-bottom: 8vw; }
+  .spoiler-track { gap: 8vw; }
+  .spoiler-card { width: 95vw; border-radius: 2vw; }
 }

@@ -2,7 +2,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 40px; 
+  padding: 2.08vw; /* 40px */ 
 }
 
 .more-info-svg {

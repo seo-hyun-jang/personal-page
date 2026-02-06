@@ -8,6 +8,7 @@ export default function SnsMarketing() {
 
   useEffect(() => {
     const circles = document.querySelectorAll(".sns-circle");
+    if (!circles.length) return;
 
     const observer = new IntersectionObserver(
       (entries) => {
@@ -19,7 +20,7 @@ export default function SnsMarketing() {
           }
         });
       },
-      { threshold: 0.2 }
+      { threshold: 0.1 } // Lower threshold to trigger earlier
     );
 
     circles.forEach((circle) => observer.observe(circle));
@@ -38,27 +39,39 @@ export default function SnsMarketing() {
         </div>
       </div>
 
-      <div className="sns-circle-box">
-        <div className="sns-circle sc1"></div>
-        <div className="sns-circle sc2"></div>
-        <div className="sns-circle sc3"></div>
-        <div className="sns-circle sc4"></div>
-        <div className="sns-circle sc5"></div>
-        <div className="sns-circle sc6"></div>
-        <div className="sns-circle sc7"></div>
-      </div>
+      {/* 🔥 비주얼 데코 영역 */}
+      <div className="sns-visual">
+        <div className="sns-circle-box">
+          <div className="sns-circle sc1" />
+          <div className="sns-circle sc2" />
+          <div className="sns-circle sc3" />
+          <div className="sns-circle sc4" />
+          <div className="sns-circle sc5" />
+          <div className="sns-circle sc6" />
+          <div className="sns-circle sc7" />
+        </div>
 
-      <div className="video-box">
-        <TextAni className="sns-title-ani">
+        <TextAni className="sns-title-wrap">
           <h2 className="sns-title">SNS MARKETING</h2>
         </TextAni>
+      </div>
 
-        <video src="/img/thumbnail.mp4" autoPlay muted loop playsInline />
+      {/* 🔥 미디어 영역 */}
+      <div className="sns-media">
+        <video
+          className="sns-video"
+          src="/img/thumbnail.mp4"
+          autoPlay
+          muted
+          loop
+          playsInline
+        />
 
         <div className="vedio-cut-box">
           <VedioCut className="vedio-cut-svg" />
-        </div>
-      </div>
-    </section>
+    </div>
+  </div>
+</section>
+
   );
 }

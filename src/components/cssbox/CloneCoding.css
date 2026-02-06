@@ -1,26 +1,26 @@
 .clone-section {
   width: 100%;
-  padding-bottom: 300px;
+  padding-bottom: 15.6vw; /* 300px */
   font-family: 'Pretendard', sans-serif;
 }
 
 .clone-header {
   text-align: center;
-  margin: 150px 0 120px;
+  margin: 7.8vw 0 6.25vw; /* 150px 0 120px */
 }
 
 .clone-title {
     font-family: 'Anton', sans-serif;
-  font-size: 300px;
+  font-size: 15.6vw; /* 300px */
   line-height: 1;
   color: var(--title-color);
   transition: color var(--transition-speed) ease;
 }
 
 .clone-desc-top {
-  margin-top: 16px;
+  margin-top: 0.83vw;
   font-family: 'Pretendard', sans-serif;
-  font-size: 20px;
+  font-size: 1.04vw; /* 20px */
   line-height: 1.1;
   color: var(--sub-text-color);
   font-weight: 400;
@@ -38,9 +38,9 @@
 
 .clone-item {
   position: sticky;
-  width: calc(100% - 160px);
+  width: calc(100% - 8.33vw); /* 160px */
   background: var(--card-bg);
-  border-radius: 20px;
+  border-radius: 1.04vw; /* 20px */
   align-items: center;
   justify-content: center;
   transition: background-color var(--transition-speed) ease;
@@ -50,8 +50,8 @@
 
 .clone-content {
   display: flex;
-  gap: 120px;
-  padding: 60px;
+  gap: 6.25vw; /* 120px */
+  padding: 3.125vw; /* 60px */
   height: 100%;
   box-sizing: border-box;
 }
@@ -59,9 +59,9 @@
 .clone-img-box {
   flex: 0 0 50%;
   background: #000;
-  border-radius: 30px;
+  border-radius: 1.56vw; /* 30px */
   overflow: hidden;
-  border: 8px solid #000;
+  border: 0.42vw solid #000; /* 8px */
 }
 
 .clone-img-box img {
@@ -75,7 +75,7 @@
   color: var(--sub-text-color);
   display: flex;
   flex-direction: column;
-  margin-top: 50px;
+  margin-top: 2.6vw; /* 50px */
   transition: color var(--transition-speed) ease;
 }
 
@@ -83,41 +83,41 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin-bottom: 30px;
+  margin-bottom: 1.56vw; /* 30px */
 }
 
 .clone-item-title {
   font-family: 'Anton', sans-serif;
-  font-size: 72px;
+  font-size: 3.75vw; /* 72px */
   line-height: 1;
   font-weight: 600;
   white-space: nowrap;
 }
 
 .clone-view-btn {
-  width: 250px;
+  width: 13vw; /* 250px */
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 16px 40px;
-  border-radius: 50px;
+  padding: 0.83vw 2.08vw; /* 16px 40px */
+  border-radius: 2.6vw; /* 50px */
   background: #D0E3FF;
   font-family: 'Anton', sans-serif;
-  font-size: 22px;
+  font-size: 1.15vw; /* 22px */
   text-decoration: none;
   color: var(--btn-text);
   white-space: nowrap;
   transition: background-color var(--transition-speed) ease, color var(--transition-speed) ease;
   position: absolute;
-  bottom: 60px;
+  bottom: 3.125vw; /* 60px */
   left: 57%;
 }
 
 .clone-item-desc {
   width: 60%;
-  font-size: 18px;
+  font-size: 0.93vw; /* 18px */
   line-height: 1.6;
-  margin-top: 16px;
+  margin-top: 0.83vw;
   letter-spacing: -1px;
   word-break: keep-all;
 }
@@ -125,4 +125,96 @@
 .clone-view-btn:hover {
     background-color: #1573FF;
     color: #fff;
+}
+
+/* Desktop */
+@media (min-width: 1280px) and (max-width: 1400px) {
+    /* .clone-title { font-size: 250px; } -> Handled by vw */
+    .clone-item { width: calc(100% - 6.25vw); }
+    .clone-content { gap: 4.16vw; padding: 2.08vw; }
+    /* .clone-item-title { font-size: 60px; } -> Handled by vw */
+}
+
+/* Tablet */
+@media (min-width: 768px) and (max-width: 1279px) {
+  .clone-header { margin: 10vw 0 8vw; }
+  /* .clone-title { font-size: 180px; } */
+  
+  .clone-item { width: 90%; }
+  .clone-content { flex-direction: column; gap: 4vw; padding: 4vw; }
+  .clone-img-box { flex: 0 0 auto; height: 30vw; }
+  .clone-text-box { margin-top: 0; }
+  
+  .clone-item-title { font-size: 5vw; }
+  .clone-item-desc { width: 100%; font-size: 1.8vw; min-height: auto; }
+  .clone-view-btn { position: relative; left: auto; bottom: auto; margin-top: 3vw; width: 25vw; }
+}
+
+/* Mobile Large & Mobile (Unified for Sticky Fit) */
+@media (max-width: 767px) {
+  .clone-section { padding-bottom: 10vw; }
+  .clone-header { margin: 6vw 0 3vw; }
+  .clone-title { font-size: 14vw; }
+  .clone-desc-top { font-size: 3.5vw; width: 90%; margin: 2vw auto 0; }
+  
+  .clone-item {
+    width: 90%;
+    border-radius: 2vw;
+    top: 15vw; /* Adjust sticky top offset */
+    max-height: 80vh; /* Ensure card doesn't exceed viewport */
+    overflow-y: auto; /* Allow scroll inside card if super tall */
+  }
+  
+  .clone-content {
+    flex-direction: column;
+    gap: 2vw;
+    padding: 3vw;
+    height: auto;
+  }
+  
+  .clone-img-box {
+    width: 100%;
+    flex: 0 0 auto;
+    height: 35vw; /* Fixed small height for images */
+    border-radius: 2vw;
+    border-width: 0.8vw;
+  }
+  
+  .clone-text-box {
+    margin-top: 0;
+  }
+  
+  .clone-text-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1vw;
+    margin-bottom: 2vw;
+  }
+  
+  .clone-item-title {
+    font-size: 6vw;
+    white-space: normal;
+  }
+  
+  .clone-item-desc {
+    font-size: 3vw;
+    margin-top: 1vw;
+    width: 100%;
+    line-height: 1.4;
+  }
+  
+  .clone-view-btn {
+    width: 100%;
+    margin-top: 3vw;
+    padding: 2vw 0;
+    font-size: 3.5vw;
+    position: static;
+  }
+}
+
+/* Specific tweaks for very small screens */
+@media (max-width: 389px) {
+  .clone-title { font-size: 16vw; }
+  .clone-img-box { height: 35vw; }
+  .clone-item { top: 16vw; }
 }

@@ -6,7 +6,7 @@
     align-items: center;
     justify-content: center;
     text-align: center;
-    padding: 300px 0;
+    padding: 15.6vw 0; /* 300px / 1920px */
     position: relative;
     overflow: hidden;
 }
@@ -18,7 +18,7 @@
 
 .roles-title {
     font-family: 'Anton', 'Impact', sans-serif;
-    font-size: 260px;
+    font-size: 13.5vw; /* 260px / 1920px */
     line-height: 1.1;
     color: #FFFFFF;
     text-transform: uppercase;
@@ -29,13 +29,13 @@
 .icon-container {
     display: inline-block;
     vertical-align: middle;
-    margin-right: 20px;
-    margin-bottom: 20px;
+    margin-right: 1.04vw;
+    margin-bottom: 1.04vw;
     position: absolute;
     top: 2%;
     left: 7%;
-    width: 300px;
-    height: 300px;
+    width: 15.6vw; /* 300px / 1920px */
+    height: 15.6vw;
     transform: rotate(-10deg);
 }
 
@@ -68,13 +68,30 @@
 }
 
 
-@media (max-width: 768px) {
-    .roles-title {
-        font-size: 80px;
-    }
-    
-    .icon-container {
-        width: 100px;
-        height: 100px;
-    }
+/* Desktop */
+@media (min-width: 1280px) and (max-width: 1400px) {
+    .roles-section { padding: 13vw 0; }
+    /* .roles-title { font-size: 220px; } -> Handled by vw */
+    .icon-container { width: 13vw; height: 13vw; left: 5%; }
+}
+
+/* Tablet */
+@media (min-width: 768px) and (max-width: 1279px) {
+    .roles-section { padding: 15vw 0; }
+    /* .roles-title { font-size: 150px; } -> Handled by vw */
+    .icon-container { width: 15vw; height: 15vw; top: 5%; left: 5%; }
+}
+
+/* Mobile Large */
+@media (min-width: 390px) and (max-width: 767px) {
+    .roles-section { padding: 15vw 0; }
+    .roles-title { font-size: 18vw; }
+    .icon-container { width: 25vw; height: 25vw; top: 5vw; left: 5vw; position: relative; margin-bottom: -10vw; }
+}
+
+/* Mobile */
+@media (max-width: 389px) {
+    .roles-section { padding: 15vw 0; }
+    .roles-title { font-size: 18vw; }
+    .icon-container { width: 25vw; height: 25vw; top: 5vw; left: 5vw; position: relative; margin-bottom: -10vw; }
 }

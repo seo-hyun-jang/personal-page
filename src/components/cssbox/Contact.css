@@ -49,11 +49,11 @@
 
 .contact-title {
   font-family: 'Anton', sans-serif;
-  font-size: 400px;
+  font-size: 21vw; /* 400px / 1920px */
   color: #fff;
   margin: 0;
   line-height: 1;
-  letter-spacing: -2px;
+  letter-spacing: -0.1vw;
   
 }
 
@@ -191,10 +191,58 @@
 }
 
 @media (max-width: 1400px) {
-  .contact-title { font-size: 200px; }
+  /* Taken care of by vw units */
 }
 
 @media (max-width: 1024px) {
-  .contact-title { font-size: 150px; }
-  .contact-char-container { width: 220px; height: 220px; }
+  .contact-char-container { width: 25vw; height: 25vw; }
+}
+
+/* Desktop */
+@media (min-width: 1280px) and (max-width: 1400px) {
+    .speech-bubble-wrapper { right: -75%; margin-right: 0; }
+}
+
+/* Tablet */
+@media (min-width: 768px) and (max-width: 1279px) {
+    .contact-container { padding: 15vw 4vw; }
+    .more-info-badge { width: 25vw; margin-bottom: 15vw; }
+    
+    .speech-bubble-wrapper { margin-right: 0; right: 0; margin-bottom: -5vw; }
+    .speech-bubble-bg { width: 45vw; }
+    .bubble-text { font-size: 4vw; top: 35%; }
+    
+    .contact-char-container { width: 35vw; height: 35vw; }
+}
+
+/* Mobile Large */
+@media (min-width: 390px) and (max-width: 767px) {
+    .contact-container { padding: 10vw 4vw; }
+    .more-info-badge { width: 40vw; margin-bottom: 10vw; }
+    .contact-subtitle { font-size: 4vw; margin-top: 2vw; }
+    
+    .star-icon { width: 8vw; }
+    .star-1 { top: 10%; }
+    .star-2 { top: 30%; left: 15%; }
+    
+    .speech-bubble-wrapper { margin-right: 0; margin-bottom: -5vw; transform: translateX(-2vw); }
+    .speech-bubble-bg { width: 60vw; }
+    .bubble-text { font-size: 5vw; top: 38%; }
+    
+    .contact-char-container { width: 50vw; height: 50vw; }
+    .contact-footer { bottom: 5%; }
+}
+
+/* Mobile */
+@media (max-width: 389px) {
+    .contact-container { padding: 10vw 4vw; }
+    .more-info-badge { width: 45vw; margin-bottom: 10vw; }
+    .contact-subtitle { font-size: 4.5vw; }
+    
+    .speech-bubble-wrapper { margin-bottom: -4vw; transform: translateX(-2vw); }
+    .speech-bubble-bg { width: 65vw; }
+    .bubble-text { font-size: 5.5vw; top: 38%; }
+    
+    .contact-char-container { width: 55vw; height: 55vw; }
+    .contact-footer { bottom: 5%; }
 }

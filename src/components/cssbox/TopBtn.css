@@ -1,12 +1,12 @@
 .fixed-btn-container {
   position: fixed;
-  right: 60px;
-  bottom: 50px;
+  right: 3.125vw; /* 60px */
+  bottom: 2.6vw; /* 50px */
   z-index: 1000;
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 24px;
+  gap: 1.25vw; /* 24px */
 }
 
 .play-btn {
@@ -21,8 +21,8 @@
 }
 
 .play-btn img {
-  width: 60px;
-  height: 60px;
+  width: 3.125vw; /* 60px */
+  height: 3.125vw;
   display: block;
 }
 
@@ -42,7 +42,7 @@
   padding: 0;
   transition: all 0.3s ease-in-out;
   font-family: 'Montserrat', sans-serif;
-  font-size: 24px;
+  font-size: 1.25vw; /* 24px */
   color: #1573FF;
   font-weight: 600;
   display: flex;
@@ -51,16 +51,16 @@
 }
 
 .top-btn img {
-  width: 60px;
+  width: 3.125vw; /* 60px */
   height: auto;
   display: block;
-  padding-bottom: 10px;
+  padding-bottom: 0.52vw; /* 10px */
 }
 
 .top-btn:hover {
-  transform: translateY(-8px);
+  transform: translateY(-0.4vw);
 }
 
 .top-btn:active {
-  transform: scale(0.9) translateY(-4px);
+  transform: scale(0.9) translateY(-0.2vw);
 }

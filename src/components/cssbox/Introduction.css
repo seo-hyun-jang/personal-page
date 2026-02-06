@@ -231,26 +231,82 @@
 
 
 @media (max-width: 1024px) {
-  .intro-title {
-    font-size: 100px;
-  }
+  .intro-title { font-size: 100px; }
+  .intro-profile-area { flex-direction: column; align-items: center; width: 100%; gap: 100px; }
+  .intro-text-box { text-align: center; padding-top: 0; }
+  .intro-hobby-area { text-align: center; }
+  .hobby-grid { grid-template-columns: repeat(2, 1fr); }
+  .star-char { left: -100px; }
+}
 
-  .intro-profile-area {
-    flex-direction: column;
-    align-items: center;
-    width: 100%;
-  }
+/* Desktop */
+@media (min-width: 1280px) and (max-width: 1400px) {
+  .intro-title { font-size: 300px; }
+  .intro-header-icon { margin-bottom: 250px; }
+  .intro-title-group { margin: 250px auto 60px; }
+}
 
-  .intro-text-box {
-    text-align: center;
-    padding-top: 0;
-  }
+/* Tablet */
+@media (min-width: 768px) and (max-width: 1279px) {
+    .intro-title { font-size: 200px; }
+    .intro-header-icon { margin-bottom: 200px; }
+    .intro-title-group { margin: 200px auto 50px; }
+    
+    .intro-profile-area { gap: 80px; margin-bottom: 100px; }
+    .profile-img { width: 380px; height: 480px; }
+    .star-char { width: 280px; bottom: -100px; left: -100px; }
+    
+    .profile-name { font-size: 50px; }
+    .profile-role { font-size: 16px; margin-bottom: 30px; }
+    .keyword-label { font-size: 32px; }
+    .keyword-list { font-size: 16px; }
+    
+    .hobby-title { font-size: 40px; }
+    .hobby-grid { flex-wrap: wrap; }
+    .hobby-item { flex: 0 0 45%; }
+}
 
-  .intro-hobby-area {
-    text-align: center;
-  }
+/* Mobile Large */
+@media (min-width: 390px) and (max-width: 767px) {
+    .intro-header-icon { margin-bottom: 150px; }
+    .intro-header-icon img { width: 200px; }
+    
+    .intro-title-group { margin: 150px auto 40px; }
+    .intro-title { font-size: 100px; }
+    
+    .intro-profile-area { gap: 60px; margin-bottom: 80px; }
+    .profile-img { width: 100%; max-width: 320px; height: auto; }
+    .star-char { width: 200px; bottom: -80px; left: -50px; }
+    
+    .intro-text-box { text-align: center; padding-top: 0; }
+    .profile-name { font-size: 40px; margin-bottom: 20px; }
+    .profile-role { font-size: 14px; margin-bottom: 30px; }
+    .keyword-label { font-size: 28px; }
+    .keyword-list { font-size: 14px; display: flex; flex-wrap: wrap; justify-content: center; gap: 5px; }
 
-  .hobby-grid {
-    grid-template-columns: repeat(2, 1fr);
-  }
+    .hobby-title { font-size: 32px; text-align: center; margin-left: 0; }
+    .hobby-grid { flex-direction: column; align-items: center; min-height: auto; gap: 40px; }
+    .hobby-item { flex: 0 0 100%; width: 100%; max-width: 300px; }
+    .hobby-name { margin-top: -30px; font-size: 16px; }
+}
+
+/* Mobile */
+@media (max-width: 389px) {
+    .intro-header-icon { margin-bottom: 100px; }
+    .intro-header-icon img { width: 150px; }
+    
+    .intro-title-group { margin: 100px auto 30px; }
+    .intro-title { font-size: 70px; }
+    .intro-subtitle { font-size: 14px; margin-left: 0; }
+    
+    .intro-profile-area { gap: 40px; margin-bottom: 60px; }
+    .profile-img { width: 100%; max-width: 280px; }
+    .star-char { width: 150px; bottom: -60px; left: -30px; }
+    
+    .profile-name { font-size: 32px; }
+    .keyword-label { font-size: 24px; }
+    
+    .hobby-title { font-size: 28px; }
+    .hobby-grid { flex-direction: column; gap: 30px; }
+    .hobby-item { width: 100%; }
 }

@@ -1,15 +1,15 @@
-
 .makeup-section {
   position: relative;
   width: 100%;
-  height: 100vh;          
+  height: 100vh;
   overflow: hidden;
   padding-top: 200px;
 }
 
+/* ---------- TEXT ---------- */
 
 .makeup-textBox {
-  position: absolute;     
+  position: absolute;
   top: 40%;
   left: 50%;
   transform: translate(-50%, -50%);
@@ -21,11 +21,10 @@
 
 .makeup-title {
   font-family: 'Anton', sans-serif;
-  font-size: 250px;
+  font-size: 13vw; /* 250px / 1920px */
   white-space: nowrap;
   color: var(--title-color);
   line-height: 1;
-  transition: color var(--transition-speed) ease;
 }
 
 .makeup-desc {
@@ -34,11 +33,10 @@
   font-size: 20px;
   line-height: 1.1;
   color: var(--sub-text-color);
-  font-weight: 400;
   letter-spacing: -1px;
-  transition: color var(--transition-speed) ease;
 }
 
+/* ---------- PHOTO (DESKTOP) ---------- */
 
 .photo-viewport {
   position: absolute;
@@ -57,7 +55,6 @@
   gap: 140px;
   padding-bottom: 200px;
 }
-
 
 .photo-col.left {
   transform: translateX(-210px);
@@ -78,48 +75,41 @@
   height: 100%;
   object-fit: cover;
   border-radius: 20px;
-  transition: transform 0.3s ease;
 }
 
-.photo-card img:hover {
-  transform: scale(1.05);
+/* ========================= */
+/* ===== RESPONSIVE ======= */
+/* ========================= */
+
+/* Tablet */
+@media (min-width: 768px) and (max-width: 1279px) {
+  .makeup-desc { font-size: 2vw; margin-top: 1.5vw; }
+  
+  .photo-col { gap: 8vw; padding-bottom: 15vw; }
+  .photo-col.left { transform: translateX(-15vw); }
+  .photo-col.right { transform: translateX(15vw); padding-top: 20vw; }
+  
+  .photo-card { width: 40vw; height: 50vw; }
 }
 
+/* Mobile Large & Mobile */
+@media (max-width: 767px) {
+  .makeup-desc { font-size: 3.5vw; margin-top: 2vw; width: 90%; margin-left: auto; margin-right: auto; }
+  
+  /* Keep structure but scale down significantly */
+  .photo-col { gap: 8vw; padding-bottom: 15vw; }
+  .photo-col.left { transform: translateX(-10vw); }
+  .photo-col.right { transform: translateX(10vw); padding-top: 20vw; }
+  
+  .photo-card { width: 35vw; height: 45vw; }
+  .photo-card img { border-radius: 2vw; }
+}
 
-@media (max-width: 1024px) {
-  .makeup-section {
-    height: auto;
-    overflow: visible;
-  }
-
-  .makeup-textBox {
-    position: relative;
-    transform: none;
-    top: auto;
-    left: auto;
-    margin-bottom: 80px;
-  }
-
-  .photo-viewport {
-    position: relative;
-    overflow: visible;
-  }
-
-  .photo-columns {
-    flex-direction: column;
-  }
-
-  .photo-col {
-    transform: none;
-    padding-top: 0;
-  }
-
-  .photo-card {
-    width: 100%;
-    height: auto;
-  }
-
-  .photo-card img {
-    height: auto;
-  }
+/* Mobile Small */
+@media (max-width: 389px) {
+  .photo-col { gap: 8vw; padding-bottom: 15vw; }
+  .photo-col.left { transform: translateX(-8vw); }
+  .photo-col.right { transform: translateX(8vw); padding-top: 15vw; }
+  
+  .photo-card { width: 38vw; height: 48vw; }
 }

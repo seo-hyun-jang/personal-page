@@ -9,7 +9,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    padding-top: 200px;
+    padding-top: 300px;
     padding-bottom: 200px;
     background: #1573FF;
     margin-top: -2px; 
@@ -27,9 +27,9 @@
 
 .history-title {
     font-family: 'Anton', sans-serif;
-    font-size: 100px;
+    font-size: 5.2vw; /* 100px / 1920px */
     line-height: 1;
-    margin-bottom:16px;
+    margin-bottom: 16px;
     
 }
 
@@ -45,8 +45,8 @@
 
 .history-slideshow-container {
     position: relative;
-    width: 800px; 
-    height: 600px;
+    width: 42vw; 
+    height: 31vw;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -57,13 +57,13 @@
 .history-year-text {
     position: absolute;
     font-family: 'Anton', sans-serif;
-    font-size: 500px;
+    font-size: 26vw; /* 500px / 1920px */
     color: #fff;
     z-index: 2;
     left: 54%;
     transform: translate(-50%, -33%);
     white-space: nowrap;
-    letter-spacing: 50px;
+    letter-spacing: 2.6vw;
     line-height: 1;
 }
 .history-bg-white{
@@ -116,26 +116,77 @@
 }
 
 
+@media (max-width: 1400px){
+    .history-section { padding-top: 300px;}
+}
+
+
 @media (max-width: 1024px) {
-    .history-title {
-        font-size: 80px;
+    .history-section { padding-top: 300px;}   
+    .history-slideshow-container { width: 100%; height: 50vw; }
+    .history-bg-shape { width: 90%; }
+    .history-photo { width: 30vw; height: 40vw; margin-top: -15vw; }
+    
+    .history-text-content { 
+        bottom: auto; 
+        top: 10%; 
+        width: 100%; 
+        left: 50%; 
+        transform: translateX(-50%); 
+        text-align: center;
+        max-width: 90%;
     }
     
-    .history-slideshow-container {
-        width: 100%;
-        height: 500px;
+    .history-char {
+        width: 20vw;
+        bottom: 5%;
+        right: 5%;
     }
+}
 
-    .history-year-text {
-        font-size: 200px;
-    }
+/* Tablet */
+@media (min-width: 768px) and (max-width: 1024px) {
+    /* Adjustments already covered by max-width: 1024px logic, can add specific tweaks here */
+    .history-section { padding-top: 15vw; padding-bottom: 15vw; }
+    .history-text-content { top: 15%; }
+}
 
-    .history-bg-shape {
-        width: 90%;
+/* Mobile Large */
+@media (min-width: 390px) and (max-width: 767px) {
+    .history-section { padding-top: 20vw; padding-bottom: 20vw; min-height: 60vh; }
+    
+    .history-title { margin-bottom: 2vw; }
+    .history-desc { font-size: 4vw; width: 90%; margin: 0 auto; }
+    
+    .history-text-content { top: 15%; }
+    
+    .history-slideshow-container { height: 60vw; margin-top: 15vw; }
+    .history-year-text { font-size: 25vw; letter-spacing: 2vw; left: 50%; }
+    
+    .history-photo { 
+        width: 40vw; 
+        height: 55vw; 
+        margin-top: 0; 
+        border: 2vw solid #fff; 
     }
+    
+    .history-char { width: 25vw; bottom: 5%; right: 5%; }
+    .history-bg-white { width: 300%; height: 20vw; }
+}
 
-    .history-photo {
-        width: 250px;
-        height: 350px;
-    }
+/* Mobile */
+@media (max-width: 389px) {
+    .history-section { padding-top: 20vw; padding-bottom: 20vw; min-height: 60vh; }
+    
+    .history-title { font-size: 15vw; }
+    .history-desc { font-size: 4.5vw; width: 95%; }
+    
+    .history-text-content { top: 15%; }
+    
+    .history-slideshow-container { height: 70vw; margin-top: 15vw; }
+    .history-year-text { font-size: 25vw; letter-spacing: 2vw; }
+    
+    .history-photo { width: 45vw; height: 60vw; margin-top: 0; border-width: 1.5vw; }
+    
+    .history-char { width: 25vw; bottom: 5%; right: 5%; }
 }

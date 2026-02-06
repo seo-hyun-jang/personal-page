@@ -18,12 +18,12 @@
     z-index: 12;
     text-align: center;
     color: var(--title-color);
-    font-size: 250px; 
+    font-size: 13vw; /* 250px / 1920px */
     font-weight: 900;
     line-height: 1;
     text-transform: uppercase;
     font-family: 'Anton', 'Impact', sans-serif; 
-    letter-spacing: -2px;
+    letter-spacing: -0.1vw;
     transition: color var(--transition-speed) ease;
 }
 
@@ -42,4 +42,32 @@
 .white-ball {
     background-color: #fff;
     transition: background-color var(--transition-speed) ease;
+}
+
+/* Desktop */
+@media (min-width: 1280px) and (max-width: 1400px) {
+    /* Heights etc handled by vw now or percentage */
+    .hero { height: 1100px; } /* Keep fixed height or switch to vh if preferred, but sticking to vw for text requested */
+    /* .hero-text { font-size: 200px; } -> Handled by base vw */
+}
+
+/* Tablet */
+@media (min-width: 768px) and (max-width: 1279px) {
+    .hero { height: 900px; }
+    .hero-text { font-size: 18vw; } 
+    .ball-container { transform: scale(0.8); }
+}
+
+/* Mobile Large */
+@media (min-width: 390px) and (max-width: 767px) {
+    .hero { height: 75vh; }
+    .hero-text { font-size: 20vw; }
+    .ball-container { transform: scale(0.6); }
+}
+
+/* Mobile */
+@media (max-width: 389px) {
+    .hero { height: 70vh; }
+    .hero-text { font-size: 22vw; }
+    .ball-container { transform: scale(0.5); }
 }

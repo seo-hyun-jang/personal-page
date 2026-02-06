@@ -14,9 +14,9 @@
 
 .qna-title {
   font-family: 'Anton', sans-serif;
-  font-size: 210px;
+  font-size: 11vw; /* 210px / 1920px */
   color: var(--title-color);
-  letter-spacing: -2px;
+  letter-spacing: -0.1vw;
   line-height: 1;
   white-space: nowrap;
   display: flex;
@@ -200,13 +200,59 @@
 }
 
 @media (max-width: 1400px) {
-  .qna-title {
-    font-size: 180px;
-  }
+  /* Removed specific font-size adjustments as vw handles scaling */
 }
 
 @media (max-width: 1024px) {
-  .qna-title {
-    font-size: 120px;
-  }
+  /* Removed specific font-size adjustments as vw handles scaling */
+}
+
+/* Desktop */
+@media (min-width: 1280px) and (max-width: 1400px) {
+    .qna-card { width: 28vw; height: 38vw; } /* Proportional scaling */
+}
+
+/* Tablet */
+@media (min-width: 768px) and (max-width: 1279px) {
+    .qna-section { padding: 10vw 0 15vw; }
+    .qna-subtitle { margin-bottom: 15vw; }
+    
+    .qna-card { width: 40vw; height: 55vw; } /* Larger relative size on tablet */
+    .qna-back-frame { padding: 4vw; }
+    .qna-q-icon { font-size: 6vw; }
+    .qna-question { font-size: 2.2vw; }
+    .qna-answer { font-size: 1.8vw; }
+    .qna-char-img { width: 15vw; }
+    
+    /* Disable shuffle animation */
+    .start-animation .qna-card:nth-child(n) { animation: none !important; opacity: 1 !important; transform: none !important; }
+}
+
+/* Mobile Large */
+@media (min-width: 390px) and (max-width: 767px) {
+    .qna-section { padding: 15vw 0 20vw; }
+    .qna-subtitle { font-size: 4vw; margin-bottom: 10vw; width: 90%; margin-left: auto; margin-right: auto; }
+    
+    .qna-cards-grid { transform: none; flex-direction: column; align-items: center; gap: 5vw; }
+    .qna-card { width: 70vw; height: 95vw; }
+    .qna-back-frame { padding: 6vw; }
+    .qna-q-icon { font-size: 10vw; }
+    .qna-question { font-size: 4vw; }
+    .qna-char-img { width: 25vw; }
+    .qna-answer { font-size: 3.5vw; }
+    
+    /* Disable shuffle animation */
+    .start-animation .qna-card:nth-child(n) { animation: none !important; opacity: 1 !important; transform: none !important; }
+}
+
+/* Mobile */
+@media (max-width: 389px) {
+    .qna-section { padding: 15vw 0 20vw; }
+    .qna-subtitle { font-size: 4.5vw; margin-bottom: 10vw; }
+    
+    .qna-cards-grid { transform: none; flex-direction: column; align-items: center; gap: 5vw; }
+    .qna-card { width: 80vw; height: 110vw; }
+    
+    /* Disable shuffle animation */
+    .start-animation .qna-card:nth-child(n) { animation: none !important; opacity: 1 !important; transform: none !important; }
 }

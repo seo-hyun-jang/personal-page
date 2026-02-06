@@ -31,16 +31,18 @@ export default function MakeupScroll() {
     const leftCol = leftColRef.current;
     const rightCol = rightColRef.current;
 
+    if (!section || !leftCol || !rightCol) return;
+
     const scrollLength =
       Math.max(leftCol.scrollHeight, rightCol.scrollHeight) -
       window.innerHeight;
 
     const tl = gsap.timeline({
       scrollTrigger: {
-        trigger: section,          
+        trigger: section,
         start: "top top",
         end: () => "+=" + scrollLength,
-        pin: true,                 
+        pin: true,
         scrub: 1,
         invalidateOnRefresh: true,
       },
@@ -57,10 +59,9 @@ export default function MakeupScroll() {
 
   return (
     <section className="makeup-section" ref={sectionRef}>
-      {}
       <div className="makeup-textBox">
         <TextAni>
-        <h2 className="makeup-title">MAKE UP</h2>
+          <h2 className="makeup-title">MAKE UP</h2>
         </TextAni>
         <p className="makeup-desc">
           메이크업 분야에서의 경험을 바탕으로<br />
