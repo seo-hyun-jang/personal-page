@@ -93,7 +93,7 @@ export default function IntroAnimation({ onComplete }) {
             justifyContent: "center",
             fontFamily: "Anton, sans-serif",
             fontSize: "200px",
-            letterSpacing: "0.25em",
+            letterSpacing: "0.1em",
             paddingLeft: "0.25em",
             color: "#000",
             whiteSpace: "nowrap",
