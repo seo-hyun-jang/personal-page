@@ -28,6 +28,23 @@ const Qna = () => {
   ];
 
   const [flippedCards, setFlippedCards] = useState({});
+  const [startAnimation, setStartAnimation] = React.useState(false);
+  const sectionRef = React.useRef(null);
+
+  React.useEffect(() => {
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        setStartAnimation(entry.isIntersecting);
+      },
+      { threshold: 0.1 }
+    );
+
+    if (sectionRef.current) {
+      observer.observe(sectionRef.current);
+    }
+
+    return () => observer.disconnect();
+  }, []);
 
   const handleCardClick = (id) => {
     setFlippedCards((prev) => ({
@@ -37,7 +54,7 @@ const Qna = () => {
   };
 
   return (
-    <section className="qna-section">
+    <section className="qna-section" ref={sectionRef}>
       <div className="qna-container">
         <TextAni>
         <h2 className="qna-title">QUESTIONS & ANSWERED</h2>
@@ -48,7 +65,7 @@ const Qna = () => {
           결과로 검증해온 답변입니다.
         </p>
 
-        <div className="qna-cards-grid">
+        <div className={`qna-cards-grid ${startAnimation ? 'start-animation' : ''}`}>
           {qnaData.map((item) => (
             <div
               key={item.id}
@@ -57,7 +74,6 @@ const Qna = () => {
             >
               <div className="qna-card-inner">
                 
-                {/* FRONT */}
                 <div className="qna-card-front">
                   <div className="qna-card-frame qna-front-frame">
                     <img
@@ -66,12 +82,10 @@ const Qna = () => {
                       className="qna-front-img"
                     />
                     <div className="qna-front-content">
-                      {/* 필요하면 앞면 텍스트 여기 */}
                     </div>
                   </div>
                 </div>
 
-                {/* BACK */}
                 <div className="qna-card-back">
                   <div className="qna-card-frame qna-back-frame">
                     <div className="qna-card-top">
