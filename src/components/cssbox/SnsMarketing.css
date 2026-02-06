@@ -65,13 +65,11 @@
     will-change: transform, opacity;
 }
 
-/* 스크롤 진입 시 */
 .sns-circle.is-visible {
     opacity: 1;
     transform: translateY(0px);
 }
 
-/* 기존 위치값은 그대로 */
 .sc1 { width: 700px; height: 700px; top: 5%; left: -21%; transition-delay: 0s; }
 .sc2 { width: 500px; height: 500px; top: 18%; left: 15%; transition-delay: 0.1s; }
 .sc3 { width: 650px; height: 650px; bottom: -140%; right: -20%; transition-delay: 0.2s; }

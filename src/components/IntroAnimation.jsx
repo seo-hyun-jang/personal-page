@@ -3,7 +3,6 @@ import { motion } from "framer-motion";
 
 const INTRO_CHAR_SVG = "/img/intro-char.svg";
 
-// 위 → 아래
 const WAVE_COLORS = [
   "#9ABEFF",
   "#4F8DFF",
@@ -36,7 +35,6 @@ export default function IntroAnimation({ onComplete }) {
         background: stage === "statement" ? "#000" : "#fff",
       }}
     >
-      {/* ===== WAVES ===== */}
       {(stage === "waves" ||
         stage === "name" ||
         stage === "blackhole" ||
@@ -72,7 +70,6 @@ export default function IntroAnimation({ onComplete }) {
           />
         ))}
 
-      {/* ===== NAME ===== */}
       {(stage === "name" || isBlackhole) && (
         <motion.h1
           initial={{ y: 80, opacity: 0 }}
@@ -104,7 +101,6 @@ export default function IntroAnimation({ onComplete }) {
         </motion.h1>
       )}
 
-      {/* ===== CHARACTER ===== */}
       {(stage === "name" || isBlackhole) && (
         <motion.img
           src={INTRO_CHAR_SVG}
@@ -136,7 +132,6 @@ export default function IntroAnimation({ onComplete }) {
         />
       )}
 
-      {/* ===== BLACKHOLE ===== */}
       {(stage === "blackhole" || stage === "explode") && (
         <motion.div
           initial={{ scale: 0 }}
@@ -167,7 +162,6 @@ export default function IntroAnimation({ onComplete }) {
         </motion.div>
       )}
 
-      {/* ===== STATEMENT ===== */}
       {stage === "statement" && (
         <motion.div
           initial={{ opacity: 0 }}

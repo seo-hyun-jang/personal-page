@@ -28,9 +28,8 @@ export default function AboutMe1() {
           {barIcons.map((src, index) => (
             <img key={`first-${index}`} src={src} alt={`icon-${index + 1}`} className="bar-icon" />
           ))}
-          {}
           {barIcons.map((src, index) => (
-            <img key={`second-${index}`} src={src} alt={`icon-dup-${index + 1}`} className="bar-icon" />
+            <img key={`first-${index}`} src={src} alt={`icon-${index + 1}`} className="bar-icon" />
           ))}
         </div>
       </div>

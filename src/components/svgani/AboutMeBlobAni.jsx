@@ -11,7 +11,7 @@ const AboutMeBlobAni = ({ className }) => {
         shapeRendering="geometricPrecision"
       >
         <g>
-          {}
+
           <path
             fill="#1573FF"
             d="M334.36,803.29c-4.77,0-9.54,0-14.31,0c-6.44-0.9-12.9-1.69-19.32-2.7c-29.61-4.67-58.95-10.93-83.25-29.06

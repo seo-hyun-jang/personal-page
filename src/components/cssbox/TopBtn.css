@@ -21,7 +21,7 @@
 }
 
 .play-btn img {
-  width: 60px; /* Same size as top button icon */
+  width: 60px;
   height: 60px;
   display: block;
 }
@@ -35,7 +35,6 @@
 }
 
 .top-btn {
-  /* Removed fixed positioning since container handles it */
   position: static; 
   background: none;
   border: none;

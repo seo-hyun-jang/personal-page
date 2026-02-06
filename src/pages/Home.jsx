@@ -19,7 +19,6 @@ export default function Home({ introDone }) {
   return (
     <div className="relative">
 
-      {/* ✅ introDone 되기 전엔 Hero를 '렌더하지 않음' (흰 화면 덮는 문제 방지) */}
       <AnimatePresence mode="wait">
         {introDone && (
           <motion.div
@@ -36,10 +35,6 @@ export default function Home({ introDone }) {
         )}
       </AnimatePresence>
 
-      {/* ===== 이후 섹션들 =====
-          ✅ introDone 전에도 아래 섹션들이 보이면 싫으면, 이 블록도 introDone 조건 걸어라.
-          (보통은 인트로 동안은 전체를 가리는 게 맞아서 App에서 안 보이게 처리하는 걸 추천)
-      */}
       <Roles />
       <UxuiSpoiler />
       <SnsMarkerting />

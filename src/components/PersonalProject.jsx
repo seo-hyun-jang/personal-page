@@ -37,7 +37,6 @@ UX와 UI 전반을 직접 설계하며, 기획 단계부터 화면 구조와 인
 
       <div className="personal-content-wrapper">
         <div className="personal-project-display">
-          {}
           <div className="personal-image-box">
             <img 
               src={project.image}
@@ -46,10 +45,8 @@ UX와 UI 전반을 직접 설계하며, 기획 단계부터 화면 구조와 인
             />
           </div>
 
-          {}
           <div className="personal-info-box">
             
-            {}
             <div className="personal-char-container">
                <img src="/img/personal-char.svg" alt="" className="personal-char-img" />
             </div>

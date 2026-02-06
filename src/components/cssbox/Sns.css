@@ -76,10 +76,8 @@
   transition: color var(--transition-speed) ease;
 }
 
-/* === 핵심 수정 영역 === */
-/* clone 카드와 동일한 배경/톤 */
 .sns-stats-card {
-  background: var(--card-bg); /* ✅ clone과 동일 */
+  background: var(--card-bg);
   border-radius: 20px;
   width: 846px;
   max-width: 100%;

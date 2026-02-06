@@ -49,7 +49,6 @@ export default function Contact() {
         </header>
       </div>
 
-      {}
       <div className="contact-footer">
         <div className="speech-bubble-wrapper">
           <img src="/img/contact-textbollun.svg" alt="speech bubble" className="speech-bubble-bg" />

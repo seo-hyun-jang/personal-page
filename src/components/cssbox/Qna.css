@@ -46,7 +46,7 @@
   perspective: 1500px;
   cursor: pointer;
   flex-shrink: 0;
-  opacity: 0; /* Hidden until animation starts */
+  opacity: 0;
   transition: opacity 0.5s;
 }
 

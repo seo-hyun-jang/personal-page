@@ -14,12 +14,10 @@ export default function Introduction() {
   ];
   return (
     <section className="intro-section">
-      {}
       <div className="intro-header-icon">
         <MoreInfoAni className="more-info-icon" />
       </div>
 
-      {}
       <div className="intro-blue-box">
         <IntroBlobAni className="bg-blob" />
         <div className="intro-title-group">
@@ -32,7 +30,6 @@ export default function Introduction() {
           </div>
         </div>
 
-        {}
         <div className="intro-profile-area">
           <div className="intro-photo-box">
             <img src="/img/who-am-i-me.svg" alt="Profile" className="profile-img" />
@@ -54,7 +51,6 @@ export default function Introduction() {
           </div>
         </div>
 
-        {}
         <div className="intro-hobby-area">
           <h3 className="hobby-title">MY HOBBY</h3>
           <div className="hobby-grid">

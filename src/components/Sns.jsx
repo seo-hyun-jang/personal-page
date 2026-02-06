@@ -93,7 +93,6 @@ const Sns = () => {
           <a href="https://www.youtube.com/channel/UCrQDh5l_3JcfIxh58nFQJPQ?si=cquTmYYML3nAV7GW" target="_blank" rel="noopener noreferrer" className="sns-view-project-btn">VIEW CHANNEL</a>
         </div>
 
-        {}
         <div className="sns-column" data-platform="instagram">
           <div className="sns-platform-header">
             <img src="/img/sns-instagram.png" alt="Instagram" className="sns-platform-logo" />

@@ -69,7 +69,6 @@ export default function MakeupScroll() {
         </p>
       </div>
 
-      {}
       <div className="photo-viewport">
         <div className="photo-columns">
           <div className="photo-col left" ref={leftColRef}>

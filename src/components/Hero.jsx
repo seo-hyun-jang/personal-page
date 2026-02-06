@@ -145,14 +145,12 @@ export default function Hero() {
 
   return (
     <section className="hero" ref={containerRef}>
-      {}
       <div className="hero-text" style={{ pointerEvents: 'none', display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
         <TextAni delay="0.1s">TO DESIGN,</TextAni>
         <TextAni delay="0.3s">EDIT,</TextAni>
         <TextAni delay="0.5s">AND GROW</TextAni>
       </div>
 
-      {}
       {INITIAL_BALLS.map((ball, index) => (
         <div 
           key={ball.id}

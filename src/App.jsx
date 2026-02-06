@@ -14,12 +14,10 @@ export default function App() {
   return (
     <div className="relative w-full h-screen overflow-hidden">
 
-      {/* ===== INTRO : 최상단 ===== */}
       {!introDone && (
         <IntroAnimation onComplete={() => setIntroDone(true)} />
       )}
 
-      {/* ===== MAIN CONTENT : 인트로 끝난 후에만 렌더 ===== */}
       {introDone && (
         <Layout>
           <Routes>

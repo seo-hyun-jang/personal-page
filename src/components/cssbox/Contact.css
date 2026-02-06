@@ -165,9 +165,6 @@
   animation: contactFrameToggle1 0.6s step-end infinite;
 }
 
-/* .contact-char.frame-2 {
-  animation: contactFrameToggle2 0.6s step-end infinite;
-} */
 
 .contact-char.frame-3 {
   margin-bottom: 10px;
@@ -178,11 +175,6 @@
   0%, 49% { visibility: visible; }
   50%, 100% { visibility: hidden; }
 }
-
-/* @keyframes contactFrameToggle2 {
-  0%, 49% { visibility: hidden; }
-  50%, 100% { visibility: visible; }
-} */
 
 @keyframes contactFrameToggle3 {
   0%, 49% { visibility: hidden; }
