@@ -11,6 +11,23 @@ const ContactWaveAni = ({ className }) => {
         className="wave-svg-container"
       >
 
+        <rect width="1920" height="3321" fill="#1573FF" />
+
+        <path className="mid-wave-path" fill="#81B3FF">
+          <animate
+            attributeName="d"
+            dur="8s"
+            repeatCount="indefinite"
+            calcMode="spline"
+            keySplines="0.4 0 0.6 1; 0.4 0 0.6 1"
+            values="
+              M 0 1450 C 480 1380, 1440 1520, 1920 1450 V 3321 H 0 Z;
+              M 0 1450 C 480 1520, 1440 1380, 1920 1450 V 3321 H 0 Z;
+              M 0 1450 C 480 1380, 1440 1520, 1920 1450 V 3321 H 0 Z
+            "
+          />
+        </path>
+
         <path fill="#D0E3FF">
           <animate
             attributeName="d"
