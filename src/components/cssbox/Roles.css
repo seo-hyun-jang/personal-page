@@ -14,6 +14,9 @@
 .roles-content {
     position: relative;
     z-index: 2;
+    justify-content: center; 
+    display: flex;
+    flex-direction: column;
 }
 
 .roles-title {
@@ -24,6 +27,8 @@
     text-transform: uppercase;
     margin: 0;
     letter-spacing: -2px;
+    white-space: nowrap;  
+
 }
 
 .icon-container {
@@ -75,23 +80,14 @@
     .icon-container { width: 13vw; height: 13vw; left: 5%; }
 }
 
-/* Tablet */
-@media (min-width: 768px) and (max-width: 1279px) {
+/* Tablet & Mobile (Extended) */
+@media (min-width: 390px) and (max-width: 1279px) {
     .roles-section { padding: 15vw 0; }
-    /* .roles-title { font-size: 150px; } -> Handled by vw */
-    .icon-container { width: 15vw; height: 15vw; top: 5%; left: 5%; }
+    .roles-title { font-size: 13.5vw; }
+    .icon-container { width: 15vw; height: 15vw; top: 5%; left: 5%; position: absolute; margin-bottom: 0; }
 }
 
-/* Mobile Large */
-@media (min-width: 390px) and (max-width: 767px) {
-    .roles-section { padding: 15vw 0; }
-    .roles-title { font-size: 18vw; }
-    .icon-container { width: 25vw; height: 25vw; top: 5vw; left: 5vw; position: relative; margin-bottom: -10vw; }
-}
-
-/* Mobile */
+/* Small Mobile */
 @media (max-width: 389px) {
-    .roles-section { padding: 15vw 0; }
-    .roles-title { font-size: 18vw; }
-    .icon-container { width: 25vw; height: 25vw; top: 5vw; left: 5vw; position: relative; margin-bottom: -10vw; }
+    /* Fallback/Empty */
 }

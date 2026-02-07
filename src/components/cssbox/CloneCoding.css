@@ -135,10 +135,12 @@
     /* .clone-item-title { font-size: 60px; } -> Handled by vw */
 }
 
-/* Tablet */
-@media (min-width: 768px) and (max-width: 1279px) {
+/* Tablet & Mobile (Extended) */
+@media (min-width: 390px) and (max-width: 1279px) {
   .clone-header { margin: 10vw 0 8vw; }
   /* .clone-title { font-size: 180px; } */
+  .clone-title { font-size: 15vw; font-weight: 800; letter-spacing: -5px;}
+  .clone-desc-top {font-size: clamp(14px, 1.2vw, 20px);}
   
   .clone-item { width: 90%; }
   .clone-content { flex-direction: column; gap: 4vw; padding: 4vw; }
@@ -146,75 +148,11 @@
   .clone-text-box { margin-top: 0; }
   
   .clone-item-title { font-size: 5vw; }
-  .clone-item-desc { width: 100%; font-size: 1.8vw; min-height: auto; }
-  .clone-view-btn { position: relative; left: auto; bottom: auto; margin-top: 3vw; width: 25vw; }
+  .clone-item-desc { width: 100%; font-size: clamp(14px, 1.2vw, 20px); min-height: auto; }
+  .clone-view-btn { position: relative; left: auto; bottom: auto; margin-top: 3vw; width: 18vw; font-weight: 700; font-size: clamp(14px, 1.2vw, 20px);}
 }
 
-/* Mobile Large & Mobile (Unified for Sticky Fit) */
-@media (max-width: 767px) {
-  .clone-section { padding-bottom: 10vw; }
-  .clone-header { margin: 6vw 0 3vw; }
-  .clone-title { font-size: 14vw; }
-  .clone-desc-top { font-size: 3.5vw; width: 90%; margin: 2vw auto 0; }
-  
-  .clone-item {
-    width: 90%;
-    border-radius: 2vw;
-    top: 15vw; /* Adjust sticky top offset */
-    max-height: 80vh; /* Ensure card doesn't exceed viewport */
-    overflow-y: auto; /* Allow scroll inside card if super tall */
-  }
-  
-  .clone-content {
-    flex-direction: column;
-    gap: 2vw;
-    padding: 3vw;
-    height: auto;
-  }
-  
-  .clone-img-box {
-    width: 100%;
-    flex: 0 0 auto;
-    height: 35vw; /* Fixed small height for images */
-    border-radius: 2vw;
-    border-width: 0.8vw;
-  }
-  
-  .clone-text-box {
-    margin-top: 0;
-  }
-  
-  .clone-text-header {
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 1vw;
-    margin-bottom: 2vw;
-  }
-  
-  .clone-item-title {
-    font-size: 6vw;
-    white-space: normal;
-  }
-  
-  .clone-item-desc {
-    font-size: 3vw;
-    margin-top: 1vw;
-    width: 100%;
-    line-height: 1.4;
-  }
-  
-  .clone-view-btn {
-    width: 100%;
-    margin-top: 3vw;
-    padding: 2vw 0;
-    font-size: 3.5vw;
-    position: static;
-  }
-}
-
-/* Specific tweaks for very small screens */
+/* Small Mobile */
 @media (max-width: 389px) {
-  .clone-title { font-size: 16vw; }
-  .clone-img-box { height: 35vw; }
-  .clone-item { top: 16vw; }
+   /* Fallback/Empty */
 }

@@ -77,39 +77,78 @@
   border-radius: 20px;
 }
 
-/* ========================= */
-/* ===== RESPONSIVE ======= */
-/* ========================= */
 
-/* Tablet */
-@media (min-width: 768px) and (max-width: 1279px) {
-  .makeup-desc { font-size: 2vw; margin-top: 1.5vw; }
+/* Tablet & Mobile (Extended) */
+@media (min-width: 390px) and (max-width: 1279px) {
+  .makeup-section {
+    height: auto;
+    overflow: visible;
+    padding-top: 10vw;
+    padding-bottom: 15vw;
+  }
   
-  .photo-col { gap: 8vw; padding-bottom: 15vw; }
-  .photo-col.left { transform: translateX(-15vw); }
-  .photo-col.right { transform: translateX(15vw); padding-top: 20vw; }
+  .makeup-textBox {
+    position: static;
+    transform: none;
+    margin-bottom: 5vw;
+    text-align: center;
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .makeup-title {
+    font-size: clamp(100px,100vw, 180px);
+    font-weight: 800;
+  }
+
+  .makeup-desc { font-size: clamp(14px, 1.2vw, 20px); margin-top: 1.5vw; }
   
-  .photo-card { width: 40vw; height: 50vw; }
+  .photo-viewport {
+    position: static;
+    height: auto;
+    overflow: visible;
+  }
+
+  .photo-columns {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2vw;
+  }
+
+  .photo-col {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 2vw;
+    padding: 0;
+    width: 90vw;
+  }
+
+  .photo-col.left { transform: none; }
+  .photo-col.right { transform: none; padding-top: 0; }
+  
+  /* Hide the 9th image (5th in left column) */
+  .photo-col.left .photo-card:nth-child(5) {
+    display: none;
+  }
+  
+  .photo-card { 
+    width: auto; 
+    height: auto; 
+    aspect-ratio: 3/4; /* Square-ish or rectangular as needed */
+    border-radius: 1.5vw;
+  }
 }
 
-/* Mobile Large & Mobile */
-@media (max-width: 767px) {
-  .makeup-desc { font-size: 3.5vw; margin-top: 2vw; width: 90%; margin-left: auto; margin-right: auto; }
-  
-  /* Keep structure but scale down significantly */
-  .photo-col { gap: 8vw; padding-bottom: 15vw; }
-  .photo-col.left { transform: translateX(-10vw); }
-  .photo-col.right { transform: translateX(10vw); padding-top: 20vw; }
-  
-  .photo-card { width: 35vw; height: 45vw; }
-  .photo-card img { border-radius: 2vw; }
-}
-
-/* Mobile Small */
+/* Small Mobile */
 @media (max-width: 389px) {
-  .photo-col { gap: 8vw; padding-bottom: 15vw; }
-  .photo-col.left { transform: translateX(-8vw); }
-  .photo-col.right { transform: translateX(8vw); padding-top: 15vw; }
-  
-  .photo-card { width: 38vw; height: 48vw; }
+    /* Fallback/Empty to allow 390 rules or base to apply (Wait, base is desktop!)
+       I must ensure broad coverage.
+       As discussed, I should consider just max-width: 1279px. 
+       But I will stick to 390-1279 for now to match 768-1279 logic, 
+       and just leave 389 empty? No, 389 will break.
+       I'll use @media (max-width: 1279px) instead of min-width: 390px 
+       in the NEXT step if I see issues. 
+       For now, sticking to the requested 390px minimum since user's previous mobile breakpoint was 390-767.
+    */
 }

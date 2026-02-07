@@ -111,7 +111,7 @@
   z-index: 10;                /* 🔥 원 위 */
   text-align: center;
   font-family: 'Anton', 'Impact', sans-serif;
-  font-size: clamp(48px, 12vw, 240px);
+  font-size: clamp(50px, 12vw, 240px);
   line-height: 1;
   letter-spacing: -2px;
   color: #ffffff;
@@ -198,131 +198,10 @@
     }
   }
 
-  .sns-title {
-    font-size: clamp(42px, 10vw, 160px);
-  }
-
-
-@media (max-width: 768px) {
-  /* 모바일 감산 */
-  }
-
-  .sns-title {
-    font-size: clamp(36px, 9vw, 80px);
-  }
-
-@media (max-width: 768px) {
-
-  .sc1 {
-    width: clamp(160px, 40vw, 260px);
-    height: clamp(160px, 40vw, 260px);
-    top: 20%;
-    left: -20%;
-  }
-
-  .sc2 {
-    width: clamp(100px, 26vw, 180px);
-    height: clamp(100px, 26vw, 180px);
-    top: 50%;
-    left: 10%;
-  }
-
-  .sc3 {
-    width: clamp(180px, 42vw, 300px);
-    height: clamp(180px, 42vw, 300px);
-    bottom: -45%;
-    right: -30%;
-  }
-
-  .sc4 {
-    width: clamp(160px, 36vw, 260px);
-    height: clamp(160px, 36vw, 260px);
-    top: 15%;
-    right:11%;
-  }
-
-  .sc5 {
-    width: clamp(120px, 28vw, 200px);
-    height: clamp(120px, 28vw, 200px);
-    top: 65%;
-    right: 41%;
-  }
-
-  .sc6 {
-    width: clamp(60px, 14vw, 100px);
-    height: clamp(60px, 14vw, 100px);
-    top: 80%;
-    right: 8%;
-  }
-
-  .sc7 {
-    width: clamp(50px, 18vw, 120px);
-    height: clamp(50px, 18vw, 120px);
-    top: 90%;
-    left: -12%;
-  }
-}
-
-@media (max-width: 480px) {
-
-  .sc1 {
-    width: clamp(120px, 30vw, 195px);
-    height: clamp(120px, 30vw, 195px);
-    top: 45%;
-    left: -17%;
-  }
-
-  .sc2 {
-    width: clamp(75px, 19.5vw, 135px);
-    height: clamp(75px, 19.5vw, 135px);
-    top: 80%;
-    left: 10%;
-  }
-
-  .sc3 {
-    width: clamp(135px, 31.5vw, 225px);
-    height: clamp(135px, 31.5vw, 225px);
-    bottom: -33%;
-    right: -18%;
-  }
-
-  .sc4 {
-    width: clamp(120px, 27vw, 195px);
-    height: clamp(120px, 27vw, 195px);
-    top: 47%;
-    right: 23%;
-  }
-
-  .sc5 {
-    width: clamp(90px, 21vw, 150px);
-    height: clamp(90px, 21vw, 150px);
-    top: 65%;
-    right: 50%;
-  }
-
-  .sc6 {
-    width: clamp(45px, 10.5vw, 75px);
-    height: clamp(45px, 10.5vw, 75px);
-    top: 80%;
-    right: 14%;
-  }
-
-  .sc7 {
-    width: clamp(30px, 13.5vw, 90px);
-    height: clamp(30px, 13.5vw, 90px);
-    top: 105%;
-    left: -8%;
-  }
-}
 
 
 
 
-@media (max-width: 390px) {
-  .sns-title {
-    font-size: 42px;
-  }
-  .sc1 {
-    top: 52%;
-  }
-}
+/* Mobile Overrides Removed to enforce Tablet (1024px) Layout on all small screens */
+/* The layout defined in max-width: 1024px will now apply to all screens narrowing down, 
+   using clamp() and % positioning to scale. */

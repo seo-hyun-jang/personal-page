@@ -11,34 +11,28 @@ export default function UxuiSpoiler() {
   const trackRef = useRef(null);
 
   useEffect(() => {
-    const content = contentRef.current;
-    const track = trackRef.current;
-    const panels = gsap.utils.toArray(".spoiler-card", track);
+    let mm = gsap.matchMedia();
 
-    const tween = gsap.to(panels, {
-      xPercent: -100 * (panels.length - 1),
-      ease: "none",
-      paused: true,
+    mm.add("(min-width: 1280px)", () => {
+      const content = contentRef.current;
+      const track = trackRef.current;
+      const panels = gsap.utils.toArray(".spoiler-card", track);
+
+      const tween = gsap.to(panels, {
+        xPercent: -100 * (panels.length - 1),
+        ease: "none",
+        scrollTrigger: {
+          trigger: content,
+          pin: true,
+          scrub: 1,
+          start: "top top",
+          end: () => "+=" + (track.scrollWidth - window.innerWidth),
+          invalidateOnRefresh: true,
+        }
+      });
     });
 
-    const st = ScrollTrigger.create({
-      trigger: content,        
-      pin: true,               
-      scrub: 1,
-      start: "top top",
-      end: () => "+=" + (track.scrollWidth - window.innerWidth), 
-      animation: tween,
-      invalidateOnRefresh: true,
-    });
-
-    const onResize = () => st.refresh();
-    window.addEventListener("resize", onResize);
-
-    return () => {
-      window.removeEventListener("resize", onResize);
-      st.kill();
-      tween.kill();
-    };
+    return () => mm.revert();
   }, []);
 
   return (

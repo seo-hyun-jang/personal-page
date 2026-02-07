@@ -74,38 +74,20 @@ nav a {
     .header-rightBox { width: auto; padding-right: 1.05vw; }
 }
 
-/* Tablet */
-@media (min-width: 768px) and (max-width: 1279px) {
-    .header { height: 7vw; }
-    .header-leftBox { width: 22vw; height: 3.5vw; }
+/* Tablet & Mobile (Extended) */
+@media (min-width: 390px) and (max-width: 1279px) {
+    .header { height: 7vw; min-height: 50px; } /* Ensure min height */
+    .header-leftBox { width: 22vw; height: 3.5vw; min-height: 20px; }
     
-    .header-rightBox { width: auto; padding-right: 2vw; }
+    .header-rightBox { width: auto; padding-right: 2vw; display: flex; } /* Ensure display flex since mobile hid it? No, mobile large had it. Mobile small hid it. extended will show it.*/
     
-    .headerFlowerBox { width: 5.5vw; height: 3.5vw; padding-left: 2vw; }
+    .headerFlowerBox { width: 5.5vw; height: 3.5vw; padding-left: 2vw; min-width: 30px; min-height: 20px;}
     
-    nav { font-size: 1.6vw; }
+    nav { font-size: clamp(12px, 1.6vw, 24px); } /* Clamp for legibility */
     nav a { padding: 0 1.5vw; }
 }
 
-/* Mobile Large */
-@media (min-width: 390px) and (max-width: 767px) {
-    .header { height: 14vw; }
-    .header-leftBox { width: 32vw; height: auto; }
-    
-    .header-rightBox { width: auto; }
-    
-    nav { font-size: 3vw; }
-    nav a { padding: 0 2vw; }
-    
-    .headerFlowerBox { width: 10vw; height: auto; padding-left: 2vw; }
-}
-
-/* Mobile */
+/* Small Mobile */
 @media (max-width: 389px) {
-    .header { height: 16vw; }
-    .header-leftBox { width: 35vw; height: auto; }
-    
-    .header-rightBox { display: none; }
-    
-    .headerFlowerBox { width: 10vw; height: auto; padding-left: 2vw; }
+    /* Fallback/Empty */
 }

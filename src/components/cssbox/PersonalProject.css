@@ -129,12 +129,6 @@
     .personal-char-container { margin-left: 0; }
 }
 
-@media (max-width: 768px) {
-    /* .personal-title { font-size: 100px; } */
-    .personal-image-box { width: 100%; max-width: 50vw; height: auto; }
-    .personal-phone-img { width: 100%; height: auto; border-width: 2vw; border-radius: 4vw; }
-}
-
 /* Desktop */
 @media (min-width: 1280px) and (max-width: 1400px) {
     /* .personal-title { font-size: 250px; } */
@@ -143,44 +137,21 @@
     .personal-info-box { min-height: 36.4vw; }
 }
 
-/* Tablet */
-@media (min-width: 768px) and (max-width: 1279px) {
+/* Tablet & Mobile (Extended) */
+@media (min-width: 390px) and (max-width: 1279px) {
     /* .personal-title { font-size: 150px; } */
     .personal-header { margin-bottom: 8vw; }
+    .personal-title { font-size: 14vw; font-weight: 800; letter-spacing: -5px;}
+    .personal-desc-top {font-size: clamp(14px, 1.2vw, 20px);}
     .personal-image-box { height: auto; width: 35vw; }
     .personal-info-box { align-items: center; }
     .personal-project-title { font-size: 4vw; }
-    .personal-project-description { font-size: 1.8vw; min-height: auto; margin-bottom: 4vw; }
-    .team-btn { padding: 2vw 6vw; font-size: 2.5vw; }
+    .personal-project-description { font-size: clamp(14px, 1.2vw, 20px); min-height: auto; margin-bottom: 4vw; }
+    .team-btn { padding: 2vw 6vw; font-size: 2.5vw; font-weight: 700;}
     .personal-char-img { width: 15vw; }
 }
 
-/* Mobile Large */
-@media (min-width: 390px) and (max-width: 767px) {
-    .personal-section { padding-bottom: 15vw; }
-    .personal-title { font-size: 18vw; }
-    .personal-desc-top { font-size: 3.5vw; width: 90%; margin: 2vw auto 0; }
-    
-    .personal-image-box { max-width: 60vw; }
-    .personal-project-title { font-size: 6vw; white-space: normal; }
-    .personal-project-description { font-size: 3.5vw; width: 90%; margin: 0 auto 6vw; }
-    
-    .action-buttons { flex-direction: column; gap: 3vw; width: 100%; align-items: center; }
-    .team-btn { width: 80%; padding: 4vw 0; font-size: 4vw; text-align: center; }
-    .personal-char-img { width: 15vw; }
-}
-
-/* Mobile */
+/* Small Mobile */
 @media (max-width: 389px) {
-    .personal-section { padding-bottom: 15vw; }
-    .personal-title { font-size: 18vw; }
-    .personal-desc-top { font-size: 4vw; width: 90%; margin: 2vw auto 0; }
-    
-    .personal-image-box { max-width: 70vw; }
-    .personal-project-title { font-size: 7vw; }
-    .personal-project-description { font-size: 4vw; width: 95%; }
-    
-    .team-btn { width: 90%; padding: 4vw 0; font-size: 4.5vw; }
-    .personal-char-img { width: 18vw; }
-    .personal-char-container { margin-bottom: 4vw; }
+    /* Fallback/Empty */
 }

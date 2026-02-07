@@ -57,7 +57,7 @@ const Qna = () => {
     <section className="qna-section" ref={sectionRef}>
       <div className="qna-container">
         <TextAni>
-        <h2 className="qna-title">QUESTIONS & ANSWERED</h2>
+        <h2 className="qna-title">QUESTIONS <br className="tablet-br" /> & ANSWERED</h2>
         </TextAni>
         <p className="qna-subtitle">
           작업 과정에서 자주 마주한 질문들입니다.

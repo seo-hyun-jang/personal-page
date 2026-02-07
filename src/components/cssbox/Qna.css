@@ -23,6 +23,7 @@
   justify-content: center;
   font-weight: 400;
 }
+.tablet-br { display: none; }
 
 .qna-subtitle {
   margin-top: 16px;
@@ -213,46 +214,35 @@
 }
 
 /* Tablet */
-@media (min-width: 768px) and (max-width: 1279px) {
+/* Tablet & Mobile (Extended) */
+@media (min-width: 390px) and (max-width: 1279px) {
     .qna-section { padding: 10vw 0 15vw; }
-    .qna-subtitle { margin-bottom: 15vw; }
+    .qna-title {
+        font-size: 15vw; /* Adjusted for 2 lines - larger size */
+        font-weight: 800; 
+        letter-spacing: -3px; 
+        display: block; /* Allows breaks */
+        text-align: center;
+        line-height: 0.9;
+    }
+    .tablet-br { display: block; }
+
+    .qna-subtitle {font-size: clamp(14px, 1.2vw, 20px); margin-bottom: 15vw;}
+    .qna-card-inner {width: 100%; height: 100%;} /* Reset inner width to fill card */
+    .qna-cards-grid { gap: 2vw; } /* Add gap for grid */
+    .qna-card { width: 30vw; height: 42vw; } /* Reduced size */
+    .qna-back-frame { padding: 3vw; }
+    .qna-q-icon { font-size: 5vw; }
+    .qna-question { font-size: 2vw; }
+    .qna-answer { font-size: 1.6vw; }
+    .qna-char-img { width: 12vw; }
     
-    .qna-card { width: 40vw; height: 55vw; } /* Larger relative size on tablet */
-    .qna-back-frame { padding: 4vw; }
-    .qna-q-icon { font-size: 6vw; }
-    .qna-question { font-size: 2.2vw; }
-    .qna-answer { font-size: 1.8vw; }
-    .qna-char-img { width: 15vw; }
     
     /* Disable shuffle animation */
     .start-animation .qna-card:nth-child(n) { animation: none !important; opacity: 1 !important; transform: none !important; }
 }
 
-/* Mobile Large */
-@media (min-width: 390px) and (max-width: 767px) {
-    .qna-section { padding: 15vw 0 20vw; }
-    .qna-subtitle { font-size: 4vw; margin-bottom: 10vw; width: 90%; margin-left: auto; margin-right: auto; }
-    
-    .qna-cards-grid { transform: none; flex-direction: column; align-items: center; gap: 5vw; }
-    .qna-card { width: 70vw; height: 95vw; }
-    .qna-back-frame { padding: 6vw; }
-    .qna-q-icon { font-size: 10vw; }
-    .qna-question { font-size: 4vw; }
-    .qna-char-img { width: 25vw; }
-    .qna-answer { font-size: 3.5vw; }
-    
-    /* Disable shuffle animation */
-    .start-animation .qna-card:nth-child(n) { animation: none !important; opacity: 1 !important; transform: none !important; }
-}
-
-/* Mobile */
+/* Small Mobile */
 @media (max-width: 389px) {
-    .qna-section { padding: 15vw 0 20vw; }
-    .qna-subtitle { font-size: 4.5vw; margin-bottom: 10vw; }
-    
-    .qna-cards-grid { transform: none; flex-direction: column; align-items: center; gap: 5vw; }
-    .qna-card { width: 80vw; height: 110vw; }
-    
-    /* Disable shuffle animation */
-    .start-animation .qna-card:nth-child(n) { animation: none !important; opacity: 1 !important; transform: none !important; }
+    /* Fallback/Empty */
 }

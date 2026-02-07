@@ -27,34 +27,35 @@ export default function MakeupScroll() {
   ];
 
   useEffect(() => {
-    const section = sectionRef.current;
-    const leftCol = leftColRef.current;
-    const rightCol = rightColRef.current;
+    let mm = gsap.matchMedia();
 
-    if (!section || !leftCol || !rightCol) return;
+    mm.add("(min-width: 1280px)", () => {
+      const section = sectionRef.current;
+      const leftCol = leftColRef.current;
+      const rightCol = rightColRef.current;
 
-    const scrollLength =
-      Math.max(leftCol.scrollHeight, rightCol.scrollHeight) -
-      window.innerHeight;
+      if (!section || !leftCol || !rightCol) return;
 
-    const tl = gsap.timeline({
-      scrollTrigger: {
-        trigger: section,
-        start: "top top",
-        end: () => "+=" + scrollLength,
-        pin: true,
-        scrub: 1,
-        invalidateOnRefresh: true,
-      },
+      const scrollLength =
+        Math.max(leftCol.scrollHeight, rightCol.scrollHeight) -
+        window.innerHeight;
+
+      const tl = gsap.timeline({
+        scrollTrigger: {
+          trigger: section,
+          start: "top top",
+          end: () => "+=" + scrollLength,
+          pin: true,
+          scrub: 1,
+          invalidateOnRefresh: true,
+        },
+      });
+
+      tl.to(leftCol, { y: -scrollLength * 1.1, ease: "none" }, 0)
+        .to(rightCol, { y: -scrollLength * 0.8, ease: "none" }, 0);
     });
 
-    tl.to(leftCol, { y: -scrollLength * 1.1, ease: "none" }, 0)
-      .to(rightCol, { y: -scrollLength * 0.8, ease: "none" }, 0);
-
-    return () => {
-      tl.scrollTrigger?.kill();
-      tl.kill();
-    };
+    return () => mm.revert();
   }, []);
 
   return (

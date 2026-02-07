@@ -88,29 +88,19 @@
   .spoiler-card { width: min(62.5vw, 75vw); }
 }
 
-/* Tablet */
-@media (min-width: 768px) and (max-width: 1279px) {
+/* Tablet & Mobile (Extended) */
+@media (min-width: 390px) and (max-width: 1279px) {
   /* .uxui-title { font-size: 180px; } */
+  .uxui-header { margin-bottom: 8vw; }
+  .uxui-title { font-size: 16vw; font-weight: 800; }
+  .uxui-subtitle { font-size: clamp(14px, 1.2vw, 20px); margin-top: 1.5vw; }
+  
   .uxui-content { height: auto; overflow: visible; padding: 8vw 0; }
   .spoiler-track { gap: 4vw; padding: 0 5vw; }
   .spoiler-card { width: 85vw; border-radius: 1.5vw; }
 }
 
-/* Mobile Large */
-@media (min-width: 390px) and (max-width: 767px) {
-  .uxui-title { font-size: 18vw; }
-  .uxui-subtitle { font-size: 3.5vw; width: 90%; margin: 2vw auto 0; }
-  .uxui-header { margin-bottom: 8vw; }
-  .spoiler-track { gap: 8vw; }
-  .spoiler-card { width: 92vw; border-radius: 2vw; }
-}
-
-/* Mobile */
+/* Small Mobile */
 @media (max-width: 389px) {
-  .uxui-spoiler { padding: 15vw 0; }
-  .uxui-title { font-size: 18vw; }
-  .uxui-subtitle { font-size: 4vw; width: 90%; margin: 2vw auto 0; }
-  .uxui-header { margin-bottom: 8vw; }
-  .spoiler-track { gap: 8vw; }
-  .spoiler-card { width: 95vw; border-radius: 2vw; }
+  /* Fallback/Empty */
 }
