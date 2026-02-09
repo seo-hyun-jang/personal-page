@@ -1,7 +1,11 @@
+/* History.css - 1920px 메인 해상도 고정 버전 */
+
 .history-section {
     width: 100%;
-    background-size: cover;
-    min-height: 36.5vw; /* 700px / 1920px */
+    background: #1573FF;
+    min-height: 700px; /* 1921px 설정 그대로 이식 */
+    padding-top: 300px;
+    padding-bottom: 200px;
     font-family: 'Montserrat', sans-serif;
     color: #fff;
     position: relative;
@@ -9,109 +13,100 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    padding-top: 15.6vw; /* 300px / 1920px */
-    padding-bottom: 10.4vw; /* 200px / 1920px */
-    background: #1573FF;
     margin-top: -2px;
 }
 
+/* 텍스트 컨텐츠: 고정 위치와 크기 */
 .history-text-content {
     position: absolute;
-    bottom: 5.2vw; /* 100px / 1920px */
-    left: 10%;
-    width: 90%;
-    max-width: 31.25vw; /* 600px / 1920px */
+    left: calc(50% - 768px); /* 중앙에서 왼쪽으로 고정 */
+    width: 400px;
     z-index: 10;
     text-align: left;
+    pointer-events: none;
 }
 
 .history-title {
     font-family: 'Anton', sans-serif;
-    font-size: 5.2vw;
+    font-size: 100px;
     line-height: 1;
-    margin-bottom: 0.8vw;
-    font-weight: 800; /* Matching Makeup.css weight */
+    margin-bottom: 15px;
+    font-weight: 800;
 }
 
 .history-desc {
-    font-size: clamp(12px, 1.2vw, 20px);
+    font-size: 18px; /* 고정 크기 */
     line-height: 1.6;
     font-weight: 500;
     color: var(--sub-text-color);
     font-family: 'pretendard', sans-serif;
-    transition: color var(--transition-speed) ease;
+    white-space: pre-line;
 }
 
-
+/* 슬라이드쇼 컨테이너: 고정 크기 */
 .history-slideshow-container {
     position: relative;
-    width: 42vw; 
-    height: 31vw;
+    width: clamp(320px, 38vw, 730px);
+    height: clamp(260px, 31vw, 595px);
     display: flex;
     justify-content: center;
     align-items: center;
-    
 }
 
-
+/* 배경 연도: 고정 크기 */
 .history-year-text {
     position: absolute;
     font-family: 'Anton', sans-serif;
-    font-size: 26vw; /* 500px / 1920px */
+    font-size: 500px; /* 고정 크기 */
     color: #fff;
     z-index: 2;
-    left: 54%;
+    left: calc(50% + 77px);
     transform: translate(-50%, -33%);
     white-space: nowrap;
-    letter-spacing: 2.6vw;
+    letter-spacing: 50px;
     line-height: 1;
-}
-.history-bg-white{
-    width: 100%;
-    position: absolute;
-    z-index: 1;
-    white-space: nowrap;
-    line-height: 1;
-    background: var(--bg-color);
-    transition: background-color var(--transition-speed) ease;
-    left: 50%;
-    transform: translateX(-50%);
-    height: 171%;
-}   
-.history-bg{
-    width: 100%;
-    position: absolute;
-    z-index: 3;
-    white-space: nowrap;
-    line-height: 1;
-    left: 50%;
-    transform: translateX(-50%);
-}
-.history-bg img{
-    width: 100%;
 }
 
-
+/* 사진: 고정 크기 */
 .history-photo {
     position: relative;
     z-index: 3;
-    width: 24.6vw; /* 473px / 1920px */ 
-    height: 31.25vw; /* 600px / 1920px */
+    width: clamp(220px, 12vw, 472px);
+    height: clamp(280px, 12vw, 600px);
     object-fit: cover;
-    border-radius: 0.52vw;
-    margin-top: -15.6vw; /* -300px / 1920px */
+    border-radius: 10px;
+    margin-top: -300px;
     background: none;
 }
 
-
+/* 캐릭터: 고정 위치 */
 .history-char {
     position: absolute;
-    bottom: 5.2vw;
-    right: 10%;
-    width: 14vw; /* 270px / 1920px */
+    bottom: 100px;
+    right: calc(50% - 768px);
+    width: 270px;
     height: auto;
     z-index: 20;
     animation: wiggle 3s ease-in-out infinite;
+}
+
+/* 배경 이미지들 */
+.history-bg-white, 
+.history-bg {
+    width: 100%;                /* ← 기존 1920px 삭제 */
+    max-width: 1920px;  
+    position: absolute;
+    z-index: 1;
+    left: 50%;
+    transform: translateX(-50%);
+    pointer-events: none;
+}
+.history-bg { z-index: 3; }
+.history-bg img { width: 100%; }
+.history-bg-white {
+    height: 171%;
+    background: var(--bg-color);
+    transition: background-color var(--transition-speed) ease;
 }
 
 @keyframes wiggle {
@@ -119,38 +114,38 @@
     50% { transform: rotate(3deg); }
 }
 
-
-/* Tablet & Small Desktop adjustment */
+/* ------------------------------------------------------ */
+/* [태블릿/모바일] 1024px 이하일 때만 유동적으로 변경 */
 @media (max-width: 1024px) {
-    /* .history-section { padding-top: 300px;}  <- Removed fixed padding */
+    .history-section { padding-top: 10px; padding-bottom: 150px; min-height: auto; }
     .history-slideshow-container { width: 100%; height: 50vw; }
-    /* .history-bg-shape { width: 90%; } <- Removed unused class */
-    .history-photo { width: 30vw; height: 40vw; margin-top: -15vw; }
+    .history-photo { width: 32vw; height: 40vw; margin-top: -13vw; }
+    .history-year-text { font-size: 30vw; left: 50%; letter-spacing: 2vw; }
     
-    .history-text-content { 
-        bottom: auto; 
-        top: 8vw; 
-        width: 100%; 
-        left: 50%; 
-        transform: translateX(-50%); 
-        text-align: center;
-        max-width: 90%;
-    }
-    
-    .history-char {
-        width: 20vw;
-        bottom: 5%;
-        right: 5%;
-    }
-        .history-section { padding-top: 4vw; padding-bottom: 15vw; }
-    .history-text-content { top: 59%; left: 40%; width: 70%; text-align: left; }
-    .history-title {font-size: 4vw;}
-    .history-desc {
-        text-align: left;
-        }
-        .history-char {bottom: 20%;}
-        .history-desc {font-size: clamp(12px, 1.2vw, 20px); line-height: 1.2;}
+    .history-text-content { top: 65%; left: 4%; width: 70%; text-align: left; }
+    .history-title { font-size: 4vw; }
+    .history-desc { text-align: left; font-size: clamp(10px, 1.2vw, 20px); line-height: 1.2; }
+    .history-char { width: 120px; bottom: 150px; right: 20px; }
 }
 
+@media (max-width: 768px) {
+    .history-text-content { top: 55%; left: 4%; width: 70%; text-align: left; }
+}
 
+@media (max-width: 630px) {
+    .history-title {line-height: 0.5}
+    .history-text-content { top: 45%; left: 4%; width: 70%; text-align: left; line-height: 0.5 }
+}
 
+@media (max-width: 400px) {
+    .history-text-content { top: 40%; left: 4%; width: 70%;}
+}
+
+/* [울트라 와이드] 1921px 이상 (요청하신 대로 유지) */
+@media (min-width: 1921px) {
+    .history-bg-white, .history-bg {
+        width: 1920px;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+}
