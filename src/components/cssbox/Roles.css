@@ -21,14 +21,14 @@
 
 .roles-title {
     font-family: 'Anton', 'Impact', sans-serif;
-    font-size: 13.5vw; /* 260px / 1920px */
+    font-size: clamp(50px, 22vw, 250px);
     line-height: 1.1;
     color: #FFFFFF;
     text-transform: uppercase;
     margin: 0;
     letter-spacing: -2px;
     white-space: nowrap;  
-
+    font-weight: 800;
 }
 
 .icon-container {
@@ -81,13 +81,24 @@
 }
 
 /* Tablet & Mobile (Extended) */
-@media (min-width: 390px) and (max-width: 1279px) {
+@media (min-width: 600px) and (max-width: 1279px) {
     .roles-section { padding: 15vw 0; }
     .roles-title { font-size: 13.5vw; }
     .icon-container { width: 15vw; height: 15vw; top: 5%; left: 5%; position: absolute; margin-bottom: 0; }
 }
 
 /* Small Mobile */
-@media (max-width: 389px) {
-    /* Fallback/Empty */
+@media (min-width: 360px) and (max-width: 599px) {
+    .roles-section { padding: 15vw 0; }
+    .roles-title { font-size: 13.5vw; }
+    .icon-container { width: 14vw; height: 14vw; top: 15%; left: 4%; position: absolute; margin-bottom: 0; }
+}
+/* Ultra Wide (1920 이상) */
+@media (min-width: 1920px) {
+    .icon-container {
+        top: 18%;
+        left: 5%;
+        width: 260px;
+        height: 260px;
+    }
 }

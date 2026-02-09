@@ -21,7 +21,9 @@
 
 .makeup-title {
   font-family: 'Anton', sans-serif;
-  font-size: 13vw; /* 250px / 1920px */
+  font-size: clamp(50px, 13vw, 400px);
+  font-weight: 800;
+  letter-spacing: -5px;
   white-space: nowrap;
   color: var(--title-color);
   line-height: 1;
@@ -79,7 +81,7 @@
 
 
 /* Tablet & Mobile (Extended) */
-@media (min-width: 390px) and (max-width: 1279px) {
+@media (max-width: 1279px) {
   .makeup-section {
     height: auto;
     overflow: visible;
@@ -97,11 +99,12 @@
     margin-right: auto;
   }
   .makeup-title {
-    font-size: clamp(100px,100vw, 180px);
+    font-size: clamp(50px, 21vw, 180px);
     font-weight: 800;
+    letter-spacing: -5px;
   }
 
-  .makeup-desc { font-size: clamp(14px, 1.2vw, 20px); margin-top: 1.5vw; }
+  .makeup-desc { font-size: clamp(12px, 1.2vw, 20px); margin-top: 1.5vw; }
   
   .photo-viewport {
     position: static;
@@ -138,17 +141,8 @@
     aspect-ratio: 3/4; /* Square-ish or rectangular as needed */
     border-radius: 1.5vw;
   }
-}
 
-/* Small Mobile */
-@media (max-width: 389px) {
-    /* Fallback/Empty to allow 390 rules or base to apply (Wait, base is desktop!)
-       I must ensure broad coverage.
-       As discussed, I should consider just max-width: 1279px. 
-       But I will stick to 390-1279 for now to match 768-1279 logic, 
-       and just leave 389 empty? No, 389 will break.
-       I'll use @media (max-width: 1279px) instead of min-width: 390px 
-       in the NEXT step if I see issues. 
-       For now, sticking to the requested 390px minimum since user's previous mobile breakpoint was 390-767.
-    */
+  .photo-card img {
+    border-radius: 1.5vw;
+  }
 }

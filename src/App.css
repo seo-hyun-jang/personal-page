@@ -15,11 +15,10 @@ address, em, i {font-style: normal;}
 
 
 .layoutPadding {
-  width: 100%;
-  min-width: 1240px;
-  margin: 0 auto;
-  padding: 0 90px;
-  box-sizing: border-box;
+width: min(100%, 1600px);
+margin: 0 auto;
+padding: 0 clamp(16px, 4vw, 90px);
+box-sizing: border-box;
 }
 
 body {

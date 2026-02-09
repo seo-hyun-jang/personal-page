@@ -18,19 +18,20 @@
 
 .sns-main-title {
   font-family: 'Anton', sans-serif;
-  font-size: 14.5vw; /* 280px */
+  font-size: clamp(50px, 25vw, 300px);
   line-height: 1;
   color: var(--title-color);
   margin: 0;
   position: relative;
   z-index: 1;
   transition: color var(--transition-speed) ease;
+  font-weight: 800;
 }
 
 .sns-subtitle {
   margin: 0;
   font-family: 'Pretendard', sans-serif;
-  font-size: 1.04vw; /* 20px */
+  font-size: clamp(12px, 1.2vw, 20px);
   line-height: 1.1;
   color: var(--sub-text-color);
   white-space: pre-line;
@@ -262,7 +263,7 @@
 
 /* Tablet */
 /* Tablet & Mobile (Extended) */
-@media (min-width: 390px) and (max-width: 1279px) {
+@media (max-width: 1279px) {
   .sns-section { padding: 10vw 0 15vw; }
   .sns-header { margin-bottom: 8vw; }
   .sns-main-title { font-size: 15vw; font-weight: 800; letter-spacing: -5px;}
@@ -316,20 +317,22 @@
       font-weight: 800;
       letter-spacing: -1px;
   }
+
+    .sns-crown-icon {
+    width: 8vw;
+    top: -30px;
+    left: -20px;
+  }
+
+  /* Force overlay visible on tablet/mobile */
+  .sns-card-overlay {
+    opacity: 1 !important;
+    backdrop-filter: blur(4px); /* Slightly less blur for permanent view? or keep 8px. User said "just come out". */
+    background: rgba(0,0,0,0.3); /* Adjust brightness if needed */
+  }
 }
 
 /* Small Mobile */
 @media (max-width: 389px) {
-  /* Inherit from above or basic overrides if needed. 
-     Currently keeping empty to enforce tablet layout structure for all < 1280px (if min-width is lower or irrelevant). 
-     Wait, the above is min-width: 390px.
-     So < 390px will use Desktop styles? No, base styles.
-     Base styles are typically desktop in this project (1920px design).
-     This means < 390px will look like desktop (huge) or break.
-     I should probably change the Media Query to `max-width: 1279px` to cover EVERYTHING.
-     Or `min-width: 0`.
-     Since the user said "Media below that", implying smaller screens.
-     I will use `@media (max-width: 1279px)` for this block to cover everything below desktop.
-     That is safer.
-  */
+
 }

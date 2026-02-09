@@ -27,14 +27,14 @@
 
 .history-title {
     font-family: 'Anton', sans-serif;
-    font-size: 5.2vw; /* 100px / 1920px */
+    font-size: 5.2vw;
     line-height: 1;
     margin-bottom: 0.8vw;
-    
+    font-weight: 800; /* Matching Makeup.css weight */
 }
 
 .history-desc {
-    font-size: 0.94vw; /* 18px / 1920px */
+    font-size: clamp(12px, 1.2vw, 20px);
     line-height: 1.6;
     font-weight: 500;
     color: var(--sub-text-color);
@@ -142,20 +142,15 @@
         bottom: 5%;
         right: 5%;
     }
-}
-
-/* Tablet (Extended to Mobile) */
-@media (min-width: 390px) and (max-width: 699px) {
-    /* Adjustments already covered by max-width: 1024px logic, can add specific tweaks here */
-    .history-section { padding-top: 4vw; padding-bottom: 15vw; }
-    .history-text-content { top: 62%; left: 30%; width: 50%; text-align: left; }
+        .history-section { padding-top: 4vw; padding-bottom: 15vw; }
+    .history-text-content { top: 59%; left: 40%; width: 70%; text-align: left; }
+    .history-title {font-size: 4vw;}
     .history-desc {
         text-align: left;
         }
         .history-char {bottom: 20%;}
-        .history-desc {font-size: clamp(14px, 1.2vw, 20px); line-height: 1.2;}
+        .history-desc {font-size: clamp(12px, 1.2vw, 20px); line-height: 1.2;}
 }
 
-/* Base Mobile (Very small) fallback or keep empty if 390 covers most */
-@media (max-width: 389px) {
-}
+
+

@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { motion } from "framer-motion";
+import "./cssbox/IntroAnimation.css";
 
 const INTRO_CHAR_SVG = "/img/intro-char.svg";
 
@@ -27,11 +28,8 @@ export default function IntroAnimation({ onComplete }) {
 
   return (
     <div
+      className="intro-container"
       style={{
-        position: "fixed",
-        inset: 0,
-        zIndex: 9999,
-        overflow: "hidden",
         background: stage === "statement" ? "#000" : "#fff",
       }}
     >
@@ -42,6 +40,7 @@ export default function IntroAnimation({ onComplete }) {
         WAVE_COLORS.map((color, i) => (
           <motion.div
             key={i}
+            className="intro-wave"
             initial={{ y: "100%" }}
             animate={{
               y: "40%",
@@ -57,14 +56,8 @@ export default function IntroAnimation({ onComplete }) {
               ease: "easeInOut",
             }}
             style={{
-              position: "absolute",
-              bottom: 0,
-              left: "-20%",
-              width: "140%",
               height: `${48 + i * 10}%`,
               background: color,
-              borderRadius: "50% 50% 0 0",
-              transformOrigin: "50% 100%",
               zIndex: 10 + i,
             }}
           />
@@ -72,6 +65,7 @@ export default function IntroAnimation({ onComplete }) {
 
       {(stage === "name" || isBlackhole) && (
         <motion.h1
+          className="intro-name"
           initial={{ y: 80, opacity: 0 }}
           animate={
             isBlackhole
@@ -82,20 +76,6 @@ export default function IntroAnimation({ onComplete }) {
             duration: isBlackhole ? 0.8 : 0.8,
             ease: "easeOut",
           }}
-          style={{
-            position: "absolute",
-            inset: 0,
-            display: "flex",
-            alignItems: "center",
-            justifyContent: "center",
-            fontFamily: "Anton, sans-serif",
-            fontSize: "200px",
-            letterSpacing: "0.05em",
-            paddingLeft: "0.25em",
-            color: "#000",
-            whiteSpace: "nowrap",
-            zIndex: 40,
-          }}
         >
           Jang Seo Hyun
         </motion.h1>
@@ -103,6 +83,7 @@ export default function IntroAnimation({ onComplete }) {
 
       {(stage === "name" || isBlackhole) && (
         <motion.img
+          className="intro-char-img"
           src={INTRO_CHAR_SVG}
           initial={{ y: 60, opacity: 0 }}
           animate={
@@ -121,73 +102,35 @@ export default function IntroAnimation({ onComplete }) {
             ease: "easeOut",
             repeat: isBlackhole ? 0 : Infinity,
           }}
-          style={{
-            position: "absolute",
-            top: 150,
-            right: 150,
-            width: 120,
-            height: 120,
-            zIndex: 50,
-          }}
         />
       )}
 
       {(stage === "blackhole" || stage === "explode") && (
         <motion.div
+          className="intro-circle-container"
           initial={{ scale: 0 }}
           animate={{ scale: stage === "explode" ? 50 : 1 }}
           transition={{
             duration: stage === "explode" ? 0.5 : 1.0,
             ease: "easeInOut",
           }}
-          style={{
-            position: "absolute",
-            inset: 0,
-            display: "flex",
-            alignItems: "center",
-            justifyContent: "center",
-            zIndex: 100,
-          }}
         >
-          <div
-            style={{
-              width: 240,
-              height: 240,
-              borderRadius: "50%",
-              background: "#000",
-              boxShadow:
-                "0 0 160px #1573FF, inset 0 0 120px #1573FF",
-            }}
-          />
+          <div className="intro-blackhole-circle" />
         </motion.div>
       )}
 
       {stage === "statement" && (
         <motion.div
+            className="intro-statement-container"
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ duration: 0.4 }}
-          style={{
-            position: "fixed",
-            inset: 0,
-            background: "#000",
-            zIndex: 200,
-            display: "flex",
-            alignItems: "center",
-            justifyContent: "center",
-          }}
         >
           <motion.p
+            className="intro-statement-text"
             initial={{ y: 10, opacity: 0 }}
             animate={{ y: 0, opacity: 1 }}
             transition={{ duration: 0.8, ease: "easeOut" }}
-            style={{
-              fontFamily: "Anton, sans-serif",
-              fontSize: "56px",
-              letterSpacing: "0.08em",
-              color: "#fff",
-              textAlign: "center",
-            }}
           >
             Designing beyond one role.
           </motion.p>

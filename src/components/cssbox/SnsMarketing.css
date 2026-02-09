@@ -32,7 +32,7 @@
 
 .sns-description {
   font-family: 'Pretendard', sans-serif;
-  font-size: clamp(14px, 1.2vw, 20px);
+  font-size: clamp(12px, 1.2vw, 20px);
   line-height: 1.4;
   letter-spacing: -0.5px;
   color: var(--sub-text-color);
@@ -82,13 +82,13 @@
 }
 
 /* desktop 기준 */
-.sc1 { width: clamp(180px, 35vw, 700px); height: clamp(180px, 35vw, 700px); top: 55%; left: -20%; }
-.sc2 { width: clamp(100px, 25vw, 500px); height: clamp(100px, 25vw, 500px); top: 110%; left: 13%; }
-.sc3 { width: clamp(260px, 32vw, 650px); height: clamp(260px, 32vw, 650px); bottom: -140%; right: -18%; }
-.sc4 { width: clamp(240px, 30vw, 580px); height: clamp(240px, 30vw, 580px); top: 35%; right: 15%; }
-.sc5 { width: clamp(180px, 22vw, 400px); height: clamp(180px, 22vw, 400px); top: 80%; right: 43%; }
-.sc6 { width: clamp(80px, 8vw, 160px); height: clamp(80px, 8vw, 160px); top: 120%; right: 10%; }
-.sc7 { width: clamp(100px, 10vw, 200px); height: clamp(100px, 10vw, 200px); top: 200%; left: -5%; }
+.sc1 { width: clamp(50px, 35vw, 700px); height: clamp(50px, 35vw, 700px); top: 55%; left: -20%; }
+.sc2 { width: clamp(40px, 25vw, 500px); height: clamp(40px, 25vw, 500px); top: 110%; left: 13%; }
+.sc3 { width: clamp(60px, 32vw, 650px); height: clamp(60px, 32vw, 650px); bottom: -140%; right: -18%; }
+.sc4 { width: clamp(60px, 30vw, 580px); height: clamp(60px, 30vw, 580px); top: 35%; right: 15%; }
+.sc5 { width: clamp(50px, 22vw, 400px); height: clamp(50px, 22vw, 400px); top: 80%; right: 43%; }
+.sc6 { width: clamp(30px, 8vw, 160px); height: clamp(30px, 8vw, 160px); top: 120%; right: 10%; }
+.sc7 { width: clamp(30px, 10vw, 200px); height: clamp(30px, 10vw, 200px); top: 200%; left: -5%; }
 
 /* -------------------------
    TITLE (ABSOLUTE TOP)
@@ -111,12 +111,13 @@
   z-index: 10;                /* 🔥 원 위 */
   text-align: center;
   font-family: 'Anton', 'Impact', sans-serif;
-  font-size: clamp(50px, 12vw, 240px);
+  font-size: clamp(40px, 13vw, 300px);
   line-height: 1;
   letter-spacing: -2px;
   color: #ffffff;
   white-space: nowrap;
   pointer-events: none;
+  font-weight: 800;
 }
 
 /* =========================
@@ -198,10 +199,31 @@
     }
   }
 
+@media (max-width: 430px) {
+    .sc1 {top: 50%;}
+    .sc2 { top: 55%; }
+    .sc3 { bottom: -50%; }
+    .sc4 { top: 50%; }
+    .sc5 { top: 70%; }
+    .sc6 { top: 90%; }
+    .sc7 { top: 110%; }
+    .sns-title {
+      top: 115%;
+    }
+  }
+
+  @media (max-width: 390px) {
+    .sc1 {top: 50%;}
+    .sc2 { top: 55%; }
+    .sc3 { bottom: -50%; }
+    .sc4 { top: 58%; }
+    .sc5 { top: 75%; }
+    .sc6 { top: 95%; }
+    .sc7 { top: 110%; }
+    .sns-title {
+      top: 115%;
+    }
+  }
 
 
 
-
-/* Mobile Overrides Removed to enforce Tablet (1024px) Layout on all small screens */
-/* The layout defined in max-width: 1024px will now apply to all screens narrowing down, 
-   using clamp() and % positioning to scale. */

@@ -100,8 +100,13 @@ export default function Hero() {
           ball.y += ball.vy;
 
           
-          const radiusX = (ball.size / 2 / containerWidth) * 100;
-          const radiusY = (ball.size / 2 / containerHeight) * 100;
+          // Responsive size calculation for physics
+          const vwSize = ball.size * (containerWidth / 1920);
+          const minSize = ball.size * 0.3; // Allow down to 30%
+          const currentSize = Math.max(minSize, Math.min(ball.size, vwSize));
+
+          const radiusX = (currentSize / 2 / containerWidth) * 100;
+          const radiusY = (currentSize / 2 / containerHeight) * 100;
 
           
           if (ball.y + radiusY > 100) {
@@ -157,8 +162,8 @@ export default function Hero() {
           className={`ball-container interactive-ball b${ball.id} ${ball.type === 'white' ? 'white-ball' : ''}`}
           ref={el => ballElementsRef.current[index] = el}
           style={{ 
-            width: ball.size, 
-            height: ball.size,
+            width: `clamp(${ball.size * 0.3}px, ${(ball.size / 1920) * 100}vw, ${ball.size}px)`, 
+            height: `clamp(${ball.size * 0.3}px, ${(ball.size / 1920) * 100}vw, ${ball.size}px)`,
             left: `${ball.x}%`,
             top: `${ball.y}%`,
             position: 'absolute',

@@ -14,20 +14,19 @@
 
 .qna-title {
   font-family: 'Anton', sans-serif;
-  font-size: 11vw; /* 210px / 1920px */
+  font-size: clamp(50px, 25vw, 300px);
+  letter-spacing: -15px;
   color: var(--title-color);
-  letter-spacing: -0.1vw;
   line-height: 1;
-  white-space: nowrap;
   display: flex;
   justify-content: center;
-  font-weight: 400;
+  font-weight: 800;
 }
 .tablet-br { display: none; }
 
 .qna-subtitle {
   margin-top: 16px;
-  font-size: 20px;
+  font-size: clamp(12px, 1.2vw, 20px);
   color: var(--sub-text-color);
   font-weight: 500;
   margin-bottom: 200px;
@@ -215,10 +214,10 @@
 
 /* Tablet */
 /* Tablet & Mobile (Extended) */
-@media (min-width: 390px) and (max-width: 1279px) {
+@media (max-width: 1279px) {
     .qna-section { padding: 10vw 0 15vw; }
     .qna-title {
-        font-size: 15vw; /* Adjusted for 2 lines - larger size */
+        font-size: clamp(50px, 14vw, 150px);
         font-weight: 800; 
         letter-spacing: -3px; 
         display: block; /* Allows breaks */
@@ -227,10 +226,10 @@
     }
     .tablet-br { display: block; }
 
-    .qna-subtitle {font-size: clamp(14px, 1.2vw, 20px); margin-bottom: 15vw;}
+    .qna-subtitle {font-size: clamp(12px, 1.2vw, 20px); margin-bottom: 15vw;}
     .qna-card-inner {width: 100%; height: 100%;} /* Reset inner width to fill card */
-    .qna-cards-grid { gap: 2vw; } /* Add gap for grid */
-    .qna-card { width: 30vw; height: 42vw; } /* Reduced size */
+    .qna-cards-grid { gap: 0vw; } /* Add gap for grid */
+    .qna-card { width: 30vw; height: 40vw; } /* Reduced size */
     .qna-back-frame { padding: 3vw; }
     .qna-q-icon { font-size: 5vw; }
     .qna-question { font-size: 2vw; }
@@ -240,9 +239,4 @@
     
     /* Disable shuffle animation */
     .start-animation .qna-card:nth-child(n) { animation: none !important; opacity: 1 !important; transform: none !important; }
-}
-
-/* Small Mobile */
-@media (max-width: 389px) {
-    /* Fallback/Empty */
 }

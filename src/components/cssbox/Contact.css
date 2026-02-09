@@ -49,17 +49,17 @@
 
 .contact-title {
   font-family: 'Anton', sans-serif;
-  font-size: 21vw; /* 400px / 1920px */
+  font-size: clamp(50px, 21vw, 300px);
+  letter-spacing: -15px;
   color: #fff;
   margin: 0;
   line-height: 1;
-  letter-spacing: -0.1vw;
-  
+  font-weight: 800;
 }
 
 .contact-subtitle {
   font-family: 'Pretendard', sans-serif;
-  font-size: 20px;
+  font-size: clamp(12px, 1.2vw, 20px);
   font-weight: 400;
   color: var(--sub-text-color);
   line-height: 1.1;
@@ -71,7 +71,7 @@
 
 .star-icon {
   position: absolute;
-  width: 60px;
+  width: clamp(20px, 5vw, 60px);
   height: auto;
   z-index: 5;
 }
@@ -124,7 +124,9 @@
   left: 52%;
   transform: translate(-50%, -50%);
   font-family: 'Anton', sans-serif;
-  font-size: 44px;
+  font-size: clamp(28px, 3vw, 32px);
+  font-weight: 600;
+  letter-spacing: -1px;
   color: #000;
   margin: 0;
   text-transform: uppercase;
@@ -204,12 +206,12 @@
 }
 
 /* Tablet & Mobile (Extended) */
-@media (min-width: 390px) and (max-width: 1279px) {
+@media (max-width: 1279px) {
     .contact-container { padding: 15vw 4vw; }
     .more-info-badge { width: 25vw; margin-bottom: 15vw; }
     .star-2 { top: 24%; left: 15%; }
     .contact-title {letter-spacing: -5px; font-size: 18vw; font-weight: 800;}
-    .contact-subtitle { font-size: clamp(14px, 1.2vw, 20px); }
+    .contact-subtitle { font-size: clamp(12px, 1.2vw, 20px); }
     .speech-bubble-wrapper { margin-right: 0; right: -65%; margin-bottom: -5vw; }
     .speech-bubble-bg { width: 36vw; }
     .bubble-text { font-size: 2.4vw; top: 38%; font-weight: 600;}
@@ -217,15 +219,3 @@
     .contact-char-container { width: 35vw; height: 35vw; }
 }
 
-/* Small Mobile */
-@media (max-width: 389px) {
-    /* Fallback/Empty to allow 390 rules or base to apply (Wait, base is desktop!)
-       I must ensure broad coverage.
-       As discussed, I should consider just max-width: 1279px. 
-       But I will stick to 390-1279 for now to match 768-1279 logic, 
-       and just leave 389 empty? No, 389 will break.
-       I'll use @media (max-width: 1279px) instead of min-width: 390px 
-       in the NEXT step if I see issues. 
-       For now, sticking to the requested 390px minimum since user's previous mobile breakpoint was 390-767.
-    */
-}

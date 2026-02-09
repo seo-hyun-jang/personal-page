@@ -19,19 +19,20 @@
 
 .team-title {
     font-family: 'Anton', sans-serif;
-    font-size: 15.6vw; /* 300px / 1920px */
+    font-size: clamp(50px, 13vw, 300px);
     line-height: 1;
     color: var(--title-color);
     text-transform: uppercase;
     margin: 0;
-    letter-spacing: -0.1vw;
+    letter-spacing: -15px;
     transition: color var(--transition-speed) ease;
+    font-weight: 800;
 }
 
 .team-desc-top {
     margin-top: 0.83vw;
     font-family: 'Pretendard', sans-serif;
-    font-size: 1.04vw; /* 20px */
+    font-size: clamp(12px, 1.2vw, 20px);
     line-height: 1.1;
     color: var(--sub-text-color);
     font-weight: 400;
@@ -58,6 +59,7 @@
     top: 73%;
     transform: translateY(-50%);
     z-index: 20;
+    
 }
 .contribution-list {
     display: flex;
@@ -74,6 +76,8 @@
 .nav-arrow.active svg path {
     fill: #fff;
 }
+
+
 .nav-arrow.disabled {
     color: #fff;
     cursor: default;
@@ -168,10 +172,11 @@
 .action-buttons {
     display: flex;
     gap: 1.04vw;
+    white-space: nowrap;
 }
 
 .team-btn {
-    padding: 1.25vw 4.84vw; /* 24px 93px */
+    padding: 1.25vw 3.24vw; /* 24px 93px */
     border-radius: 2.6vw; /* 50px */
     font-family: 'Anton', sans-serif;
     font-size: 1.45vw; /* 28px */
@@ -182,6 +187,9 @@
     background-color: #DDEEFE;
     color: #3b1f14;
     transition: all 0.3s ease;
+    white-space: nowrap;
+    letter-spacing: -1px;
+    font-weight: 700;
 }
 
 .team-btn:hover {
@@ -199,22 +207,22 @@
 
 
 @media (max-width: 1200px) {
-    .project-display { flex-direction: column; gap: 5vw; }
-    .project-info-box { min-height: auto; justify-content: flex-start; text-align: center; }
+    .project-display { flex-direction: column; }
+    .project-info-box { min-height: auto; justify-content: center; text-align: center;}
     .info-grid { display: inline-grid; text-align: left; justify-content: center; }
 }
 
 /* Desktop */
 @media (min-width: 1280px) and (max-width: 1400px) {
-     /* .team-title { font-size: 250px; } -> Handled by vw */
     .team-content-wrapper { max-width: 80vw; }
-    .project-display { gap: 4vw; }
+    .project-display { gap: 5vw; }
     .project-image-box { width: 20.8vw; height: 41.6vw; } /* 400px, 800px */
     .project-info-box { min-height: 36.4vw; }
+    
 }
 
 /* Tablet & Mobile (Extended) */
-@media (min-width: 390px) and (max-width: 1279px) {
+@media (min-width: 600px) and (max-width: 1279px) {
     /* .team-title { font-size: 150px; } */
     .team-header { margin-bottom: 8vw; }
     .project-image-box { height: auto; width: 35vw; }
@@ -225,14 +233,50 @@
     .team-desc-top {font-size: clamp(14px, 1.2vw, 20px);}
     .project-description { font-size: clamp(14px, 1.2vw, 20px); min-height: auto; margin-bottom: 4vw; }
     .action-buttons {gap: 4vw;}
-    .team-btn { padding: 2vw 6vw; font-size: 2.5vw; border-radius: 50px; font-weight: 700;}
+    .team-btn { padding: 1.25vw 3.64vw;  font-size: 1.5vw; border-radius: 50px; font-weight: 700;}
     .team-char { width: 18vw; right: 20px; bottom: 350px;}
     .nav-arrow.right {right: 2.16vw; top: 70%;}
     .nav-arrow.left {left: 2.16vw; top: 70%;}
     .team-section {padding-bottom: 14vw;}
+    .nav-arrow svg {
+    width: clamp(28px, 2.5vw, 56px);
+    height: auto;
+}
 }
 
 /* Small Mobile */
-@media (max-width: 389px) {
-    /* Fallback/Empty */
+@media (max-width: 600px) { 
+    .project-display { flex-direction: column; align-items: center; }
+    .project-info-box { align-items: center; text-align: center; width: 100%; }
+    .info-grid { 
+        width: 70%; /* Increased width for better fitting */
+        margin: 0 auto 5vw; 
+        grid-template-columns: 1fr 2fr; /* Adjust grid for better center look if needed, or keep as is */
+        text-align: left; /* Keep grid text left or center? User said "center alignment" generally but grid content usually looks better left aligned inside a centered box. But let's center the box itself. */
+        display: grid;
+        font-size: clamp(10px, 2vw, 20px);
+    }
+    
+    .project-title { font-size: 4vw; text-align: center; width: 100%; }
+    .team-title { font-size: 15vw; font-weight: 800; letter-spacing: -2px;}
+    .team-desc-top {font-size: clamp(12px, 3vw, 20px);}
+    
+    .project-description { 
+        font-size: clamp(10px, 1.5vw, 18px); 
+        min-height: auto; 
+        margin-bottom: 6vw; 
+        text-align: center; 
+        width: 100%;
+    }
+    
+    .action-buttons {gap: 4vw; justify-content: center; width: 100%; }
+    .team-btn { padding: 3vw 8vw; font-size: 3.5vw; border-radius: 50px; font-weight: 700;}
+    
+    .team-char { display: none;}
+    .nav-arrow.right {right: 5%; top: 70%;}
+    .nav-arrow.left {left: 5%; top: 70%;}
+    .nav-arrow svg { width: 8vw; height: auto; min-width: 30px; }
+    
+    .team-section {padding-bottom: 20vw;}
+    .team-more-info {padding: 20vw 0;}
 }

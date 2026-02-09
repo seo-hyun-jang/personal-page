@@ -51,14 +51,20 @@
     /* .hero-text { font-size: 200px; } -> Handled by base vw */
 }
 
+@media (min-width: 801px) and (max-width: 1279px) {
+    .hero { height: 60vh; } /* Keeping explicit height from tablet */
+}
+
 /* Tablet & Mobile (Extended) */
-@media (min-width: 390px) and (max-width: 1279px) {
-    .hero { height: 900px; } /* Keeping explicit height from tablet */
+@media (min-width: 600px) and (max-width: 800px) {
+    .hero { height: 50vh; } /* Keeping explicit height from tablet */
     .hero-text { font-size: 18vw; } 
-    .ball-container { transform: scale(0.8); }
+    /* .ball-container { transform: scale(0.8); } -> Removed, handled by JS clamp */
 }
 
 /* Small Mobile */
-@media (max-width: 389px) {
-    /* Fallback/Empty */
+@media (min-width: 360px) and (max-width: 599px) {
+    .hero { height: 35vh; } /* Keeping explicit height from tablet */
+    .hero-text { font-size: 18vw; } 
+    /* .ball-container { transform: scale(0.8); } -> Removed, handled by JS clamp */
 }

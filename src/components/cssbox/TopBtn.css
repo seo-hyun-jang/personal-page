@@ -6,7 +6,7 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 1.25vw; /* 24px */
+  gap: clamp(12px, 1.25vw, 24px);
 }
 
 .play-btn {
@@ -21,8 +21,8 @@
 }
 
 .play-btn img {
-  width: 3.125vw; /* 60px */
-  height: 3.125vw;
+  width: clamp(32px, 3vw, 60px); /* 60px */
+  height: clamp(32px, 3vw, 60px);
   display: block;
 }
 
@@ -42,7 +42,7 @@
   padding: 0;
   transition: all 0.3s ease-in-out;
   font-family: 'Montserrat', sans-serif;
-  font-size: 1.25vw; /* 24px */
+  font-size: clamp(12px, 1.5vw, 24px);
   color: #1573FF;
   font-weight: 600;
   display: flex;
@@ -51,16 +51,17 @@
 }
 
 .top-btn img {
-  width: 3.125vw; /* 60px */
+  width: clamp(32px, 3vw, 60px);
+ /* 60px */
   height: auto;
   display: block;
-  padding-bottom: 0.52vw; /* 10px */
+  padding-bottom: 10px; /* 10px */
 }
 
 .top-btn:hover {
-  transform: translateY(-0.4vw);
+  transform: translateY(-4px);
 }
 
 .top-btn:active {
-  transform: scale(0.9) translateY(-0.2vw);
+  transform: scale(0.9) translateY(-2px);
 }

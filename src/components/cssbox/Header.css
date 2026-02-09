@@ -1,53 +1,59 @@
+/* 기본 헤더 */
 .header {
     width: 100%;
-    height: 4.16vw; /* 80px / 1920px */
+    height: clamp(60px, 5vw, 80px);
     background: #fff;
     position: fixed;
     top: 0;
     left: 0;
-    z-index: 1000;
-    transition: background-color var(--transition-speed) ease, border-bottom var(--transition-speed) ease;
+    z-index: 3000;
+    transition: background-color var(--transition-speed) ease,
+                border-bottom var(--transition-speed) ease;
     border-bottom: 1px solid rgba(0, 0, 0, 0.05);
-} 
+}
 
 body.dark-mode .header {
     border-bottom: 1px solid rgba(255, 255, 255, 0.1);
     background: #212121;
 }
-.header .layoutPadding {
+
+/* 헤더 컨테이너 */
+.headerlayoutPadding {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    height: 100%;
     width: 100%;
+    padding: 0 clamp(16px, 4vw, 80px);
+    margin: 0 auto;
+    height: 100%;
+    box-sizing: border-box;
 }
 
+/* 로고 */
 .header-leftBox {
-    width: 10.4vw; /* 200px / 1920px */
-    height: 1.77vw; /* 34px / 1920px */
-}  
+    width: clamp(120px, 10vw, 200px);
+}
 
 .header-leftBox img {
     width: 100%;
-} 
+}
 
+/* 오른쪽 영역 */
 .header-rightBox {
-    width: 24vw; /* 460px / 1920px */
-    height: 2.18vw; /* 42px / 1920px */
     display: flex;
-    justify-content: center;
-    align-items: center; 
-    text-align: center;
-}   
+    align-items: center;
+    gap: clamp(12px, 2vw, 32px);
+}
 
+/* 꽃 아이콘 */
 .headerFlowerBox {
-    width: 3.23vw; /* 62px / 1920px */
-    height: 2.18vw;
-    padding-left: 1.04vw; 
+    width: clamp(28px, 3vw, 48px);
+    flex-shrink: 0;
 }
 
 .headerFlowerBox img {
     width: 100%;
+    display: block;
     animation: spin 10s linear infinite;
 }
 
@@ -56,8 +62,11 @@ body.dark-mode .header {
     to { transform: rotate(360deg); }
 }
 
+/* 데스크탑 네비 */
 nav {
-    font-size: 1.04vw; /* 20px / 1920px */
+    display: flex;
+    gap: clamp(16px, 2vw, 40px);
+    font-size: clamp(14px, 1vw, 20px);
     letter-spacing: -1px;
     font-family: 'Montserrat', sans-serif;
     font-weight: 500;
@@ -66,28 +75,109 @@ nav {
 nav a {
     text-decoration: none;
     color: #1573FF;
-    padding: 0 20px;   
 }
 
-/* Desktop */
-@media (min-width: 1280px) and (max-width: 1400px) {
-    .header-rightBox { width: auto; padding-right: 1.05vw; }
+/* 햄버거 기본 숨김 */
+.hamburger-btn {
+    display: none;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 0;
 }
 
-/* Tablet & Mobile (Extended) */
-@media (min-width: 390px) and (max-width: 1279px) {
-    .header { height: 7vw; min-height: 50px; } /* Ensure min height */
-    .header-leftBox { width: 22vw; height: 3.5vw; min-height: 20px; }
-    
-    .header-rightBox { width: auto; padding-right: 2vw; display: flex; } /* Ensure display flex since mobile hid it? No, mobile large had it. Mobile small hid it. extended will show it.*/
-    
-    .headerFlowerBox { width: 5.5vw; height: 3.5vw; padding-left: 2vw; min-width: 30px; min-height: 20px;}
-    
-    nav { font-size: clamp(12px, 1.6vw, 24px); } /* Clamp for legibility */
-    nav a { padding: 0 1.5vw; }
+/* 태블릿 이하 */
+@media (max-width: 1279px) {
+
+    /* 컨테이너 간격 축소 */
+    .headerlayoutPadding {
+        padding: 0 clamp(12px, 4vw, 32px);
+    }
+
+    /* 햄버거 버튼: 항상 우측 상단 고정 */
+    .hamburger-btn {
+        display: block;
+        position: fixed;
+        top: clamp(14px, 3vw, 22px);
+        right: clamp(16px, 4vw, 32px);
+        width: clamp(28px, 4vw, 40px);
+        height: clamp(28px, 4vw, 40px);
+        z-index: 5000;
+    }
+
+    .hamburger-btn img {
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
+        display: block;
+        transition: transform 0.3s ease;
+    }
+
+    .hamburger-btn.active img {
+        transform: rotate(90deg);
+    }
+
+    /* 꽃 아이콘 숨김 */
+    .headerFlowerBox {
+        display: none;
+    }
+
+    /* 풀스크린 메뉴 */
+    nav {
+        position: fixed;
+        top: 0;
+        left: 0;
+        height: 100vh;
+        width: 100%;
+        background: rgba(255, 255, 255, 0.96);
+        backdrop-filter: blur(10px);
+        z-index: 3500;
+
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 8vw;
+
+        transform: translateY(-100%);
+        opacity: 0;
+        pointer-events: none;
+
+        transition: transform 0.4s ease, opacity 0.4s ease;
+    }
+
+    body.dark-mode nav {
+        background: rgba(33, 33, 33, 0.98);
+    }
+
+    nav.active {
+        transform: translateY(0);
+        opacity: 1;
+        pointer-events: all;
+    }
+
+    nav a {
+        font-family: 'Anton', sans-serif;
+        font-size: clamp(32px, 8vw, 72px);
+        color: #1573FF;
+        text-transform: uppercase;
+        opacity: 0;
+        transform: translateY(20px);
+        transition: opacity 0.4s ease 0.2s,
+                    transform 0.4s ease 0.2s;
+    }
+
+    body.dark-mode nav a {
+        color: #fff;
+    }
+
+    nav.active a {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
 
-/* Small Mobile */
-@media (max-width: 389px) {
-    /* Fallback/Empty */
+/* 가로 튀어나옴 방지 */
+body {
+    overflow-x: hidden;
 }

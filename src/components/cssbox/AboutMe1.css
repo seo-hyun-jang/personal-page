@@ -15,18 +15,19 @@
 
 .aboutme1-title {
     font-family: 'Anton', sans-serif;
-    font-size: 20.8vw; /* 400px */
+    font-size: clamp(50px, 18vw, 300px);
     line-height: 1;
     color: var(--title-color); 
     margin: 0;
-    letter-spacing: -2px;
+    letter-spacing: -15px;
     transition: color var(--transition-speed) ease;
+    font-weight: 800;
 }
 
 .aboutme1-subtitle {
     margin-top: 1vw;
     font-family: 'Pretendard', sans-serif;
-    font-size: 1.04vw; /* 20px */
+    font-size: clamp(12px, 1.2vw, 20px);
     line-height: 1.1;
     color: var(--sub-text-color);
     font-weight: 400;
@@ -103,21 +104,16 @@
 
 /* Tablet & Mobile (Extended) */
 @media (min-width: 390px) and (max-width: 1279px) {
-    .aboutme1-section { margin-top: 20vw; padding: 15vw 0; }
+    .aboutme1-section { margin: 15vw 0; padding: 15vw 0;}
     .aboutme1-graphic { width: 50vw; height: 35vw; aspect-ratio: auto; }
     .aboutme1-bar-container { width: 81%; padding: 0.83vw 2.18vw; margin-top: -10.4vw; border-width: 0.31vw; border-radius: 4.16vw; }
     .bar-icon { height: 2.5vw; }
     .char-img { margin-top: 8vw; margin-left: 6vw; }
     .aboutme1-title {
-        font-size: clamp(60px, 20.8vw, 170px); /* 400px base in desktop, scaled down? Tablet had 100vw clamp?? No, the previous code had clamp(100px, 100vw, 170px) which seems wrong/aggressive. I will use a reasonable scaling or keep previous tablet settings if they worked. 
-        Previous tablet: font-size: clamp(100px,100vw, 170px);
-        100vw is huge. It basically maxes out?
-        Let's look at Desktop: 20.8vw.
-        Mobile was 18vw/20vw.
-        I will use 20vw.
-        */
+        font-size: clamp(60px, 20.8vw, 170px); 
         font-size: 20vw;
         font-weight: 800;
+        letter-spacing: -10px;
     }
     .aboutme1-subtitle {
         font-size: clamp(14px, 1.2vw, 20px); margin-top: 1.5vw;

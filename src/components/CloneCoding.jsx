@@ -77,7 +77,7 @@ export default function CloneCoding() {
             className="clone-item" 
             key={item.id} 
             
-            style={{top: `${20 + index *20}px`}} 
+            style={{top: `${110 + index * 10}px`}} 
           > 
             <div className="clone-content">
               

@@ -15,19 +15,20 @@
 
 .uxui-title {
   font-family: 'Anton', 'Impact', sans-serif;
-  font-size: 16.6vw; /* 320px / 1920px */
+  font-size: clamp(40px, 14vw, 380px);
   line-height: 1;
   color: var(--title-color);
   text-transform: uppercase;
   margin: 0;
   letter-spacing: -0.1vw;
   transition: color var(--transition-speed) ease;
+  font-weight: 800;
 }
 
 .uxui-subtitle {
   margin-top: 1vw;
   font-family: 'Pretendard', sans-serif;
-  font-size: 1.04vw; /* 20px / 1920px */
+  font-size: clamp(12px, 1.2vw, 20px);
   line-height: 1.1;
   color: var(--sub-text-color);
   font-weight: 400;
@@ -93,7 +94,7 @@
   /* .uxui-title { font-size: 180px; } */
   .uxui-header { margin-bottom: 8vw; }
   .uxui-title { font-size: 16vw; font-weight: 800; }
-  .uxui-subtitle { font-size: clamp(14px, 1.2vw, 20px); margin-top: 1.5vw; }
+  .uxui-subtitle { font-size: clamp(12px, 1.2vw, 20px); margin-top: 1.5vw; }
   
   .uxui-content { height: auto; overflow: visible; padding: 8vw 0; }
   .spoiler-track { gap: 4vw; padding: 0 5vw; }
