@@ -70,8 +70,8 @@
 }
 
 .sns-platform-name {
-  font-family: 'Anton';
-  font-size: 3.125vw; /* 60px */
+  font-family: 'Anton', sans-serif; 
+  font-size: 3.125vw;
   color: var(--sub-text-color);
   font-weight: 600;
   transition: color var(--transition-speed) ease;
@@ -218,7 +218,7 @@
   margin-top: auto;
   padding: 0.93vw 3.125vw; /* 18px 60px */
   border-radius: 2.6vw; /* 50px */
-  font-family: 'Anton';
+  font-family: 'Anton', sans-serif;
   font-size: 1.25vw; /* 24px */
   letter-spacing: 1px;
   background: #D0E3FF;
