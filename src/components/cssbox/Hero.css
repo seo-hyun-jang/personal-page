@@ -57,14 +57,12 @@
 
 /* Tablet & Mobile (Extended) */
 @media (min-width: 600px) and (max-width: 800px) {
-    .hero { height: 50vh; } /* Keeping explicit height from tablet */
+    .hero { height: 60vh; padding-top: 80px; box-sizing: border-box; } /* Increase height & add padding */
     .hero-text { font-size: 18vw; } 
-    /* .ball-container { transform: scale(0.8); } -> Removed, handled by JS clamp */
 }
 
 /* Small Mobile */
 @media (min-width: 360px) and (max-width: 599px) {
-    .hero { height: 35vh; } /* Keeping explicit height from tablet */
+    .hero { height: 100vh; padding-top: 80px; box-sizing: border-box; } /* Full viewport height for mobile hero */
     .hero-text { font-size: 18vw; } 
-    /* .ball-container { transform: scale(0.8); } -> Removed, handled by JS clamp */
 }

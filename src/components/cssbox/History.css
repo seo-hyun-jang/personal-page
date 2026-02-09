@@ -67,7 +67,7 @@
     line-height: 1;
 }
 .history-bg-white{
-    width: 100vw;
+    width: 100%;
     position: absolute;
     z-index: 1;
     white-space: nowrap;
@@ -79,7 +79,7 @@
     height: 171%;
 }   
 .history-bg{
-    width: 100vw;
+    width: 100%;
     position: absolute;
     z-index: 3;
     white-space: nowrap;
