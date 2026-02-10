@@ -1,9 +1,9 @@
 .makeup-section {
   position: relative;
   width: 100%;
-  min-height: 100vh;
   overflow: hidden;
   padding-top: 200px;
+  min-height: 120vh;
 }
 
 /* ---------- TEXT ---------- */

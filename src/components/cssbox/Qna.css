@@ -83,99 +83,60 @@
 
 @keyframes shuffle-deal-1 {
   0% {
-    transform: translateX(516px) translateY(0) scale(0.9) rotate(0deg);
+    transform: translateX(516px) scale(0.9) rotate(0deg);
     z-index: 1;
-    opacity: 1;
-  }
-
-  25% {
-    transform: translateX(516px) translateY(-40px) scale(0.92) rotate(-8deg);
-    z-index: 5;
     opacity: 1;
   }
 
   50% {
-    transform: translateX(516px) translateY(0) scale(0.9) rotate(0deg);
+    transform: translateX(516px) scale(0.92) rotate(-5deg);
     z-index: 5;
-    opacity: 1;
-  }
-
-  75% {
-    transform: translateX(516px) translateY(-10px) scale(0.95) rotate(-2deg);
-    z-index: 5;
-    opacity: 1;
   }
 
   100% {
-    transform: translateX(0) translateY(0) scale(1) rotate(0deg);
+    transform: translateX(0) scale(1) rotate(0deg);
     z-index: 1;
-    opacity: 1;
   }
 }
+
 
 @keyframes shuffle-deal-2 {
   0% {
-    transform: translateX(0px) translateY(0) scale(0.9) rotate(0deg);
+    transform: scale(0.9);
     z-index: 3;
-    opacity: 1;
-  }
-
-  25% {
-    transform: translateX(0px) translateY(10px) scale(0.88) rotate(3deg);
-    z-index: 1;
     opacity: 1;
   }
 
   50% {
-    transform: translateX(0px) translateY(0) scale(0.9) rotate(0deg);
-    z-index: 3;
-    opacity: 1;
-  }
-
-  75% {
-    transform: translateX(0px) translateY(0) scale(0.95) rotate(0deg);
+    transform: scale(0.92) rotate(2deg);
     z-index: 2;
-    opacity: 1;
   }
 
   100% {
-    transform: translateX(0) translateY(0) scale(1) rotate(0deg);
+    transform: scale(1) rotate(0deg);
     z-index: 2;
-    opacity: 1;
   }
 }
+
 
 @keyframes shuffle-deal-3 {
   0% {
-    transform: translateX(-516px) translateY(0) scale(0.9) rotate(0deg);
+    transform: translateX(-516px) scale(0.9);
     z-index: 2;
-    opacity: 1;
-  }
-
-  25% {
-    transform: translateX(-516px) translateY(-20px) scale(0.92) rotate(5deg);
-    z-index: 3;
     opacity: 1;
   }
 
   50% {
-    transform: translateX(-516px) translateY(0) scale(0.9) rotate(0deg);
-    z-index: 2;
-    opacity: 1;
-  }
-
-  75% {
-    transform: translateX(-516px) translateY(-10px) scale(0.95) rotate(2deg);
+    transform: translateX(-516px) scale(0.92) rotate(4deg);
     z-index: 3;
-    opacity: 1;
   }
 
   100% {
-    transform: translateX(0) translateY(0) scale(1) rotate(0deg);
+    transform: translateX(0) scale(1) rotate(0deg);
     z-index: 3;
-    opacity: 1;
   }
 }
+
 
 .qna-card-front,
 .qna-card-back {
@@ -396,7 +357,7 @@
   }
 
   .qna-question {
-    font-size: 4vw;
+    font-size: 3.5vw;
     line-height: 1.3;
     white-space: normal;
     word-break: keep-all;
@@ -404,7 +365,7 @@
   }
 
   .qna-char-img {
-    width: 30vw;
+    width: 13vw;
   }
 
   .qna-answer {

@@ -34,7 +34,18 @@ const Qna = () => {
   React.useEffect(() => {
     const observer = new IntersectionObserver(
       ([entry]) => {
-        setStartAnimation(entry.isIntersecting);
+        if (entry.isIntersecting) {
+          setStartAnimation(true);
+
+          // 애니메이션 끝나면 자동 flip
+          setTimeout(() => {
+            const flipped = {};
+            qnaData.forEach(item => {
+              flipped[item.id] = true;
+            });
+            setFlippedCards(flipped);
+          }, 2200); // 셔플 끝난 뒤 뒤집힘
+        }
       },
       { threshold: 0.1 }
     );
@@ -46,19 +57,15 @@ const Qna = () => {
     return () => observer.disconnect();
   }, []);
 
-  const handleCardClick = (id) => {
-    setFlippedCards((prev) => ({
-      ...prev,
-      [id]: !prev[id]
-    }));
-  };
-
   return (
     <section className="qna-section" ref={sectionRef}>
       <div className="qna-container">
         <TextAni>
-        <h2 className="qna-title">QUESTIONS <br className="tablet-br" /> & ANSWER</h2>
+          <h2 className="qna-title">
+            QUESTIONS <br className="tablet-br" /> & ANSWER
+          </h2>
         </TextAni>
+
         <p className="qna-subtitle">
           작업 과정에서 자주 마주한 질문들입니다.
           <br />
@@ -70,10 +77,9 @@ const Qna = () => {
             <div
               key={item.id}
               className={`qna-card ${flippedCards[item.id] ? 'is-flipped' : ''}`}
-              onClick={() => handleCardClick(item.id)}
             >
               <div className="qna-card-inner">
-                
+
                 <div className="qna-card-front">
                   <div className="qna-card-frame qna-front-frame">
                     <img
@@ -81,8 +87,6 @@ const Qna = () => {
                       alt="card pattern"
                       className="qna-front-img"
                     />
-                    <div className="qna-front-content">
-                    </div>
                   </div>
                 </div>
 
