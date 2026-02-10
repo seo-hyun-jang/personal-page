@@ -164,6 +164,7 @@
     aspect-ratio: 3/4;
     /* Square-ish or rectangular as needed */
     border-radius: 1.5vw;
+    margin-bottom: 0;
   }
 
   .photo-card img {

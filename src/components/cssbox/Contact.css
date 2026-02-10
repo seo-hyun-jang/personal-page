@@ -371,6 +371,11 @@
   }
 
   .footer-social a {
+    width: 6vw;
+    height: 6vw;
+  }
+
+  .footer-social a img {
     width: 5vw;
     height: 5vw;
   }

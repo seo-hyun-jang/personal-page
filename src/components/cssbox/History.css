@@ -11,7 +11,12 @@
     overflow: hidden;
     font-family: 'Montserrat', sans-serif;
     padding: 200px 0;
+    margin-top: -2px;
+    box-shadow: 0 -2px 0 #1573FF;
 }
+
+
+
 
 /* 중앙 컨테이너 */
 .history-slideshow-container {
@@ -22,6 +27,7 @@
     justify-content: center;
     align-items: center;
     z-index: 5;
+
 }
 
 /* 중앙 사진 */
@@ -46,17 +52,20 @@
     top: 50%;
     transform: translate(-50%, -50%);
     z-index: 3;
+    border: none;
 }
 
 .history-bg img {
     width: 100%;
     height: auto;
+    border: none;
+    object-fit: cover;
 }
 
 /* 흰 배경 숫자 (반응형 스케일) */
 .history-bg-white {
     position: absolute;
-    width: 140vw;
+    width: 139vw;
     max-width: 1920px;
     left: 50%;
     top: 50%;
@@ -67,6 +76,7 @@
 .history-bg-white img {
     width: 100%;
     height: auto;
+    object-fit: cover;
 }
 
 /* 연도 텍스트 */
@@ -121,6 +131,7 @@
 @media (max-width: 1280px) {
     .history-section {
         padding: 150px 0;
+        margin-top: -2px;
     }
 
     .history-slideshow-container {
@@ -129,9 +140,9 @@
     }
 
     .history-photo {
-        width: 320px;
-        height: 460px;
-        margin-top: -150px;
+        width: 473px;
+        height: 600px;
+        margin-top: -250px;
     }
 
     .history-year-text {
@@ -154,7 +165,7 @@
     .history-section {
         flex-direction: column;
         padding: 100px 20px;
-        margin-top: -5px;
+        margin-top: -2px;
     }
 
     .history-text-content {
@@ -162,6 +173,8 @@
         text-align: center;
         margin-bottom: 200px;
     }
+
+
 
     .history-slideshow-container {
         width: 100%;
@@ -198,6 +211,11 @@
 
 
 @media (max-width: 390px) {
+
+    .history-section {
+        margin-top: -2px;
+    }
+
     .history-year-text {
         letter-spacing: clamp(20px, 10vw, 50px);
         bottom: clamp(10%, 10vw, 15%);
