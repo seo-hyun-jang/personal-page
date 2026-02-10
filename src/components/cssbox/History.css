@@ -65,7 +65,7 @@
 /* 흰 배경 숫자 (반응형 스케일) */
 .history-bg-white {
     position: absolute;
-    width: 139vw;
+    width: 138vw;
     max-width: 1920px;
     left: 50%;
     top: 50%;
