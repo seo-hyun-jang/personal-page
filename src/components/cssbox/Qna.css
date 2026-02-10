@@ -15,7 +15,7 @@
 .qna-title {
   font-family: 'Anton', sans-serif;
   font-size: clamp(50px, 14vw, 300px);
-  letter-spacing: -15px;
+  letter-spacing: -10px;
   color: var(--title-color);
   line-height: 1;
   display: flex;
@@ -382,8 +382,8 @@
   }
 
   .qna-card {
-    width: 80vw;
-    height: 110vw;
+    width: 60vw;
+    height: 80vw;
     /* Adjust aspect ratio */
   }
 
@@ -396,7 +396,7 @@
   }
 
   .qna-question {
-    font-size: 4.5vw;
+    font-size: 4vw;
     line-height: 1.3;
     white-space: normal;
     word-break: keep-all;
@@ -408,7 +408,7 @@
   }
 
   .qna-answer {
-    font-size: 3.5vw;
+    font-size: 2.5vw;
     line-height: 1.5;
     white-space: normal;
     /* Ignore \n */

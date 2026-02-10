@@ -363,8 +363,13 @@
     min-height: 4vw;
   }
 
+  .sns-stat-value.small-value {
+    font-size: 2vw;
+  }
+
   .sns-stat-label {
     font-size: 1.5vw;
+    margin-bottom: 0.625vw;
   }
 
   /* Gallery Common */

@@ -20,7 +20,7 @@
     line-height: 1;
     color: var(--title-color);
     margin: 0;
-    letter-spacing: -15px;
+    letter-spacing: -7px;
     transition: color var(--transition-speed) ease;
     font-weight: 800;
 }
@@ -79,7 +79,24 @@
     align-items: center;
     width: max-content;
     animation: marqueeScroll 30s linear infinite;
+    will-change: transform;
 }
+
+.aboutme1-marquee:hover {
+    animation-play-state: paused;
+}
+
+
+@keyframes marqueeScroll {
+    from {
+        transform: translateX(0);
+    }
+
+    to {
+        transform: translateX(-50%);
+    }
+}
+
 
 .bar-icon {
     height: 2.5vw;
@@ -105,7 +122,6 @@
         width: 46.8vw;
     }
 }
-
 
 @media (max-width: 1024px) {
     .aboutme1-graphic {

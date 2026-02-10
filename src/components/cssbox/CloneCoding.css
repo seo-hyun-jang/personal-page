@@ -14,7 +14,7 @@
 .clone-title {
   font-family: 'Anton', sans-serif;
   font-size: clamp(50px, 14vw, 280px);
-  letter-spacing: -15px;
+  letter-spacing: -7px;
   line-height: 1;
   color: var(--title-color);
   transition: color var(--transition-speed) ease;

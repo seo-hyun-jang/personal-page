@@ -20,7 +20,7 @@
     color: var(--title-color);
     text-transform: uppercase;
     margin: 0;
-    letter-spacing: -15px;
+    letter-spacing: -7px;
     transition: color var(--transition-speed) ease;
     font-weight: 800;
 }

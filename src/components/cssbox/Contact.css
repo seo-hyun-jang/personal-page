@@ -50,7 +50,7 @@
 .contact-title {
   font-family: 'Anton', sans-serif;
   font-size: clamp(50px, 21vw, 300px);
-  letter-spacing: -15px;
+  letter-spacing: -7px;
   color: #fff;
   margin: 0;
   line-height: 1;

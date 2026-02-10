@@ -29,6 +29,7 @@ export default function MakeupScroll() {
   useEffect(() => {
     let mm = gsap.matchMedia();
 
+    // 데스크탑 스크롤 애니메이션
     mm.add("(min-width: 1280px)", () => {
       const section = sectionRef.current;
       const leftCol = leftColRef.current;
@@ -36,9 +37,20 @@ export default function MakeupScroll() {
 
       if (!section || !leftCol || !rightCol) return;
 
-      const scrollLength =
-        Math.max(leftCol.scrollHeight, rightCol.scrollHeight) -
-        window.innerHeight;
+      // 이전 transform 제거
+      gsap.set([leftCol, rightCol], { clearProps: "all" });
+
+      const leftCards = leftCol.querySelectorAll(".photo-card");
+      const rightCards = rightCol.querySelectorAll(".photo-card");
+
+      const lastLeft = leftCards[leftCards.length - 1];
+      const lastRight = rightCards[rightCards.length - 1];
+
+      const leftBottom = lastLeft.offsetTop + lastLeft.offsetHeight;
+      const rightBottom = lastRight.offsetTop + lastRight.offsetHeight;
+
+      const contentHeight = Math.max(leftBottom, rightBottom);
+      const scrollLength = Math.max(0, contentHeight - window.innerHeight);
 
       const tl = gsap.timeline({
         scrollTrigger: {
@@ -51,12 +63,24 @@ export default function MakeupScroll() {
         },
       });
 
-      tl.to(leftCol, { y: -scrollLength * 1.1, ease: "none" }, 0)
-        .to(rightCol, { y: -scrollLength * 0.8, ease: "none" }, 0);
+      tl.to(leftCol, { y: -scrollLength, ease: "none" }, 0)
+        .to(rightCol, { y: -scrollLength, ease: "none" }, 0);
+    });
+
+    // 모바일 진입 시 애니메이션 제거
+    mm.add("(max-width: 1279px)", () => {
+      const leftCol = leftColRef.current;
+      const rightCol = rightColRef.current;
+
+      if (!leftCol || !rightCol) return;
+
+      gsap.set([leftCol, rightCol], { clearProps: "all" });
+      ScrollTrigger.getAll().forEach(st => st.kill());
     });
 
     return () => mm.revert();
   }, []);
+
 
   return (
     <section className="makeup-section" ref={sectionRef}>
