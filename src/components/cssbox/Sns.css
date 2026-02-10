@@ -389,7 +389,6 @@
     width: 100%;
     height: auto;
     margin-bottom: 4vw;
-    flex-direction: column;
   }
 
   .sns-stats-grid.two {
@@ -405,7 +404,8 @@
 
   .sns-stat-value {
     font-size: 5vw;
-    min-height: 4vw;
+    height: auto;
+    min-height: auto;
   }
 
   .sns-stat-item:first-child {
@@ -419,23 +419,28 @@
   }
 
   .sns-gallery.youtube {
-    height: auto;
-    flex-direction: column;
+    height: 60vw;
+    flex-direction: row;
     gap: 2vw;
+
   }
 
   .youtube-large {
-    height: 50vw;
-    flex: none;
-    width: 100%;
+    flex: 0.7;
+    height: 100%;
   }
 
   .sns-gallery-right-stack {
-    flex: none;
-    width: 100%;
-    flex-direction: row;
-    height: 30vw;
+    flex: 0.9;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
     gap: 2vw;
+  }
+
+  .youtube-small {
+    flex: 1;
+    height: calc(50% - 1vw);
   }
 
   .sns-gallery.instagram {
@@ -461,6 +466,7 @@
 
   .sns-stat-label {
     font-size: 2.2vw;
+    height: auto;
   }
 
   /* 모바일에서도 오버레이 항상 보이게 */
@@ -472,7 +478,7 @@
 }
 
 /* Mobile */
-@media (max-width: 389px) {
+@media (max-width: 390px) {
   .sns-section {
     padding: 6vw 0 10vw;
   }
@@ -499,21 +505,48 @@
   }
 
   .sns-stats-grid.two {
-    flex-direction: column;
+    flex-direction: row;
   }
 
   .sns-stat-item:first-child {
-    border-right: none;
-    border-bottom: 1px solid #808080;
+    border-right: 1px solid #808080;
+    border-bottom: none;
+  }
+
+  .sns-stat-item {
+    padding: 4vw 0;
+  }
+
+  .sns-stat-label,
+  .sns-stat-value {
+    height: auto;
+    min-height: auto;
+  }
+
+  .sns-stat-label {
+    font-size: 3.5vw;
+    margin-bottom: 1vw;
+  }
+
+  .sns-stat-value {
+    font-size: 4vw;
+  }
+
+  .sns-gallery.youtube {
+    height: 60vw;
+    flex-direction: row;
+    gap: 2vw;
   }
 
   .sns-gallery-right-stack {
-    height: auto;
+    height: 100%;
     flex-direction: column;
+    gap: 2vw;
   }
 
   .youtube-small {
-    height: 30vw;
+    height: calc(50% - 1vw);
+    flex: 1;
   }
 
   .sns-gallery.instagram .sns-card {
@@ -522,8 +555,10 @@
   }
 
   .sns-view-project-btn {
-    padding: 3vw 8vw;
-    font-size: 4vw;
+    padding: 4vw 14vw;
+    font-size: clamp(16px, 5.5vw, 24px);
+    border-radius: 50vw;
+    font-weight: 700;
   }
 
   .sns-char-box {
@@ -535,5 +570,10 @@
     opacity: 1 !important;
     backdrop-filter: blur(5px);
     background: rgba(0, 0, 0, 0.35);
+    font-size: 3.5vw;
+  }
+
+  .sns-overlay-icon {
+    width: 5vw;
   }
 }

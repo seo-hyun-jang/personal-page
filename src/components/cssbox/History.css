@@ -185,13 +185,17 @@
     .history-photo {
         width: 50vw;
         height: auto;
-        margin-top: -100px;
+
+        /* 진짜 중앙 정렬 */
+        display: block;
+        margin: -100px auto 0;
+
+        position: relative;
         border-radius: 10px;
 
-        /* 핵심 중앙 정렬 */
-        position: relative;
-        left: 50%;
-        transform: translateX(-50%);
+        /* 기존 밀림 원인 제거 */
+        left: auto;
+        transform: none;
     }
 
     .history-year-text {
@@ -216,7 +220,8 @@
 }
 
 
-@media (max-width: 391px) {
+
+@media (max-width: 392px) {
 
     .history-section {
         margin-top: -2px;
@@ -224,7 +229,14 @@
 
     .history-title {
         font-size: 60px;
-        letter-spacing: ;
+        letter-spacing: -1px;
+    }
+
+    .history-text-content {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
     }
 
     .history-year-text {
