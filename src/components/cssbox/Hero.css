@@ -58,7 +58,7 @@
 }
 
 /* Tablet & Mobile (Extended) */
-@media (min-width: 390px) and (max-width: 1279px) {
+@media (max-width: 1279px) {
     .hero {
         height: 900px;
     }
@@ -73,7 +73,9 @@
     }
 }
 
-/* Small Mobile */
-@media (max-width: 389px) {
-    /* Fallback/Empty */
+@media (max-width: 390px) {
+    .hero {
+        height: 100vh;
+        padding-top: 0;
+    }
 }

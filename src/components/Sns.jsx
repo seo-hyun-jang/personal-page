@@ -23,7 +23,7 @@ const Sns = () => {
     <section className="sns-section">
       <div className="sns-header">
         <TextAni>
-        <p className="sns-main-title">SNS & GROWTH</p>
+          <p className="sns-main-title">SNS & GROWTH</p>
         </TextAni>
         <p className="sns-subtitle">
           직접 운영하며 성과를 만들어왔습니다.{"\n"}
@@ -32,7 +32,7 @@ const Sns = () => {
       </div>
 
       <div className="sns-columns-container">
-        {}
+        { }
         <div className="sns-column" data-platform="youtube">
           <div className="sns-platform-header">
             <img src="/img/sns-youtube.png" alt="YouTube" className="sns-platform-logo" />
@@ -44,8 +44,8 @@ const Sns = () => {
               {youtubeStats.map((stat, i) => (
                 <div key={i} className="sns-stat-item">
                   <div className="sns-stat-label">{stat.label}</div>
-                  <div 
-                    className={`sns-stat-value ${stat.value.includes('\n') ? 'small-value' : ''}`} 
+                  <div
+                    className={`sns-stat-value ${stat.value.includes('\n') ? 'small-value' : ''}`}
                     style={{ whiteSpace: 'pre-line' }}
                   >
                     {stat.value}
@@ -104,7 +104,7 @@ const Sns = () => {
               {instagramStats.map((stat, i) => (
                 <div key={i} className="sns-stat-item">
                   <div className="sns-stat-label">{stat.label}</div>
-                  <div 
+                  <div
                     className={`sns-stat-value ${stat.value.includes('\n') ? 'small-value' : ''}`}
                     style={{ whiteSpace: 'pre-line' }}
                   >
@@ -117,12 +117,12 @@ const Sns = () => {
 
           <div className="sns-gallery instagram">
             {instaThumbs.map((t, i) => (
-              <div key={t.id} className="sns-card-wrapper" style={{ flex: 1, height: '100%', position: 'relative' }}>
+              <div key={t.id} className="sns-card-wrapper">
                 {i === 0 && <img src="/img/crown.svg" className="sns-crown-icon" alt="Best" />}
-                <div className="sns-card" style={{ width: '100%', height: '100%' }}>
-                  <img src={t.img} className="sns-thumb" />
+                <div className="sns-card">
+                  <img src={t.img} className="sns-thumb" alt={`Instagram ${t.id}`} />
                   <div className="sns-card-overlay">
-                    <img src="/img/sns-eyes.svg" className="sns-overlay-icon" />
+                    <img src="/img/sns-eyes.svg" className="sns-overlay-icon" alt="Views" />
                     <span>{t.views}</span>
                   </div>
                 </div>
@@ -132,11 +132,11 @@ const Sns = () => {
 
           <a href="https://www.instagram.com/amongguri?igsh=MWN0czkxcXl6eXdrMQ%3D%3D&utm_source=qr" target="_blank" rel="noopener noreferrer" className="sns-view-project-btn">VIEW CHANNEL</a>
         </div>
-        
+
       </div>
       <div className="sns-char-box">
-          <img src="/img/sns-char.svg" className="sns-btn-char" />
-        </div>
+        <img src="/img/sns-char.svg" className="sns-btn-char" />
+      </div>
     </section>
   );
 };
