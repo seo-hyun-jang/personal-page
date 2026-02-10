@@ -16,6 +16,7 @@ export default function MakeupScroll() {
     "/img/makeup3.svg",
     "/img/makeup5.svg",
     "/img/makeup7.svg",
+    "/img/makeup9.svg",
   ];
 
   const rightImages = [
