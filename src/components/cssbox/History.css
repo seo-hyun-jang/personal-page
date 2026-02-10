@@ -210,10 +210,15 @@
 }
 
 
-@media (max-width: 390px) {
+@media (max-width: 391px) {
 
     .history-section {
         margin-top: -2px;
+    }
+
+    .history-title {
+        font-size: 60px;
+        letter-spacing: -1px;
     }
 
     .history-year-text {
