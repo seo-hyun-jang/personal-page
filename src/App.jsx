@@ -12,7 +12,7 @@ export default function App() {
   const [introDone, setIntroDone] = useState(false);
 
   return (
-    <div className="relative w-full h-screen overflow-hidden">
+    <div className={`relative w-full ${!introDone ? "h-screen overflow-hidden" : ""}`}>
 
       {!introDone && (
         <IntroAnimation onComplete={() => setIntroDone(true)} />
