@@ -8,7 +8,7 @@
     left: 0;
     z-index: 3000;
     transition: background-color var(--transition-speed) ease,
-                border-bottom var(--transition-speed) ease;
+        border-bottom var(--transition-speed) ease;
     border-bottom: 1px solid rgba(0, 0, 0, 0.05);
 }
 
@@ -42,6 +42,7 @@ body.dark-mode .header {
 .header-rightBox {
     display: flex;
     align-items: center;
+    justify-content: center;
     gap: clamp(12px, 2vw, 32px);
 }
 
@@ -58,8 +59,13 @@ body.dark-mode .header {
 }
 
 @keyframes spin {
-    from { transform: rotate(0deg); }
-    to { transform: rotate(360deg); }
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(360deg);
+    }
 }
 
 /* 데스크탑 네비 */
@@ -97,11 +103,12 @@ nav a {
     /* 햄버거 버튼: 항상 우측 상단 고정 */
     .hamburger-btn {
         display: block;
-        position: fixed;
-        top: clamp(14px, 3vw, 22px);
+        position: absolute;
+        top: 50%;
         right: clamp(16px, 4vw, 32px);
-        width: clamp(28px, 4vw, 40px);
-        height: clamp(28px, 4vw, 40px);
+        transform: translateY(-50%);
+        width: clamp(20px, 4vw, 40px);
+        height: clamp(20px, 4vw, 40px);
         z-index: 5000;
     }
 
@@ -164,7 +171,7 @@ nav a {
         opacity: 0;
         transform: translateY(20px);
         transition: opacity 0.4s ease 0.2s,
-                    transform 0.4s ease 0.2s;
+            transform 0.4s ease 0.2s;
     }
 
     body.dark-mode nav a {
