@@ -174,11 +174,12 @@
         margin-bottom: 200px;
     }
 
-
-
     .history-slideshow-container {
         width: 100%;
         height: auto;
+        display: flex;
+        justify-content: center;
+        align-items: center;
     }
 
     .history-photo {
@@ -186,6 +187,11 @@
         height: auto;
         margin-top: -100px;
         border-radius: 10px;
+
+        /* 핵심 중앙 정렬 */
+        position: relative;
+        left: 50%;
+        transform: translateX(-50%);
     }
 
     .history-year-text {
@@ -218,7 +224,7 @@
 
     .history-title {
         font-size: 60px;
-        letter-spacing: -1px;
+        letter-spacing: ;
     }
 
     .history-year-text {
