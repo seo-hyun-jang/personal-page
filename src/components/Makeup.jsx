@@ -56,7 +56,7 @@ export default function MakeupScroll() {
         scrollTrigger: {
           trigger: section,
           start: "top top",
-          end: () => "+=" + scrollLength,
+          end: () => "+=" + (scrollLength + 200),
           pin: true,
           scrub: 1,
           invalidateOnRefresh: true,

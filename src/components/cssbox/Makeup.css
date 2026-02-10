@@ -1,8 +1,9 @@
 .makeup-section {
   position: relative;
   width: 100%;
-  overflow: visible;
+  overflow: hidden;
   padding-top: 200px;
+  min-height: 140vh;
 }
 
 /* ---------- TEXT ---------- */
@@ -42,7 +43,7 @@
 .photo-viewport {
   position: absolute;
   inset: 0;
-  overflow: visible;
+  overflow: hidden;
 }
 
 .photo-columns {
