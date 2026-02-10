@@ -28,7 +28,7 @@
 .personal-desc-top {
     margin-top: 0.83vw;
     font-family: 'Pretendard', sans-serif;
-    font-size: clamp(12px, 1.2vw, 20px);
+    font-size: clamp(13px, 1.2vw, 20px);
     line-height: 1.1;
     color: var(--sub-text-color);
     font-weight: 400;
@@ -103,22 +103,41 @@
     text-transform: uppercase;
     min-height: 1.1em;
     letter-spacing: -1px;
-    white-space: nowrap;
+    white-space: normal;
     transition: color var(--transition-speed) ease;
 }
 
 .personal-project-description {
     font-family: 'Pretendard', sans-serif;
-    font-size: 0.93vw;
-    line-height: 1.6;
+    font-size: clamp(15px, 0.9vw, 18px);
+    line-height: 1.7;
     color: var(--sub-text-color);
     margin-bottom: 3.125vw;
-    white-space: pre-line;
-    min-height: 7.8vw;
-    letter-spacing: -1px;
-    transition: color var(--transition-speed) ease;
+    letter-spacing: -0.3px;
+    text-align: left;
+
+    /* 줄 끊김 최소화 핵심 */
+    white-space: normal;
     word-break: keep-all;
-    overflow-wrap: break-word;
+    overflow-wrap: normal;
+
+    max-width: none;
+}
+
+
+.personal-project-description p {
+    margin: 0 0 1.2em;
+}
+
+.personal-project-description p:last-child {
+    margin-bottom: 0;
+}
+
+
+
+
+.m-br {
+    display: none;
 }
 
 @media (max-width: 1200px) {
@@ -144,7 +163,7 @@
 }
 
 /* Tablet & Mobile */
-@media (min-width: 600px) and (max-width: 1279px) {
+@media (max-width: 1279px) {
     .personal-header {
         margin-bottom: 8vw;
     }
@@ -174,21 +193,35 @@
     }
 
     .personal-project-description {
-        font-size: clamp(14px, 1.2vw, 20px);
-        min-height: auto;
-        margin-bottom: 4vw;
-
-
-    }
-
-    .personal-char-img {
-        width: 15vw;
-    }
-
-    .personal-section {
-        padding-bottom: 14vw;
+        font-size: 16px;
+        line-height: 1.7;
+        max-width: 520px;
     }
 }
+
+@media (max-width: 600px) {
+
+    .personal-project-description {
+        font-size: 14px;
+        line-height: 1.6;
+        margin-bottom: 6vw;
+        text-align: left;
+        width: 100%;
+        max-width: none;
+        padding: 0 20px;
+    }
+}
+
+
+
+.personal-char-img {
+    width: 15vw;
+}
+
+.personal-section {
+    padding-bottom: 14vw;
+}
+
 
 /* Small Mobile */
 @media (max-width: 600px) {
@@ -204,11 +237,11 @@
         width: 100%;
     }
 
-    /* team과 완전히 동일한 비율 유지 */
 
     .personal-project-title {
         font-size: 3.5vw;
-        text-align: center;
+        text-align: left;
+        white-space: nowrap;
         width: 100%;
     }
 
@@ -220,14 +253,24 @@
     }
 
     .personal-desc-top {
-        font-size: clamp(12px, 3vw, 20px);
+        font-size: clamp(13px, 3vw, 20px);
     }
 
     .personal-project-description {
-        font-size: clamp(10px, 1.5vw, 18px);
+        font-size: 12px;
+        line-height: 1.5;
         margin-bottom: 6vw;
-        text-align: center;
+        text-align: left;
         width: 100%;
+        max-width: 94%;
+        padding: 0;
+    }
+
+
+
+
+    .m-br {
+        display: block;
     }
 
     .personal-char-container {

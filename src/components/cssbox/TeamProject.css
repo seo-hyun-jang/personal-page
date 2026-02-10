@@ -35,7 +35,7 @@
 .team-desc-top {
     margin-top: 0.83vw;
     font-family: 'Pretendard', sans-serif;
-    font-size: clamp(12px, 1.2vw, 20px);
+    font-size: clamp(13px, 1.2vw, 20px);
     line-height: 1.1;
     color: var(--sub-text-color);
     font-weight: 400;
@@ -181,23 +181,29 @@
     /* 30px */
     line-height: 1.1;
     letter-spacing: -1px;
-    white-space: nowrap;
+    white-space: normal;
     transition: color var(--transition-speed) ease;
 }
 
 .project-description {
     font-family: 'Pretendard', sans-serif;
     font-size: 0.93vw;
-    /* 18px */
     line-height: 1.6;
     color: var(--sub-text-color);
     margin-bottom: 3.125vw;
-    /* 60px */
-    white-space: pre-line;
-    min-height: 10.4vw;
-    /* 200px */
-    letter-spacing: -1px;
+    min-height: auto;
+    letter-spacing: -0.3px;
     transition: color var(--transition-speed) ease;
+
+    white-space: normal;
+    word-break: keep-all;
+    overflow-wrap: normal;
+    max-width: none;
+}
+
+
+.m-br {
+    display: none;
 }
 
 .action-buttons {
@@ -384,7 +390,8 @@
 
     .project-title {
         font-size: 4vw;
-        text-align: center;
+        text-align: left;
+        white-space: nowrap;
         width: 100%;
 
     }
@@ -397,16 +404,24 @@
     }
 
     .team-desc-top {
-        font-size: clamp(12px, 3vw, 20px);
+        font-size: clamp(13px, 3vw, 20px);
     }
 
     .project-description {
-        font-size: clamp(10px, 1.5vw, 18px);
+        font-size: clamp(12px, 1.5vw, 18px);
         min-height: auto;
         margin-bottom: 6vw;
         text-align: center;
         width: 100%;
+        padding: 0 4vw;
+        word-break: keep-all;
+        max-width: 90%;
+        margin-left: auto;
+        margin-right: auto;
     }
+
+
+
 
     .action-buttons {
         gap: 4vw;
@@ -427,12 +442,12 @@
 
     .nav-arrow.right {
         right: 5%;
-        top: 70%;
+        top: 64%;
     }
 
     .nav-arrow.left {
         left: 5%;
-        top: 70%;
+        top: 64%;
     }
 
     .nav-arrow svg {

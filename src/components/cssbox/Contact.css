@@ -59,7 +59,7 @@
 
 .contact-subtitle {
   font-family: 'Pretendard', sans-serif;
-  font-size: clamp(12px, 1.2vw, 20px);
+  font-size: clamp(13px, 1.2vw, 20px);
   font-weight: 400;
   color: var(--sub-text-color);
   line-height: 1.1;
@@ -334,7 +334,7 @@
   }
 
   .contact-subtitle {
-    font-size: clamp(12px, 1.2vw, 20px);
+    font-size: clamp(13px, 1.2vw, 20px);
   }
 
   .speech-bubble-wrapper {

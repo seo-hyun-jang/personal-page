@@ -29,7 +29,7 @@
 
 .qna-subtitle {
   margin-top: 16px;
-  font-size: clamp(12px, 1.2vw, 20px);
+  font-size: clamp(13px, 1.2vw, 20px);
   color: var(--sub-text-color);
   font-weight: 500;
   margin-bottom: 200px;
@@ -279,7 +279,7 @@
   }
 
   .qna-subtitle {
-    font-size: clamp(12px, 1.2vw, 20px);
+    font-size: clamp(13px, 1.2vw, 20px);
     margin-bottom: 15vw;
   }
 

@@ -30,7 +30,7 @@
 .uxui-subtitle {
   margin-top: 1vw;
   font-family: 'Pretendard', sans-serif;
-  font-size: clamp(12px, 1.2vw, 20px);
+  font-size: clamp(13px, 1.2vw, 20px);
   line-height: 1.1;
   color: var(--sub-text-color);
   font-weight: 400;
@@ -125,7 +125,7 @@
   }
 
   .uxui-subtitle {
-    font-size: clamp(12px, 1.2vw, 20px);
+    font-size: clamp(13px, 1.2vw, 20px);
     margin-top: 1.5vw;
   }
 
