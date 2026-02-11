@@ -1,9 +1,9 @@
 .makeup-section {
   position: relative;
   width: 100%;
-  height: 100vh;
   overflow: hidden;
   padding-top: 200px;
+  min-height: 140vh;
 }
 
 /* ---------- TEXT ---------- */
@@ -100,8 +100,9 @@
     overflow: visible;
     padding-top: 10vw;
     padding-bottom: 15vw;
+    min-height: 100vh;
   }
-  
+
   .makeup-textBox {
     position: static;
     transform: none;
@@ -111,14 +112,18 @@
     margin-left: auto;
     margin-right: auto;
   }
+
   .makeup-title {
     font-size: clamp(50px, 21vw, 180px);
     font-weight: 800;
     letter-spacing: -5px;
   }
 
-  .makeup-desc { font-size: clamp(12px, 1.2vw, 20px); margin-top: 1.5vw; }
-  
+  .makeup-desc {
+    font-size: clamp(13px, 1.2vw, 20px);
+    margin-top: 1.5vw;
+  }
+
   .photo-viewport {
     position: static;
     height: auto;
@@ -140,22 +145,40 @@
     width: 90vw;
   }
 
-  .photo-col.left { transform: none; }
-  .photo-col.right { transform: none; padding-top: 0; }
-  
+  .photo-col.left {
+    transform: none;
+  }
+
+  .photo-col.right {
+    transform: none;
+    padding-top: 0;
+  }
+
   /* Hide the 9th image (5th in left column) */
   .photo-col.left .photo-card:nth-child(5) {
     display: none;
   }
-  
-  .photo-card { 
-    width: auto; 
-    height: auto; 
-    aspect-ratio: 3/4; /* Square-ish or rectangular as needed */
+
+  .photo-card {
+    width: auto;
+    height: auto;
+    aspect-ratio: 3/4;
+    /* Square-ish or rectangular as needed */
     border-radius: 1.5vw;
+    margin-bottom: 0;
   }
 
   .photo-card img {
     border-radius: 1.5vw;
+  }
+}
+
+@media (max-width: 600px) {
+  .makeup-section {
+    min-height: 60vh;
+  }
+
+  .makeup-title {
+    letter-spacing: -1px;
   }
 }

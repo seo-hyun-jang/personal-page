@@ -1,7 +1,8 @@
 .uxui-spoiler {
   width: 100%;
   background-color: var(--bg-color);
-  padding: 7.8vw 0; /* 150px / 1920px */
+  padding: 7.8vw 0;
+  /* 150px / 1920px */
   font-family: 'Montserrat', sans-serif;
   overflow-x: hidden;
   overflow-y: visible;
@@ -10,7 +11,8 @@
 
 .uxui-header {
   text-align: center;
-  margin-bottom: 5.2vw; /* 100px / 1920px */
+  margin-bottom: 5.2vw;
+  /* 100px / 1920px */
 }
 
 .uxui-title {
@@ -28,7 +30,7 @@
 .uxui-subtitle {
   margin-top: 1vw;
   font-family: 'Pretendard', sans-serif;
-  font-size: clamp(12px, 1.2vw, 20px);
+  font-size: clamp(13px, 1.2vw, 20px);
   line-height: 1.1;
   color: var(--sub-text-color);
   font-weight: 400;
@@ -51,13 +53,16 @@
 .spoiler-track {
   display: flex;
   align-items: center;
-  gap: 5.2vw; /* 100px / 1920px */
-  padding: 0 10vw; 
+  gap: 5.2vw;
+  /* 100px / 1920px */
+  padding: 0 10vw;
   width: max-content;
 }
+
 .spoiler-card {
   flex-shrink: 0;
-  width: min(72.9vw, 80vw); /* 1400px / 1920px */
+  width: min(72.9vw, 80vw);
+  /* 1400px / 1920px */
   aspect-ratio: 1400 / 782;
 
   border-radius: 20px;
@@ -77,31 +82,72 @@
 
 
 @media (max-width: 1024px) {
+
   /* .uxui-title { font-size: 120px; } -> Handled by vw */
-  .uxui-content { height: auto; overflow: visible; padding: 4.16vw 0; }
-  .spoiler-track { flex-direction: column; width: 100%; padding: 0; gap: 3.125vw; }
-  .spoiler-card { width: 90vw; }
+  .uxui-content {
+    height: auto;
+    overflow: visible;
+    padding: 4.16vw 0;
+  }
+
+  .spoiler-track {
+    flex-direction: column;
+    width: 100%;
+    padding: 0;
+    gap: 3.125vw;
+  }
+
+  .spoiler-card {
+    width: 90vw;
+  }
 }
 
 /* Desktop */
 @media (min-width: 1280px) and (max-width: 1400px) {
+
   /* .uxui-title { font-size: 280px; } */
-  .spoiler-card { width: min(62.5vw, 75vw); }
+  .spoiler-card {
+    width: min(62.5vw, 75vw);
+  }
 }
 
 /* Tablet & Mobile (Extended) */
 @media (min-width: 390px) and (max-width: 1279px) {
+
   /* .uxui-title { font-size: 180px; } */
-  .uxui-header { margin-bottom: 8vw; }
-  .uxui-title { font-size: 16vw; font-weight: 800; }
-  .uxui-subtitle { font-size: clamp(12px, 1.2vw, 20px); margin-top: 1.5vw; }
-  
-  .uxui-content { height: auto; overflow: visible; padding: 8vw 0; }
-  .spoiler-track { gap: 4vw; padding: 0 5vw; }
-  .spoiler-card { width: 85vw; border-radius: 1.5vw; }
+  .uxui-header {
+    margin-bottom: 8vw;
+  }
+
+  .uxui-title {
+    font-size: 16vw;
+    font-weight: 800;
+  }
+
+  .uxui-subtitle {
+    font-size: clamp(13px, 1.2vw, 20px);
+    margin-top: 1.5vw;
+  }
+
+  .uxui-content {
+    height: auto;
+    overflow: visible;
+    padding: 8vw 0;
+  }
+
+  .spoiler-track {
+    gap: 4vw;
+    padding: 0 5vw;
+  }
+
+  .spoiler-card {
+    width: 85vw;
+    border-radius: 1.5vw;
+  }
 }
 
-/* Small Mobile */
-@media (max-width: 389px) {
-  /* Fallback/Empty */
+@media (max-width: 600px) {
+  .roles-title {
+    letter-spacing: -1px;
+  }
 }

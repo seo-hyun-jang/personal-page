@@ -54,11 +54,11 @@ export default function Header() {
       </button>
 
       <div className="headerlayoutPadding">
-        
+
         {/* Logo */}
         <div className="header-leftBox">
           <a href="#home" onClick={(e) => scrollToSection(e, 'home')}>
-            <img src="/img/logo.svg" alt="logo" />
+            <img src="/img/logo-.png" alt="logo" />
           </a>
         </div>
 

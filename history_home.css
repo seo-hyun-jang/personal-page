@@ -1,0 +1,161 @@
+﻿.history-section {
+    width: 100%;
+    background-size: cover;
+    min-height: 36.5vw; /* 700px / 1920px */
+    font-family: 'Montserrat', sans-serif;
+    color: #fff;
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 15.6vw; /* 300px / 1920px */
+    padding-bottom: 10.4vw; /* 200px / 1920px */
+    background: #1573FF;
+    margin-top: -2px;
+}
+
+.history-text-content {
+    position: absolute;
+    bottom: 5.2vw; /* 100px / 1920px */
+    left: 10%;
+    width: 90%;
+    max-width: 31.25vw; /* 600px / 1920px */
+    z-index: 10;
+    text-align: left;
+}
+
+.history-title {
+    font-family: 'Anton', sans-serif;
+    font-size: 5.2vw; /* 100px / 1920px */
+    line-height: 1;
+    margin-bottom: 0.8vw;
+    
+}
+
+.history-desc {
+    font-size: 0.94vw; /* 18px / 1920px */
+    line-height: 1.6;
+    font-weight: 500;
+    color: var(--sub-text-color);
+    font-family: 'pretendard', sans-serif;
+    transition: color var(--transition-speed) ease;
+}
+
+
+.history-slideshow-container {
+    position: relative;
+    width: 42vw; 
+    height: 31vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+
+.history-year-text {
+    position: absolute;
+    font-family: 'Anton', sans-serif;
+    font-size: 26vw; /* 500px / 1920px */
+    color: #fff;
+    z-index: 2;
+    left: 54%;
+    transform: translate(-50%, -33%);
+    white-space: nowrap;
+    letter-spacing: 2.6vw;
+    line-height: 1;
+}
+.history-bg-white{
+    width: 100vw;
+    position: absolute;
+    z-index: 1;
+    white-space: nowrap;
+    line-height: 1;
+    background: var(--bg-color);
+    transition: background-color var(--transition-speed) ease;
+    left: 50%;
+    transform: translateX(-50%);
+    height: 171%;
+}   
+.history-bg{
+    width: 100vw;
+    position: absolute;
+    z-index: 3;
+    white-space: nowrap;
+    line-height: 1;
+    left: 50%;
+    transform: translateX(-50%);
+}
+.history-bg img{
+    width: 100%;
+}
+
+
+.history-photo {
+    position: relative;
+    z-index: 3;
+    width: 24.6vw; /* 473px / 1920px */ 
+    height: 31.25vw; /* 600px / 1920px */
+    object-fit: cover;
+    border-radius: 0.52vw;
+    margin-top: -15.6vw; /* -300px / 1920px */
+    background: none;
+}
+
+
+.history-char {
+    position: absolute;
+    bottom: 5.2vw;
+    right: 10%;
+    width: 14vw; /* 270px / 1920px */
+    height: auto;
+    z-index: 20;
+    animation: wiggle 3s ease-in-out infinite;
+}
+
+@keyframes wiggle {
+    0%, 100% { transform: rotate(-3deg); }
+    50% { transform: rotate(3deg); }
+}
+
+
+/* Tablet & Small Desktop adjustment */
+@media (max-width: 1024px) {
+    /* .history-section { padding-top: 300px;}  <- Removed fixed padding */
+    .history-slideshow-container { width: 100%; height: 50vw; }
+    /* .history-bg-shape { width: 90%; } <- Removed unused class */
+    .history-photo { width: 30vw; height: 40vw; margin-top: -15vw; }
+    
+    .history-text-content { 
+        bottom: auto; 
+        top: 8vw; 
+        width: 100%; 
+        left: 50%; 
+        transform: translateX(-50%); 
+        text-align: center;
+        max-width: 90%;
+    }
+    
+    .history-char {
+        width: 20vw;
+        bottom: 5%;
+        right: 5%;
+    }
+}
+
+/* Tablet (Extended to Mobile) */
+@media (min-width: 390px) and (max-width: 699px) {
+    /* Adjustments already covered by max-width: 1024px logic, can add specific tweaks here */
+    .history-section { padding-top: 4vw; padding-bottom: 15vw; }
+    .history-text-content { top: 62%; left: 30%; width: 50%; text-align: left; }
+    .history-desc {
+        text-align: left;
+        }
+        .history-char {bottom: 20%;}
+        .history-desc {font-size: clamp(14px, 1.2vw, 20px); line-height: 1.2;}
+}
+
+/* Base Mobile (Very small) fallback or keep empty if 390 covers most */
+@media (max-width: 389px) {
+}

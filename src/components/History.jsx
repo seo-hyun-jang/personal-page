@@ -41,9 +41,9 @@ export default function History() {
 
   return (
     <section className="history-section">
-      <div className="history-text-content">  
+      <div className="history-text-content">
         <TextAni>
-        <h2 className="history-title">MY HISTORY</h2>
+          <h2 className="history-title">MY HISTORY</h2>
         </TextAni>
         <div className="history-desc">
           여러 경험을 거치며 일해왔습니다.<br />
@@ -53,20 +53,21 @@ export default function History() {
       </div>
 
       <div className="history-slideshow-container">
-        <div className="history-year-text">{year}</div>
-
-        <div className="history-bg-white">
-          <img src="/img/history-bg-white.svg" alt="" />
-        </div>
-        <div className="history-bg">
-          <img src="/img/history-bg.svg" alt="" />
-        </div>
-
         <img
           src={currentImageSrc}
           alt={`History ${year}`}
           className="history-photo"
         />
+
+
+        <div className="history-bg">
+          <img src="/img/history-bg.svg" alt="" />
+        </div>
+        <div className="history-bg-white">
+          <img src="/img/history-bg-white.svg" alt="" />
+        </div>
+        <div className="history-year-text">{year}</div>
+
       </div>
 
       <img src="/img/history-char.svg" alt="" className="history-char" />

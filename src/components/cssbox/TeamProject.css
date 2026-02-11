@@ -5,16 +5,19 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding-bottom: 10.4VW; /* 200px / 1920px */
+    padding-bottom: 10.4VW;
+    /* 200px / 1920px */
 }
 
 .team-more-info {
-    padding: 15.6vw 0; /* 300px */
+    padding: 15.6vw 0;
+    /* 300px */
 }
 
 .team-header {
     text-align: center;
-    margin-bottom: 5.2vw; /* 100px */
+    margin-bottom: 5.2vw;
+    /* 100px */
 }
 
 .team-title {
@@ -24,7 +27,7 @@
     color: var(--title-color);
     text-transform: uppercase;
     margin: 0;
-    letter-spacing: -15px;
+    letter-spacing: -7px;
     transition: color var(--transition-speed) ease;
     font-weight: 800;
 }
@@ -32,7 +35,7 @@
 .team-desc-top {
     margin-top: 0.83vw;
     font-family: 'Pretendard', sans-serif;
-    font-size: clamp(12px, 1.2vw, 20px);
+    font-size: clamp(13px, 1.2vw, 20px);
     line-height: 1.1;
     color: var(--sub-text-color);
     font-weight: 400;
@@ -43,8 +46,10 @@
 .team-content-wrapper {
     position: relative;
     width: 100%;
-    max-width: 83.3vw; /* 1600px */
-    min-height: 52vw; /* 1000px */
+    max-width: 83.3vw;
+    /* 1600px */
+    min-height: 52vw;
+    /* 1000px */
     display: flex;
     align-items: center;
     justify-content: center;
@@ -59,20 +64,24 @@
     top: 73%;
     transform: translateY(-50%);
     z-index: 20;
-    
+
 }
+
 .contribution-list {
     display: flex;
-    gap: 1.04vw;       
-    flex-wrap: wrap; 
+    gap: 1.04vw;
+    flex-wrap: wrap;
 }
+
 .nav-arrow.left {
-    left: 4.16vw; /* 80px */
+    left: 4.16vw;
+    /* 80px */
 }
 
 .nav-arrow.active {
     color: #1573FF;
 }
+
 .nav-arrow.active svg path {
     fill: #fff;
 }
@@ -82,57 +91,74 @@
     color: #fff;
     cursor: default;
 }
+
 .nav-arrow.disabled svg path {
     fill: #000;
 }
+
 .nav-arrow.right {
-    right: 4.16vw; /* 80px */
+    right: 4.16vw;
+    /* 80px */
 }
 
 .project-display {
     display: flex;
-    align-items: center;        
+    align-items: center;
     justify-content: center;
-    gap: 5.2vw; /* 100px */
-    max-width: 72.9vw; /* 1400px */
+    gap: 5.2vw;
+    /* 100px */
+    max-width: 72.9vw;
+    /* 1400px */
     width: 100%;
 }
 
 .project-image-box {
     flex: 0 0 auto;
-    width: 23.4vw; /* 450px */
-    height: 46.8vw; /* 900px */
+    width: 23.4vw;
+    /* 450px */
+    height: 46.8vw;
+    /* 900px */
     display: flex;
     align-items: center;
     justify-content: center;
 }
 
 .project-phone-img {
-    width: 22.4vw; /* 430px */
+    width: 22.4vw;
+    /* 430px */
     object-fit: contain;
     display: block;
-    border-radius: 2.08vw; /* 40px */
-    border: 0.83vw solid #000; /* 16px */
+    border-radius: 2.08vw;
+    /* 40px */
+    border: 0.83vw solid #000;
+    /* 16px */
 }
 
 .project-info-box {
     flex: 1;
-    min-height: 42.8vw; /* 822px */
+    min-height: 42.8vw;
+    /* 822px */
     display: flex;
     flex-direction: column;
-    justify-content: center;   
+    justify-content: center;
     text-align: left;
 }
 
 .info-grid {
-    padding: 2.34vw 3.23vw; /* 45px 62px */
+    padding: 2.34vw 3.23vw;
+    /* 45px 62px */
     background: var(--card-bg);
-    border-radius: 1.04vw; /* 20px */    
+    border-radius: 1.04vw;
+    /* 20px */
     display: grid;
-    grid-template-columns: 4.16vw 1fr; /* 80px */
-    gap: 0.78vw 1.04vw; /* 15px 20px */
-    margin-bottom: 4.16vw; /* 80px */
-    font-size: 0.93vw; /* 18px */
+    grid-template-columns: 4.16vw 1fr;
+    /* 80px */
+    gap: 0.78vw 1.04vw;
+    /* 15px 20px */
+    margin-bottom: 4.16vw;
+    /* 80px */
+    font-size: 0.93vw;
+    /* 18px */
     color: var(--sub-text-color);
     font-family: 'pretendard', sans-serif;
     letter-spacing: -1px;
@@ -148,25 +174,36 @@
 }
 
 .project-title {
-    font-size: 2.08vw; /* 40px */
+    font-size: 2.08vw;
+    /* 40px */
     color: var(--title-color);
-    margin-bottom: 1.56vw; /* 30px */
+    margin-bottom: 1.56vw;
+    /* 30px */
     line-height: 1.1;
     letter-spacing: -1px;
-    white-space: nowrap;
+    white-space: normal;
     transition: color var(--transition-speed) ease;
 }
 
 .project-description {
     font-family: 'Pretendard', sans-serif;
-    font-size: 0.93vw; /* 18px */
+    font-size: 0.93vw;
     line-height: 1.6;
     color: var(--sub-text-color);
-    margin-bottom: 3.125vw; /* 60px */
-    white-space: pre-line;
-    min-height: 10.4vw; /* 200px */
-    letter-spacing: -1px;
+    margin-bottom: 3.125vw;
+    min-height: auto;
+    letter-spacing: -0.3px;
     transition: color var(--transition-speed) ease;
+
+    white-space: normal;
+    word-break: keep-all;
+    overflow-wrap: normal;
+    max-width: none;
+}
+
+
+.m-br {
+    display: none;
 }
 
 .action-buttons {
@@ -176,10 +213,10 @@
 }
 
 .team-btn {
-    padding: 1.25vw 3.24vw; /* 24px 93px */
-    border-radius: 2.6vw; /* 50px */
+    padding: 1.25vw 3.24vw;
+    border-radius: 2.6vw;
     font-family: 'Anton', sans-serif;
-    font-size: 1.45vw; /* 28px */
+    font-size: 1.45vw;
     line-height: 1;
     text-transform: uppercase;
     cursor: pointer;
@@ -188,8 +225,8 @@
     color: #3b1f14;
     transition: all 0.3s ease;
     white-space: nowrap;
-    letter-spacing: -1px;
-    font-weight: 700;
+    letter-spacing: 0.5px;
+    font-weight: 600;
 }
 
 .team-btn:hover {
@@ -201,82 +238,229 @@
     position: absolute;
     bottom: 0;
     right: 0;
-    width: 13vw; /* 250px */
+    width: 13vw;
+    /* 250px */
     pointer-events: none;
 }
 
 
 @media (max-width: 1200px) {
-    .project-display { flex-direction: column; }
-    .project-info-box { min-height: auto; justify-content: center; text-align: center;}
-    .info-grid { display: inline-grid; text-align: left; justify-content: center; }
+    .project-display {
+        flex-direction: column;
+    }
+
+    .project-info-box {
+        min-height: auto;
+        justify-content: center;
+        text-align: center;
+    }
+
+    .info-grid {
+        display: inline-grid;
+        text-align: left;
+        justify-content: center;
+    }
 }
 
 /* Desktop */
 @media (min-width: 1280px) and (max-width: 1400px) {
-    .team-content-wrapper { max-width: 80vw; }
-    .project-display { gap: 5vw; }
-    .project-image-box { width: 20.8vw; height: 41.6vw; } /* 400px, 800px */
-    .project-info-box { min-height: 36.4vw; }
-    
+    .team-content-wrapper {
+        max-width: 80vw;
+    }
+
+    .project-display {
+        gap: 5vw;
+    }
+
+    .project-image-box {
+        width: 20.8vw;
+        height: 41.6vw;
+    }
+
+    /* 400px, 800px */
+    .project-info-box {
+        min-height: 36.4vw;
+    }
+
 }
 
 /* Tablet & Mobile (Extended) */
 @media (min-width: 600px) and (max-width: 1279px) {
+
     /* .team-title { font-size: 150px; } */
-    .team-header { margin-bottom: 8vw; }
-    .project-image-box { height: auto; width: 35vw; }
-    .project-info-box { align-items: center; }
-    .info-grid { gap: 1vw 3vw; padding: 2vw 4vw; font-size: 1.4vw; margin-bottom: 5vw; grid-template-columns: 8.16vw 1fr; }
-    .project-title { font-size: 4vw; }
-    .team-title { font-size: 12vw; font-weight: 800; letter-spacing: -5px;}
-    .team-desc-top {font-size: clamp(14px, 1.2vw, 20px);}
-    .project-description { font-size: clamp(14px, 1.2vw, 20px); min-height: auto; margin-bottom: 4vw; }
-    .action-buttons {gap: 4vw;}
-    .team-btn { padding: 1.25vw 3.64vw;  font-size: 1.5vw; border-radius: 50px; font-weight: 700;}
-    .team-char { width: 18vw; right: 20px; bottom: 350px;}
-    .nav-arrow.right {right: 2.16vw; top: 70%;}
-    .nav-arrow.left {left: 2.16vw; top: 70%;}
-    .team-section {padding-bottom: 14vw;}
+    .team-header {
+        margin-bottom: 8vw;
+    }
+
+    .project-image-box {
+        height: auto;
+        width: 35vw;
+    }
+
+    .project-info-box {
+        align-items: center;
+    }
+
+    .info-grid {
+        gap: 1vw 3vw;
+        padding: 2vw 4vw;
+        font-size: 1.4vw;
+        margin-bottom: 5vw;
+        grid-template-columns: 8.16vw 1fr;
+    }
+
+    .project-title {
+        font-size: 4vw;
+    }
+
+    .team-title {
+        font-size: 12vw;
+        font-weight: 800;
+        letter-spacing: -5px;
+    }
+
+    .team-desc-top {
+        font-size: clamp(14px, 1.2vw, 20px);
+    }
+
+    .project-description {
+        font-size: clamp(14px, 1.2vw, 20px);
+        min-height: auto;
+        margin-bottom: 4vw;
+    }
+
+    .action-buttons {
+        gap: 4vw;
+    }
+
+    .team-btn {
+        padding: 1.25vw 3.64vw;
+        font-size: 1.5vw;
+        border-radius: 50px;
+        font-weight: 700;
+    }
+
+    .team-char {
+        width: 18vw;
+        right: 20px;
+        bottom: 350px;
+    }
+
+    .nav-arrow.right {
+        right: 2.16vw;
+        top: 70%;
+    }
+
+    .nav-arrow.left {
+        left: 2.16vw;
+        top: 70%;
+    }
+
+    .team-section {
+        padding-bottom: 14vw;
+    }
+
     .nav-arrow svg {
-    width: clamp(28px, 2.5vw, 56px);
-    height: auto;
-}
+        width: clamp(28px, 2.5vw, 56px);
+        height: auto;
+    }
 }
 
 /* Small Mobile */
-@media (max-width: 600px) { 
-    .project-display { flex-direction: column; align-items: center; }
-    .project-info-box { align-items: center; text-align: center; width: 100%; }
-    .info-grid { 
-        width: 70%; /* Increased width for better fitting */
-        margin: 0 auto 5vw; 
-        grid-template-columns: 1fr 2fr; /* Adjust grid for better center look if needed, or keep as is */
-        text-align: left; /* Keep grid text left or center? User said "center alignment" generally but grid content usually looks better left aligned inside a centered box. But let's center the box itself. */
+@media (max-width: 600px) {
+    .project-display {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .project-info-box {
+        align-items: center;
+        text-align: center;
+        width: 100%;
+    }
+
+    .info-grid {
+        width: 70%;
+        margin: 0 auto 5vw;
+        grid-template-columns: 1fr 2fr;
+        text-align: left;
         display: grid;
         font-size: clamp(10px, 2vw, 20px);
     }
-    
-    .project-title { font-size: 4vw; text-align: center; width: 100%; }
-    .team-title { font-size: 15vw; font-weight: 800; letter-spacing: -2px;}
-    .team-desc-top {font-size: clamp(12px, 3vw, 20px);}
-    
-    .project-description { 
-        font-size: clamp(10px, 1.5vw, 18px); 
-        min-height: auto; 
-        margin-bottom: 6vw; 
-        text-align: center; 
+
+    .project-title {
+        font-size: 4vw;
+        text-align: left;
+        white-space: nowrap;
+        width: 100%;
+
+    }
+
+    .team-title {
+        font-size: 15vw;
+        font-weight: 800;
+        margin-bottom: 16px;
+        letter-spacing: -1px;
+    }
+
+    .team-desc-top {
+        font-size: clamp(13px, 3vw, 20px);
+    }
+
+    .project-description {
+        font-size: clamp(12px, 1.5vw, 18px);
+        min-height: auto;
+        margin-bottom: 6vw;
+        text-align: center;
+        width: 100%;
+        padding: 0 4vw;
+        word-break: keep-all;
+        max-width: 90%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+
+
+
+    .action-buttons {
+        gap: 4vw;
+        justify-content: center;
         width: 100%;
     }
-    
-    .action-buttons {gap: 4vw; justify-content: center; width: 100%; }
-    .team-btn { padding: 3vw 8vw; font-size: 3.5vw; border-radius: 50px; font-weight: 700;}
-    
-    .team-char { display: none;}
-    .nav-arrow.right {right: 5%; top: 70%;}
-    .nav-arrow.left {left: 5%; top: 70%;}
-    .nav-arrow svg { width: 8vw; height: auto; min-width: 30px; }
-    
-    .team-section {padding-bottom: 20vw;}
-    .team-more-info {padding: 20vw 0;}
+
+    .team-btn {
+        padding: 3vw 8vw;
+        font-size: 3.5vw;
+        border-radius: 50px;
+        font-weight: 600;
+    }
+
+    .team-char {
+        display: none;
+    }
+
+    .nav-arrow.right {
+        right: 5%;
+        top: 64%;
+    }
+
+    .nav-arrow.left {
+        left: 5%;
+        top: 64%;
+    }
+
+    .nav-arrow svg {
+        width: 8vw;
+        height: auto;
+        min-width: 30px;
+    }
+
+    .team-section {
+        padding-bottom: 20vw;
+    }
+
+    .team-more-info {
+        padding: 20vw 0;
+    }
 }

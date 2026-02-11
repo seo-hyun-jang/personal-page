@@ -1,14 +1,14 @@
-
 .hero {
     position: relative;
     width: 100%;
-    height: 1300px;
+    padding-top: 100px;
+    height: 100vh;
     background-color: var(--bg-color);
     overflow: hidden;
     display: flex;
     justify-content: center;
     align-items: center;
-    font-family: 'Montserrat', sans-serif; 
+    font-family: 'Montserrat', sans-serif;
     transition: background-color var(--transition-speed) ease;
 }
 
@@ -18,11 +18,12 @@
     z-index: 12;
     text-align: center;
     color: var(--title-color);
-    font-size: 13vw; /* 250px / 1920px */
+    font-size: 13vw;
+    /* 250px / 1920px */
     font-weight: 900;
     line-height: 1;
     text-transform: uppercase;
-    font-family: 'Anton', 'Impact', sans-serif; 
+    font-family: 'Anton', 'Impact', sans-serif;
     letter-spacing: -0.1vw;
     transition: color var(--transition-speed) ease;
 }
@@ -46,23 +47,35 @@
 
 /* Desktop */
 @media (min-width: 1280px) and (max-width: 1400px) {
+
     /* Heights etc handled by vw now or percentage */
-    .hero { height: 1100px; } /* Keep fixed height or switch to vh if preferred, but sticking to vw for text requested */
+    .hero {
+        height: 1100px;
+    }
+
+    /* Keep fixed height or switch to vh if preferred, but sticking to vw for text requested */
     /* .hero-text { font-size: 200px; } -> Handled by base vw */
 }
 
-@media (min-width: 801px) and (max-width: 1279px) {
-    .hero { height: 60vh; } /* Keeping explicit height from tablet */
-}
-
 /* Tablet & Mobile (Extended) */
-@media (min-width: 600px) and (max-width: 800px) {
-    .hero { height: 60vh; padding-top: 80px; box-sizing: border-box; } /* Increase height & add padding */
-    .hero-text { font-size: 18vw; } 
+@media (max-width: 1279px) {
+    .hero {
+        height: 900px;
+    }
+
+    /* Keeping explicit height from tablet */
+    .hero-text {
+        font-size: 18vw;
+    }
+
+    .ball-container {
+        transform: scale(0.8);
+    }
 }
 
-/* Small Mobile */
-@media (min-width: 360px) and (max-width: 599px) {
-    .hero { height: 100vh; padding-top: 80px; box-sizing: border-box; } /* Full viewport height for mobile hero */
-    .hero-text { font-size: 18vw; } 
+@media (max-width: 390px) {
+    .hero {
+        height: 100vh;
+        padding-top: 0;
+    }
 }

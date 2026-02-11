@@ -1,5 +1,6 @@
 .aboutme1-section {
-    margin-top: 15.6vw; /* 300px */
+    margin-top: 15.6vw;
+    /* 300px */
     width: 100%;
     padding: 10.4vw 0 15.6vw;
     font-family: 'Montserrat', sans-serif;
@@ -17,9 +18,9 @@
     font-family: 'Anton', sans-serif;
     font-size: clamp(50px, 18vw, 300px);
     line-height: 1;
-    color: var(--title-color); 
+    color: var(--title-color);
     margin: 0;
-    letter-spacing: -15px;
+    letter-spacing: -7px;
     transition: color var(--transition-speed) ease;
     font-weight: 800;
 }
@@ -27,7 +28,7 @@
 .aboutme1-subtitle {
     margin-top: 1vw;
     font-family: 'Pretendard', sans-serif;
-    font-size: clamp(12px, 1.2vw, 20px);
+    font-size: clamp(13px, 1.2vw, 20px);
     line-height: 1.1;
     color: var(--sub-text-color);
     font-weight: 400;
@@ -37,8 +38,10 @@
 
 .aboutme1-graphic {
     position: relative;
-    width: 41.6vw; /* 800px */
-    height: 31.25vw; /* 600px */
+    width: 41.6vw;
+    /* 800px */
+    height: 31.25vw;
+    /* 600px */
     display: flex;
     justify-content: center;
     align-items: center;
@@ -48,7 +51,7 @@
 .char-img {
     position: relative;
     z-index: 2;
-    width: 60%; 
+    width: 60%;
     height: auto;
     object-fit: contain;
     animation: blobFloat 4s ease-in-out infinite;
@@ -63,8 +66,9 @@
     border: 0.31vw solid #111;
     border-radius: 4.16vw;
     padding: 0.83vw 2.18vw;
-    margin-top: -10.4vw; 
-    width: 49vw; /* 940px */
+    margin-top: -10.4vw;
+    width: 49vw;
+    /* 940px */
     max-width: 90vw;
     overflow: hidden;
 }
@@ -75,10 +79,28 @@
     align-items: center;
     width: max-content;
     animation: marqueeScroll 30s linear infinite;
+    will-change: transform;
 }
 
+.aboutme1-marquee:hover {
+    animation-play-state: paused;
+}
+
+
+@keyframes marqueeScroll {
+    from {
+        transform: translateX(0);
+    }
+
+    to {
+        transform: translateX(-50%);
+    }
+}
+
+
 .bar-icon {
-    height: 2.5vw; /* 48px */
+    height: 2.5vw;
+    /* 48px */
     width: auto;
     flex-shrink: 0;
     object-fit: contain;
@@ -89,38 +111,87 @@
     transform: scale(1.3);
 }
 
+/* Desktop */
+@media (max-width: 1400px) {
+    .aboutme1-graphic {
+        width: 36.45vw;
+        height: 26vw;
+    }
+
+    .aboutme1-bar-container {
+        width: 46.8vw;
+    }
+}
 
 @media (max-width: 1024px) {
-    .aboutme1-graphic { width: 100%; height: auto; aspect-ratio: 4/3; }
-    .aboutme1-bar-container { padding: 1.5vw 2vw; gap: 1.5vw; }
-    .bar-icon { height: 3vw; }
+    .aboutme1-graphic {
+        width: 100%;
+        height: auto;
+        aspect-ratio: 4/3;
+    }
+
+    .aboutme1-bar-container {
+        padding: 1.5vw 2vw;
+        gap: 1.5vw;
+    }
+
+    .bar-icon {
+        height: 3vw;
+    }
 }
 
-/* Desktop */
-@media (min-width: 1280px) and (max-width: 1400px) {
-    .aboutme1-graphic { width: 36.45vw; height: 26vw; }
-    .aboutme1-bar-container { width: 46.8vw; }
-}
+
 
 /* Tablet & Mobile (Extended) */
-@media (min-width: 390px) and (max-width: 1279px) {
-    .aboutme1-section { margin: 15vw 0; padding: 15vw 0;}
-    .aboutme1-graphic { width: 50vw; height: 35vw; aspect-ratio: auto; }
-    .aboutme1-bar-container { width: 81%; padding: 0.83vw 2.18vw; margin-top: -10.4vw; border-width: 0.31vw; border-radius: 4.16vw; }
-    .bar-icon { height: 2.5vw; }
-    .char-img { margin-top: 8vw; margin-left: 6vw; }
+@media (max-width: 1279px) {
+    .aboutme1-section {
+        margin: 15vw 0;
+        padding: 15vw 0;
+    }
+
+    .aboutme1-graphic {
+        width: 50vw;
+        height: 35vw;
+        aspect-ratio: auto;
+    }
+
+    .aboutme1-bar-container {
+        width: 81%;
+        padding: 0.83vw 2.18vw;
+        margin-top: -10.4vw;
+        border-width: 0.31vw;
+        border-radius: 4.16vw;
+    }
+
+    .bar-icon {
+        height: 2.5vw;
+    }
+
+    .char-img {
+        margin-top: 8vw;
+        margin-left: 6vw;
+    }
+
     .aboutme1-title {
-        font-size: clamp(60px, 20.8vw, 170px); 
+        font-size: clamp(60px, 20.8vw, 170px);
         font-size: 20vw;
         font-weight: 800;
         letter-spacing: -10px;
     }
+
     .aboutme1-subtitle {
-        font-size: clamp(14px, 1.2vw, 20px); margin-top: 1.5vw;
+        font-size: clamp(13px, 1.2vw, 20px);
+        margin-top: 1.5vw;
     }
 }
 
 /* Small Mobile */
-@media (max-width: 389px) {
-    /* Fallback/Empty */
+@media (max-width: 600px) {
+    .aboutme1-title {
+        letter-spacing: -1px;
+    }
+
+    .aboutme1-section {
+        padding: 0;
+    }
 }

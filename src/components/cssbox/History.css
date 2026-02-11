@@ -1,151 +1,246 @@
-/* History.css - 1920px 메인 해상도 고정 버전 */
+/* History.css */
 
 .history-section {
     width: 100%;
+    min-height: 700px;
     background: #1573FF;
-    min-height: 700px; /* 1921px 설정 그대로 이식 */
-    padding-top: 300px;
-    padding-bottom: 200px;
-    font-family: 'Montserrat', sans-serif;
-    color: #fff;
     position: relative;
-    overflow: hidden;
     display: flex;
     justify-content: center;
     align-items: center;
+    overflow: hidden;
+    font-family: 'Montserrat', sans-serif;
+    padding: 200px 0;
     margin-top: -2px;
+    box-shadow: 0 -2px 0 #1573FF;
 }
 
-/* 텍스트 컨텐츠: 고정 위치와 크기 */
+
+
+
+/* 중앙 컨테이너 */
+.history-slideshow-container {
+    position: relative;
+    width: 600px;
+    height: 750px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 5;
+
+}
+
+/* 중앙 사진 */
+.history-photo {
+    width: 473px;
+    height: 600px;
+    object-fit: cover;
+    border-radius: 20px;
+    position: relative;
+    z-index: 10;
+    overflow: hidden;
+    margin-top: -250px;
+    box-shadow: 0 30px 80px rgba(0, 0, 0, 0.25);
+}
+
+/* 검정 배경 (반응형 스케일) */
+.history-bg {
+    position: absolute;
+    width: 140vw;
+    max-width: 1920px;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 3;
+    border: none;
+}
+
+.history-bg img {
+    width: 100%;
+    height: auto;
+    border: none;
+    object-fit: cover;
+}
+
+/* 흰 배경 숫자 (반응형 스케일) */
+.history-bg-white {
+    position: absolute;
+    width: 138vw;
+    max-width: 1920px;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 2;
+}
+
+.history-bg-white img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+}
+
+/* 연도 텍스트 */
+.history-year-text {
+    position: absolute;
+    bottom: 30%;
+    left: 60%;
+    transform: translateX(-50%);
+    font-family: 'Anton', sans-serif;
+    font-size: clamp(120px, 22vw, 420px);
+    color: #fff;
+    z-index: 2;
+    pointer-events: none;
+    letter-spacing: 50px;
+}
+
+/* 텍스트 영역 */
 .history-text-content {
     position: absolute;
-    left: calc(50% - 768px); /* 중앙에서 왼쪽으로 고정 */
-    width: 400px;
-    z-index: 10;
-    text-align: left;
-    pointer-events: none;
+    bottom: 6%;
+    left: 4%;
+    width: 420px;
+    z-index: 20;
+    color: #fff;
 }
 
 .history-title {
     font-family: 'Anton', sans-serif;
     font-size: 100px;
     line-height: 1;
-    margin-bottom: 15px;
-    font-weight: 800;
+    margin: 0 0 30px;
+    white-space: nowrap;
 }
 
 .history-desc {
-    font-size: 18px; /* 고정 크기 */
-    line-height: 1.6;
-    font-weight: 500;
-    color: var(--sub-text-color);
-    font-family: 'pretendard', sans-serif;
-    white-space: pre-line;
+    font-size: 16px;
+    line-height: 1.5;
+    color: #000;
 }
 
-/* 슬라이드쇼 컨테이너: 고정 크기 */
-.history-slideshow-container {
-    position: relative;
-    width: clamp(320px, 38vw, 730px);
-    height: clamp(260px, 31vw, 595px);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-/* 배경 연도: 고정 크기 */
-.history-year-text {
-    position: absolute;
-    font-family: 'Anton', sans-serif;
-    font-size: 500px; /* 고정 크기 */
-    color: #fff;
-    z-index: 2;
-    left: calc(50% + 77px);
-    transform: translate(-50%, -33%);
-    white-space: nowrap;
-    letter-spacing: 50px;
-    line-height: 1;
-}
-
-/* 사진: 고정 크기 */
-.history-photo {
-    position: relative;
-    z-index: 3;
-    width: clamp(220px, 12vw, 472px);
-    height: clamp(280px, 12vw, 600px);
-    object-fit: cover;
-    border-radius: 10px;
-    margin-top: -300px;
-    background: none;
-}
-
-/* 캐릭터: 고정 위치 */
+/* 캐릭터 */
 .history-char {
     position: absolute;
-    bottom: 100px;
-    right: calc(50% - 768px);
-    width: 270px;
-    height: auto;
-    z-index: 20;
-    animation: wiggle 3s ease-in-out infinite;
+    right: 6%;
+    bottom: 6%;
+    width: 160px;
+    z-index: 15;
 }
 
-/* 배경 이미지들 */
-.history-bg-white, 
-.history-bg {
-    width: 100%;                /* ← 기존 1920px 삭제 */
-    max-width: 1920px;  
-    position: absolute;
-    z-index: 1;
-    left: 50%;
-    transform: translateX(-50%);
-    pointer-events: none;
-}
-.history-bg { z-index: 3; }
-.history-bg img { width: 100%; }
-.history-bg-white {
-    height: 171%;
-    background: var(--bg-color);
-    transition: background-color var(--transition-speed) ease;
-}
+/* ================= 반응형 ================= */
 
-@keyframes wiggle {
-    0%, 100% { transform: rotate(-3deg); }
-    50% { transform: rotate(3deg); }
-}
+@media (max-width: 1280px) {
+    .history-section {
+        padding: 150px 0;
+        margin-top: -2px;
+    }
 
-/* ------------------------------------------------------ */
-/* [태블릿/모바일] 1024px 이하일 때만 유동적으로 변경 */
-@media (max-width: 1024px) {
-    .history-section { padding-top: 10px; padding-bottom: 150px; min-height: auto; }
-    .history-slideshow-container { width: 100%; height: 50vw; }
-    .history-photo { width: 32vw; height: 40vw; margin-top: -13vw; }
-    .history-year-text { font-size: 30vw; left: 50%; letter-spacing: 2vw; }
-    
-    .history-text-content { top: 65%; left: 4%; width: 70%; text-align: left; }
-    .history-title { font-size: 4vw; }
-    .history-desc { text-align: left; font-size: clamp(10px, 1.2vw, 20px); line-height: 1.2; }
-    .history-char { width: 120px; bottom: 150px; right: 20px; }
+    .history-slideshow-container {
+        width: 480px;
+        height: 620px;
+    }
+
+    .history-photo {
+        width: 473px;
+        height: 600px;
+        margin-top: -250px;
+    }
+
+    .history-year-text {
+        letter-spacing: 20px;
+        bottom: 35%;
+    }
+
+    .history-text-content {
+        left: 40px;
+        bottom: 80px;
+        width: 320px;
+    }
+
+    .history-title {
+        font-size: 70px;
+    }
 }
 
 @media (max-width: 768px) {
-    .history-text-content { top: 55%; left: 4%; width: 70%; text-align: left; }
+    .history-section {
+        flex-direction: column;
+        padding: 100px 20px;
+        margin-top: -2px;
+    }
+
+    .history-text-content {
+        position: static;
+        text-align: center;
+        margin-bottom: 200px;
+    }
+
+    .history-slideshow-container {
+        width: 100%;
+        height: auto;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .history-photo {
+        width: 50vw;
+        height: auto;
+
+        /* 진짜 중앙 정렬 */
+        display: block;
+        margin: -100px auto 0;
+
+        position: relative;
+        border-radius: 10px;
+
+        /* 기존 밀림 원인 제거 */
+        left: auto;
+        transform: none;
+    }
+
+    .history-year-text {
+        letter-spacing: clamp(20px, 7vw, 50px);
+        bottom: clamp(20%, 7vw, 30%);
+    }
+
+    .history-char {
+        right: 20px;
+        bottom: 20px;
+        width: 100px;
+    }
+
+    .history-title {
+        margin-bottom: 16px;
+    }
+
+    .history-desc {
+        font-size: clamp(13px, 1.2vw, 20px);
+        line-height: 1.2;
+    }
 }
 
-@media (max-width: 630px) {
-    .history-title {line-height: 0.5}
-    .history-text-content { top: 45%; left: 4%; width: 70%; text-align: left; line-height: 0.5 }
-}
 
-@media (max-width: 400px) {
-    .history-text-content { top: 40%; left: 4%; width: 70%;}
-}
 
-/* [울트라 와이드] 1921px 이상 (요청하신 대로 유지) */
-@media (min-width: 1921px) {
-    .history-bg-white, .history-bg {
-        width: 1920px;
-        left: 50%;
-        transform: translateX(-50%);
+@media (max-width: 392px) {
+
+    .history-section {
+        margin-top: -2px;
+    }
+
+    .history-title {
+        font-size: 60px;
+        letter-spacing: -1px;
+    }
+
+    .history-text-content {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .history-year-text {
+        letter-spacing: clamp(20px, 10vw, 50px);
+        bottom: clamp(10%, 10vw, 15%);
     }
 }
