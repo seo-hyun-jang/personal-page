@@ -31,7 +31,7 @@ export default function TeamProject() {
 
 
       linkPlan: 'https://www.figma.com/design/NVNNJxevXpC6TpXoN6YAV0/23.%EC%9E%A5%EC%84%9C%ED%98%84?node-id=1554-5325&t=e4iKN61IgSATVm9C-1',
-      linkProject: 'https://yunjioh.github.io/1million/',
+      linkProject: 'https://1million-nu.vercel.app/',
     },
     {
       id: 'nova',
@@ -57,7 +57,7 @@ export default function TeamProject() {
       ],
 
       linkPlan: 'https://www.figma.com/design/NVNNJxevXpC6TpXoN6YAV0/23.%EC%9E%A5%EC%84%9C%ED%98%84?node-id=1554-933&t=e4iKN61IgSATVm9C-1',
-      linkProject: 'https://tubi-nova.vercel.app/',
+      linkProject: 'https://tubi-app.vercel.app/',
     }
   ];
 

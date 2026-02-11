@@ -55,7 +55,7 @@ export default function UxuiSpoiler() {
       <div className="uxui-content" ref={contentRef}>
         <div className="spoiler-track" ref={trackRef}>
           <a 
-            href="https://www.figma.com/design/NVNNJxevXpC6TpXoN6YAV0/23.%EC%9E%A5%EC%84%9C%ED%98%84?node-id=1554-5325&t=e4iKN61IgSATVm9C-1"
+            href="https://1million-nu.vercel.app/"
             target="_blank"
             rel="noopener noreferrer"
             className="spoiler-card card-1million"
@@ -64,7 +64,7 @@ export default function UxuiSpoiler() {
           </a>
 
           <a 
-            href="https://www.figma.com/design/NVNNJxevXpC6TpXoN6YAV0/23.%EC%9E%A5%EC%84%9C%ED%98%84?node-id=1554-933&t=e4iKN61IgSATVm9C-1"
+            href="https://tubi-app.vercel.app/"
             target="_blank"
             rel="noopener noreferrer"
             className="spoiler-card card-nova"

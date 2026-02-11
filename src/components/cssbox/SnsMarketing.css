@@ -311,6 +311,12 @@
     top: 115%;
   }
 }
+@media (max-width: 768px) {
+
+  .vedio-cut-box {
+    bottom: -1px;
+  }
+}
 
 @media (max-width: 430px) {
 

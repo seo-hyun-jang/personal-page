@@ -56,6 +56,7 @@ const Sns = () => {
           </div>
 
           <div className="sns-gallery youtube">
+            
             <div className="youtube-large" style={{ position: 'relative' }}>
               <img src="/img/crown.svg" className="sns-crown-icon" alt="Best" />
               <div className="sns-card" style={{ width: '100%', height: '100%' }}>

@@ -268,20 +268,27 @@
   left: 48%;
   transform: translateX(-50%);
   width: 7.3vw;
-  /* 140px */
   z-index: 100;
 }
 
-.sns-crown-icon {
+.youtube-large .sns-crown-icon {
   position: absolute;
   top: -45px;
-  left: -25px;
+  left: -30px;
   width: 80px;
   z-index: 10;
-  filter: drop-shadow(0 4px 4px rgba(0, 0, 0, 0.2));
-  transform: rotate(-15deg);
+  rotate: -15deg;
 }
 
+.sns-gallery.instagram .sns-crown-icon {
+  position: absolute;
+  top: 51%;
+  left: 50%;
+  width: 80px;
+  z-index: 10;
+  rotate: -15deg;
+
+}
 
 /* Desktop */
 @media (min-width: 1280px) and (max-width: 1400px) {
@@ -294,56 +301,20 @@
 
   .sns-stats-card {
     width: 100%;
+    height: 10vw;
+    margin-bottom: 4vw;
   }
+
+  .sns-gallery.instagram .sns-crown-icon {
+  position: absolute;
+  top: 50.5%;
+  left: 48.5%;
+
+}
 }
 
 
 @media (max-width: 1279px) {
-  .sns-section {
-    padding: 10vw 0 15vw;
-  }
-
-  .sns-header {
-    margin-bottom: 8vw;
-  }
-
-  .sns-columns-container {
-    flex-direction: column;
-    gap: 8vw;
-    align-items: center;
-  }
-
-  .sns-column {
-    width: 90%;
-    max-width: 70vw;
-  }
-
-  .sns-platform-header {
-    margin-bottom: 4vw;
-  }
-
-  .sns-stats-card {
-    margin-bottom: 4vw;
-  }
-
-  .sns-gallery {
-    height: 40vw;
-  }
-
-  .sns-char-box {
-    display: none;
-  }
-
-  /* 핵심 수정: 오버레이 항상 보이게 */
-  .sns-card-overlay {
-    opacity: 1 !important;
-    backdrop-filter: blur(8px);
-    background: rgba(0, 0, 0, 0.35);
-  }
-}
-
-/* Mobile Large */
-@media (max-width: 767px) {
   .sns-section {
     padding: 8vw 0 12vw;
   }
@@ -365,11 +336,13 @@
   .sns-columns-container {
     flex-direction: column;
     gap: 8vw;
-    padding: 0;
+    align-items: center;
+    padding: 0 4vw;
   }
 
   .sns-column {
-    width: 95%;
+    width: 100%;
+    max-width: 100%;
   }
 
   .sns-platform-header {
@@ -394,23 +367,32 @@
   .sns-stats-grid.two {
     flex-direction: row;
     height: auto;
-    padding: 2vw 0;
   }
 
   .sns-stat-item {
-    padding-top: 2vw;
-    padding-bottom: 2vw;
-  }
-
-  .sns-stat-value {
-    font-size: 5vw;
-    height: auto;
-    min-height: auto;
+    padding: 2vw 0;
   }
 
   .sns-stat-item:first-child {
     border-right: 1px solid #808080;
     border-bottom: none;
+    /* Ensuring side-by-side means still vertical divider */
+  }
+
+  .sns-stat-label {
+    font-size: clamp(12px, 1vw, 20px);
+    margin-bottom: 1vw;
+    height: auto;
+  }
+
+  .sns-stat-value {
+    font-size: clamp(16px, 3vw, 28px);
+    height: auto;
+    min-height: auto;
+  }
+  
+  .sns-stat-value.small-value {
+    font-size: 2.5vw;
   }
 
   .sns-gallery {
@@ -422,7 +404,6 @@
     height: 60vw;
     flex-direction: row;
     gap: 2vw;
-
   }
 
   .youtube-large {
@@ -443,128 +424,11 @@
     height: calc(50% - 1vw);
   }
 
-  .sns-gallery.instagram {
-    height: auto;
-    flex-direction: row;
-    flex-wrap: wrap;
-  }
-
-  .sns-gallery.instagram .sns-card-wrapper {
-    flex: 0 0 100%;
-    height: 100vw;
-    /* 정적 높이 또는 적절한 비율 */
-    margin-bottom: 4vw;
-  }
-
-  .sns-gallery.instagram .sns-card {
-    height: 100%;
-    width: 100%;
-  }
-
-  .sns-crown-icon {
-    width: 8vw;
-    top: -5vw;
-    left: -2vw;
-  }
-
-  .sns-char-box {
-    display: none;
-  }
-
-  .sns-stat-label {
-    font-size: 2.2vw;
-    height: auto;
-  }
-
-  /* 모바일에서도 오버레이 항상 보이게 */
-  .sns-card-overlay {
-    opacity: 1 !important;
-    backdrop-filter: blur(6px);
-    background: rgba(0, 0, 0, 0.35);
-  }
-}
-
-/* Mobile */
-@media (max-width: 390px) {
-  .sns-section {
-    padding: 6vw 0 10vw;
-  }
-
-
-  .sns-header {
-    margin-bottom: 6vw;
-  }
-
-  .sns-main-title {
-    font-size: 16vw;
-    font-weight: 800;
-  }
-
-  .sns-columns-container {
-    gap: 6vw;
-    padding: 0 4vw;
-  }
-
-  .sns-platform-name {
-    font-size: 6vw;
-  }
-
-  .sns-platform-logo {
-    width: 6vw;
-  }
-
-  .sns-stats-grid.two {
-    flex-direction: row;
-  }
-
-  .sns-stat-item:first-child {
-    border-right: 1px solid #808080;
-    border-bottom: none;
-  }
-
-  .sns-stat-item {
-    padding: 4vw 0;
-  }
-
-  .sns-stat-label,
-  .sns-stat-value {
-    height: auto;
-    min-height: auto;
-  }
-
-  .sns-stat-label {
-    font-size: 3.5vw;
-    margin-bottom: 1vw;
-  }
-
-  .sns-stat-value {
-    font-size: 4vw;
-  }
-
-  .sns-stat-value.small-value {
-    font-size: 3vw;
-  }
-
-  .sns-gallery.youtube {
-    height: 60vw;
-    flex-direction: row;
-    gap: 2vw;
-  }
-
-  .sns-gallery-right-stack {
-    height: 100%;
-    flex-direction: column;
-    gap: 2vw;
-  }
-
-  .youtube-small {
-    height: calc(50% - 1vw);
-    flex: 1;
-  }
-
+  /* Instagram Gallery - Keeping 390px logic (Row layout) */
   .sns-gallery.instagram {
     height: 45vw;
     flex-direction: row;
+    flex-wrap: nowrap;
     gap: 1.5vw;
   }
 
@@ -589,19 +453,20 @@
   .sns-char-box {
     display: none;
   }
+  
+  .sns-crown-icon {
+    display: none;
+  }
 
+  /* Overlay always visible on mobile/tablet */
   .sns-card-overlay {
     opacity: 1 !important;
     backdrop-filter: blur(5px);
     background: rgba(0, 0, 0, 0.35);
     font-size: 3.5vw;
   }
-
+  
   .sns-overlay-icon {
     width: 5vw;
-  }
-
-  .sns-crown-icon {
-    display: none;
   }
 }
