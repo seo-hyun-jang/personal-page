@@ -5,7 +5,7 @@ import TextAni from "./svgani/TextAni.jsx";
 const Sns = () => {
   const youtubeStats = [
     { label: '최고 조회수', value: '2.75M' },
-    { label: '총 제작 콘텐츠', value: '롱폼 22개\n쇼츠 98개' },
+    { label: '총 제작 콘텐츠', value: '롱폼 28개\n쇼츠 125개' },
   ];
 
   const instagramStats = [
@@ -71,10 +71,10 @@ const Sns = () => {
             <div className="sns-gallery-right-stack">
               <div className="youtube-small">
                 <div className="sns-card" style={{ width: '100%', height: '100%' }}>
-                  <img src="/img/sns-youtube-2.svg" className="sns-thumb" />
+                  <img src="/img/tesla.jpg" className="sns-thumb" />
                   <div className="sns-card-overlay">
                     <img src="/img/sns-eyes.svg" className="sns-overlay-icon" />
-                    <span>6.6천회</span>
+                    <span>1.8만회</span>
                   </div>
                 </div>
               </div>

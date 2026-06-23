@@ -21,6 +21,7 @@
 .sns-main-title {
   font-family: 'Anton', sans-serif;
   font-size: 14.5vw;
+  font-weight: bold;
   /* 280px */
   line-height: 1;
   color: var(--title-color);
@@ -282,7 +283,7 @@
 
 .sns-gallery.instagram .sns-crown-icon {
   position: absolute;
-  top: 51%;
+  top: 57%;
   left: 50%;
   width: 80px;
   z-index: 10;
@@ -293,7 +294,7 @@
 /* Desktop */
 @media (min-width: 1280px) and (max-width: 1400px) {
 
-  /* .sns-main-title { font-size: 200px; } */
+  /* .sns-main-title { font-size: 200px; } */ 
   .sns-columns-container {
     gap: 1.56vw;
     padding: 0 1vw;

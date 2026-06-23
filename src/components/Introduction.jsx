@@ -39,9 +39,11 @@ export default function Introduction() {
           <div className="intro-text-box">
             <h3 className="profile-name">JANG SEO HYUN</h3>
             <div className="profile-role">
+              • INFLUENCER MARKETING <br />
               • UX / UI DESIGN<br />
               • GROWTH THINKING<br />
               • CONTENT & MARKETING PERSPECTIVE
+              
             </div>
 
             <div className="keyword-label">KEYWORD</div>
